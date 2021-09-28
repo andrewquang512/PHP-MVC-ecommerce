@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <link rel="shortcut icon" type="image" href="./public/assets/images/cropped-mona-180x180.png">
+    <link rel="stylesheet" href="/public/assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/assets/css/admin/styles.css">
+    <link rel="stylesheet" href="/public/assets/css/admin/employee_manage/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script type="text/javascript" src="/index.js"></script>
+    <script type="text/javascript" src="/public/assets/bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/assets/bootstrap/js/popper.min.js"></script>
+    <script type="text/javascript" src="/public/assets/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class='sidebar' id="sidebar">
+        <div class='logo'>
+            <a class="" href="#">
+                <img width="120" height="auto" class="header-logo" src="../../images/mona-logo2.png">
+            </a>
+        </div>
+        
+        <ul class='sidebar-links'>
+            <li><a href="#"  >
+                    <i class="fas fa-bars"></i>
+                    <span>Dashboard</span>
+            </a> </li>
+            <li><a href="#">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Sales Management</span>
+            </a> </li>
+            <li><a href="#" class="active">
+                <i class="fas fa-users"></i>
+                <span>Employee Management</span>
+            </a> </li>
+            <li><a href="#">
+                    <i class="fas fa-comments"></i>
+                    <span>Comment Management</span>
+            </a> </li>
+            <li><a href="#">
+                    <i class="fas fa-address-card"></i>
+                    <span>Contact Management</span>
+            </a></li>
+            <li><a href="#">
+                    <i class="fas fa-pager"></i>
+                    <span>Page Management</span>
+            </a></li>
+            <li><a href="#">
+                <i class="fas fa-boxes"></i>
+                <span>Product Management</span>
+            </a></li>
+            <li><a href="#">
+                <i class="far fa-newspaper"></i>
+                <span>Content Management</span>
+            </a></li>
+            <!-- <li class="log_out"><a href="#">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Log Out</span>
+            </a></li> -->
+        </ul>
+    </div>
+    <!--* We dont use main because main tag have margin: 0 auto -->
+    <section id="section">
+        <nav id="navbar">
+            <div class="sidebar-button">
+                <i onclick="toogleMenu();" class="fas fa-bars"></i>
+                <span>Employee Management</span>
+            </div>
+            <!-- <div class="search-box">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search"></i>
+            </div> -->
+            <div class="profile-details">
+                <i class="fas fa-user-circle"></i>
+                <span>Anonymous</span>
+                <i class="fas fa-caret-down"></i>
+            </div>
+        </nav>
+
+        <div class="home-content">
+            <div class="employee_list">
+                <div class="title">Employee List</div>
+                <table class="employee_details">
+                    <tr class="details topic">
+                        <td class="topic">No.</td>
+                        <td class="topic">Name</td>
+                        <td class="topic">City/Province</td>
+                        <td class="topic">Date of Birth</td>
+                        <td class="topic">Telephone</td>
+                        <td class="topic">Position</td>
+                        <td class="topic">Tools</td>
+                    </tr>
+                    <tr class="details">
+                        <td>1</td>
+                        <td><a href="#">Nguyễn Văn A</a></td>
+                        <td>Hồ Chí Minh</td>
+                        <td>01/01/2001</td>
+                        <td>0123456789</td>
+                        <td>Admin</td>
+                        <td>
+                            <button class="btn btn-primary"><i class="far fa-edit"></i></button>
+                            <button class="btn btn-danger"><i class="fas fa-minus"></i></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
