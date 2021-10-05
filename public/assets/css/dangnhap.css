@@ -1,0 +1,112 @@
+.wrapper{
+    min-height: 650px;
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.form-box{
+    background: #fff;
+    margin: auto auto;
+	padding: 30px;
+	border-radius: 3px;
+	box-shadow: 0 0 10px #000;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 400px;
+	margin: 140px auto
+}
+
+.form-box hr  {
+	margin: 0 -30px 20px;
+}
+
+.form-box .header-text{
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.form-control {
+	height: 41px;
+	background: #f2f2f2;
+	box-shadow: none !important;
+	border: none;
+}
+
+.form-control:focus {
+	background: #e2e2e2;
+}
+
+.form-control, .btn {
+	border-radius: 3px;
+}
+
+.form-box .form-group {
+	margin-bottom: 20px;
+}
+
+.form-box .btn {
+	font-size: 16px;
+	color: #fff;
+	background: #3598dc;
+	border: none;
+	min-width: 140px;
+}
+.form-box .btn:hover, .form-box .btn:focus {
+	background: #2389cd;
+	outline: none;
+}
+
+.form-box .bon{
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.form-box .signup-link{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+footer{
+    background-image: url(images/footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer-logo{
+    margin-bottom: 15px;
+}
+.col-md-4 h6{
+    margin :25px auto;
+    font-size: 1.2em;
+}
+.col-md-4 ul{
+    list-style: none;
+}
+
+.col-md-4 li{
+    line-height: 45px;
+}
+.col-md-4 a{
+    color: aliceblue;
+}
+.col-md-4{
+    padding: 15px;
+
+}
+footer .col-4{
+    padding: 0 !important;
+    width: 70px !important;
+}
