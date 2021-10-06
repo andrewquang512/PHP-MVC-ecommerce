@@ -3,7 +3,7 @@
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light   " id="navbar">
       <a class="navbar-brand text-center col-3  ml-auto" href="index.php">
-        <img width="120" height="auto" class="header-logo" src="images/mona-logo2.png">
+        <img width="120" height="auto" class="header-logo" src="public/assets/images/mona-logo2.png">
       </a>
       <button class="navbar-toggler d-lg-none ml-auto" type="button" data-toggle="collapse"
         data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -29,8 +29,8 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0 mr-auto">
-          <button class="btn btn-outline-success my-2 my-sm-0 text-dark" type="submit">Login</button>
-          <a href="/cart" class="header__cart">
+          <button class="btn btn-outline-success my-2 my-sm-0 text-dark" type="submit" href="dangnhap.php">Login</button>
+          <a href="shopping-cart.html" class="header__cart">
             <i class="fa fa-shopping-cart" ></i>
             <span >Giỏ Hàng</span>
           </a>

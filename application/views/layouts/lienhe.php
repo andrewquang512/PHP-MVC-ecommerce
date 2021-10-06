@@ -7,13 +7,13 @@
   <title>Lien he</title>
   
   
-  <link rel="shortcut icon" type="image" href="images/cropped-mona-180x180.png">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="lienhe.css">
-  <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
-  <script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
-  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="myScript.js"></script>
+  <link rel="shortcut icon" type="image" href="public/assets/images/cropped-mona-180x180.png">
+  <link rel="stylesheet" href="public/assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="public/assets/css/homepages/lienhe.css">
+  <script type="text/javascript" src="public/assets/bootstrap/js/jquery.min.js"></script>
+  <script type="text/javascript" src="public/assets/bootstrap/js/popper.min.js"></script>
+  <script type="text/javascript" src="public/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="public/assets/js/myScript.js"></script>
     <!-- Font Awesome Icon Library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>

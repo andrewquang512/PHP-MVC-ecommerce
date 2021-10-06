@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="shortcut icon" type="image" href="images/cropped-mona-180x180.png">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="trangchu.css">
-    <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="myScript.js"></script>
+    <link rel="shortcut icon" type="image" href="public/assets/images/cropped-mona-180x180.png">
+    <link rel="stylesheet" href="public/assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="public/assets/css/homepages/trangchu.css">
+    <script type="text/javascript" src="public/assets/bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="public/assets/bootstrap/js/popper.min.js"></script>
+    <script type="text/javascript" src="public/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="public/assets/js/myScript.js"></script>
 </head>
 
 <body>
@@ -48,17 +48,17 @@
                         </ol>
                         <div class="carousel-inner ">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="images/phone1.png" alt="first-slider" style="justify-content: center;"
+                                <img class="d-block w-100" src="public/assets/images/phone1.png" alt="first-slider" style="justify-content: center;"
                                     style="max-height: 300px;">
 
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="images/phone2.jpg" alt="second-slider" style="justify-content: center;"
+                                <img class="d-block w-100" src="public/assets/images/phone2.jpg" alt="second-slider" style="justify-content: center;"
                                     style="max-height: 300px;">
 
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="images/phone3.png" alt="thirds-slider" style="justify-content: center;"
+                                <img class="d-block w-100" src="public/assets/images/phone3.png" alt="thirds-slider" style="justify-content: center;"
                                     style="max-height: 300px;">
 
                             </div>

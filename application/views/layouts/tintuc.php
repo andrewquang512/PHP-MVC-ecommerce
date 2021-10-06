@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TIN TUC</title>
-  <link rel="shortcut icon" type="image" href="images/cropped-mona-180x180.png">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="tintuc.css">
+  <link rel="shortcut icon" type="image" href="public/assets/images/cropped-mona-180x180.png">
+  <link rel="stylesheet" href="public/assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="public/assets/css/homepages/tintuc.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--Get your own code at fontawesome.com-->
-  <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
-  <script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
-  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="myScript.js"></script>
+  <script type="text/javascript" src="public/assets/bootstrap/js/jquery.min.js"></script>
+  <script type="text/javascript" src="public/assets/bootstrap/js/popper.min.js"></script>
+  <script type="text/javascript" src="public/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="public/assets/js/myScript.js"></script>
 </head>
 <body>
 <?php 

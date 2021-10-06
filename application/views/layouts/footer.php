@@ -42,28 +42,28 @@
             <h6>Sản phẩm phổ biến</h6>
             <div class="row">
               <div class="col-4" ">
-                <a href="http://"><img src="images/phone1.png" alt="" style="max-width:70%;
+                <a href="http://"><img src="public/assets/images/phone1.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="col-4">
-                <a href="http://"><img src="images/phone2.jpg" alt="" style="max-width:70%;
+                <a href="http://"><img src="public/assets/images/phone2.jpg" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="col-4">
-                <a href="http://"><img src="images/phone3.png" alt="" style="max-width:70%;
+                <a href="http://"><img src="public/assets/images/phone3.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="w-100"></div>
               <div class="col-4">
-                <a href="http://"><img src="images/phone4.png" alt="" style="max-width:70%;
+                <a href="http://"><img src="public/assets/images/phone4.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="col-4">
-                <a href="http://"><img src="images/phone5.png" alt="" style="max-width:70%;
+                <a href="http://"><img src="public/assets/images/phone5.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="col-4">
-                <a href="http://"><img src="images/phone6.png" alt="" style="max-width:70%;
+                <a href="http://"><img src="public/assets/images/phone6.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
             </div>

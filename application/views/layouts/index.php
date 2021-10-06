@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRANG CHU</title>
-  <link rel="shortcut icon" type="image" href="images/cropped-mona-180x180.png">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="trangchu.css">
-  <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
-  <script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
-  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="myScript.js"></script>
+  <link rel="shortcut icon" type="image" href="public/assets/images/cropped-mona-180x180.png">
+  <link rel="stylesheet" href="public/assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="public/assets/css/homepages/trangchu.css">
+  <script type="text/javascript" src="public/assets/bootstrap/js/jquery.min.js"></script>
+  <script type="text/javascript" src="public/assets/bootstrap/js/popper.min.js"></script>
+  <script type="text/javascript" src="public/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="public/assets/js/myScript.js"></script>
   <!-- Font Awesome Icon Library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -87,20 +87,20 @@
 
             <div class="row ">
               <div class="col-md-4">
-                <img class="rounded-circle" width="250" height="250" src="images/apple.jpg" alt="">
+                <img class="rounded-circle" width="250" height="250" src="public/assets/images/apple.jpg" alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>CANADA</h5>
                 </div> -->
               </div>
               <div class="col-md-4 clearfix d-none d-md-block">
-                <img class="rounded-circle" width="250" height="250" src="images/oppo.jpg" alt="">
+                <img class="rounded-circle" width="250" height="250" src="public/assets/images/oppo.jpg" alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>BRAZIL</h5>
                 </div> -->
               </div>
 
               <div class="col-md-4 clearfix d-none d-md-block">
-                <img class="rounded-circle" width="250" height="250" src="images/huawei.jpg" alt="">
+                <img class="rounded-circle" width="250" height="250" src="public/assets/images/huawei.jpg" alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>CUBA</h5>
                 </div> -->
@@ -116,7 +116,7 @@
             <div class="row">
               <div class="col-md-4">
 
-                <img class="rounded-circle" width="250" height="250" src="images/samsung.jpg" alt="">
+                <img class="rounded-circle" width="250" height="250" src="public/assets/images/samsung.jpg" alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>ITALY</h5>
                 </div> -->
@@ -124,7 +124,7 @@
 
               <div class="col-md-4 clearfix d-none d-md-block">
 
-                <img class="rounded-circle" width="250" height="250" src="images/vivo.jpg" alt="">
+                <img class="rounded-circle" width="250" height="250" src="public/assets/images/vivo.jpg" alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>USA</h5>
                 </div> -->
@@ -132,7 +132,7 @@
 
               <div class="col-md-4 clearfix d-none d-md-block">
 
-                <img class="rounded-circle" width="250" height="250" src="images/xiaomi.jpg"
+                <img class="rounded-circle" width="250" height="250" src="public/assets/images/xiaomi.jpg"
                   alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>PHILIPPINES</h5>
@@ -187,7 +187,7 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="card mb-2">
-                  <img class="card-img-top" src="images/phone1.png" alt="">
+                  <img class="card-img-top" src="public/assets/images/phone1.png" alt="">
                   <div class="card-body">
                     <!-- <h3 class="card-title">SamSung Galaxy S21 Ultra</h3> -->
                     <p class="card-text">SamSung Galaxy S21 Ultra</p>
@@ -212,7 +212,7 @@
 
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
-                  <img class="card-img-top" src="images/phone2.jpg" alt="">
+                  <img class="card-img-top" src="public/assets/images/phone2.jpg" alt="">
                   <div class="card-body">
                     <p class="card-text">Iphone 12 64GB</p>
                     <div>
@@ -237,7 +237,7 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="images/phone3.png" alt="">
+                    src="public/assets/images/phone3.png" alt="">
                   <div class="card-body">
                     <p class="card-text">OPPO Reno6 5G 8G/128GB </p>
                     <div>
@@ -270,7 +270,7 @@
               <div class="col-md-4">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="images/phone4.png" alt="">
+                    src="public/assets/images/phone4.png" alt="">
                   <div class="card-body">
                     <p class="card-text">Vivo Y12s (4GB/128GB)</p>
                     <div>
@@ -295,7 +295,7 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="images/phone5.png" alt="">
+                    src="public/assets/images/phone5.png" alt="">
                   <div class="card-body">
                     <p class="card-text">Xiami Redmi 9T (6GB/128GB)</p>
                     <div>
@@ -320,7 +320,7 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="images/phone6.png" alt="">
+                    src="public/assets/images/phone6.png" alt="">
                   <div class="card-body">
                     <p class="card-text">Huawei P30 Pro 256GB</p>
                     <div>
@@ -370,7 +370,7 @@
       <div class="row" style="width: 80%; margin: 0 auto;">
         <div class="col-md-4 ">
           <div class="achiev-card mb-2">
-            <img class="achiev-icon" src="images/smartphone.png" alt="">
+            <img class="achiev-icon" src="public/assets/images/smartphone.png" alt="">
             <div class="card-body">
               <div>
                 <span style="font-weight: bold; font-size: 1.1em;">Sản phẩm tốt nhất
@@ -382,7 +382,7 @@
         </div>
         <div class="col-md-4 ">
           <div class="achiev-card mb-2">
-            <img class="achiev-icon" src="images/customer-service.png" alt="">
+            <img class="achiev-icon" src="public/assets/images/customer-service.png" alt="">
             <div class="card-body">
               <div>
                 <span style="font-weight: bold; font-size: 1.1em;">Tư vấn 24/7
@@ -394,7 +394,7 @@
         </div>
         <div class="col-md-4 ">
           <div class="achiev-card mb-2">
-            <img class="achiev-icon" src="images/best-price.png" alt="">
+            <img class="achiev-icon" src="public/assets/images/best-price.png" alt="">
             <div class="card-body">
               <div>
                 <span style="font-weight: bold; font-size: 1.1em;">Giá luôn tốt nhất
@@ -415,7 +415,7 @@
         <div class="col-12 col-md-6 col-lg-3 ">
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
-              src="images/phone-icon.png" alt="">
+              src="public/assets/images/phone-icon.png" alt="">
             <div class="card-body">
               <div>
                 <span class="number">20,549+
@@ -428,7 +428,7 @@
         <div class="col-12 col-md-6 col-lg-3 ">
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
-              src="images/guest.png" alt="">
+              src="public/assets/images/guest.png" alt="">
             <div class="card-body">
               <div>
                 <span class="number">60,419+
@@ -441,7 +441,7 @@
         <div class="col-12 col-md-6 col-lg-3">
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
-              src="images/world.png" alt="">
+              src="public/assets/images/world.png" alt="">
             <div class="card-body">
               <div>
                 <span class="number">100+
@@ -455,7 +455,7 @@
           
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
-              src="images/money.png" alt="">
+              src="public/assets/images/money.png" alt="">
             <div class="card-body">
               <div>
                 <span class="number">200000$+

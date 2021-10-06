@@ -7,12 +7,12 @@
   <title>Gioi Thieu</title>
   
   
-  <link rel="shortcut icon" type="image" href="images/cropped-mona-180x180.png">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="gioithieu.css">
-  <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
-  <script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
-  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" type="image" href="public/assets/images/cropped-mona-180x180.png">
+  <link rel="stylesheet" href="public/assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="public/assets/css/homepages/gioithieu.css">
+  <script type="text/javascript" src="public/assets/bootstrap/js/jquery.min.js"></script>
+  <script type="text/javascript" src="public/assets/bootstrap/js/popper.min.js"></script>
+  <script type="text/javascript" src="public/assets/bootstrap/js/bootstrap.min.js"></script>
     <!-- Font Awesome Icon Library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -36,13 +36,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="images/gt1.JPG" class="d-block w-100" alt="...">
+              <img src="public/assets/images/gt1.JPG" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="images/gt2.jpg" class="d-block w-100" alt="...">
+              <img src="public/assets/images/gt2.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="images/gt3.jpg" class="d-block w-100" alt="...">
+              <img src="public/assets/images/gt3.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
