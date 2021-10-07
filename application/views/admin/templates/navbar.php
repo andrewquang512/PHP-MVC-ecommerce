@@ -13,9 +13,9 @@
         //echo 'Current page contains index.php';
         $title = "Content Management";
     }
-    if (strpos($url, 'employee_manage.php') == true) {
+    if (strpos($url, 'customer_manage.php') == true) {
         //echo 'Current page contains index.php';
-        $title = "Employee Management";
+        $title = "Customer Management";
     }
     ?>
     <div class="sidebar-button">

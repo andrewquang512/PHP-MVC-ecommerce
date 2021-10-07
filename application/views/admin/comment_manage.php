@@ -5,7 +5,7 @@
         <?php include "./templates/sidebar.php"; ?>
         <section id="section">
             <?php include "./templates/navbar.php"; ?>
-            <div class="home-content">
+            <div class="home-content" id="homecontent">
                 <div class="employee_list">
                 <!-- Website Overview -->
                     <div class="panel panel-default">
@@ -47,7 +47,6 @@
                                         <li class=""><button class="btn btn-primary">Change Visibility</button></li>
                                         <li class=""><button class="btn btn-danger">Delete</button></li>
                                     </ul>
-
                                 </div>
                             </div>
                             <!-- COMMENT 1 - END -->

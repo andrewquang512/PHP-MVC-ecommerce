@@ -19,9 +19,9 @@
                 <i class="fas fa-money-bill-wave"></i>
                 <span>Sales Management</span>
             </a> </li>
-            <li><a class="<?php echo ($page == 'employee_manage.php') ? 'active' : ''; ?>" href="./employee_manage.php">
+            <li><a class="<?php echo ($page == 'customer_manage.php') ? 'active' : ''; ?>" href="./customer_manage.php">
                 <i class="fas fa-users"></i>
-                <span>Employee Management</span>
+                <span>Customer Management</span>
             </a> </li>
             <li><a class="<?php echo ($page == 'comment_manage.php') ? 'active' : ''; ?>" href="./comment_manage.php">
                     <i class="fas fa-comments"></i>

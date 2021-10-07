@@ -5,7 +5,7 @@
         <?php include "./templates/sidebar.php"; ?>
         <section id="section">
             <?php include "./templates/navbar.php"; ?>
-            <div class="home-content">
+            <div class="home-content" id="homecontent">
                 <div class="home-content">
                     <div class="demo_list">
                         <div class="test">
