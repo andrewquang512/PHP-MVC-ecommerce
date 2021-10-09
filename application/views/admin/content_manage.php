@@ -64,6 +64,11 @@
                                     </td>
                                 </tr>
                             </table>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add a new Post</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

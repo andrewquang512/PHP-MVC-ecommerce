@@ -17,6 +17,14 @@
         //echo 'Current page contains index.php';
         $title = "Customer Management";
     }
+    if (strpos($url, 'contact_management.php') == true) {
+        //echo 'Current page contains index.php';
+        $title = "Contact Management";
+    }
+    if (strpos($url, 'product_manage.php') == true) {
+        //echo 'Current page contains index.php';
+        $title = "Product Management";
+    }
     ?>
     <div class="sidebar-button">
         <i onclick="toogleMenu();" class="fas fa-bars"></i>
