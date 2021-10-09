@@ -17,7 +17,7 @@
         //echo 'Current page contains index.php';
         $title = "Customer Management";
     }
-    if (strpos($url, 'contact_management.php') == true) {
+    if (strpos($url, 'contact_manage.php') == true) {
         //echo 'Current page contains index.php';
         $title = "Contact Management";
     }
