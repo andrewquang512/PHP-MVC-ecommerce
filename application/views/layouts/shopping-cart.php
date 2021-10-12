@@ -117,7 +117,7 @@
             </div>
             <div class="col col-lg-1 all-center">
               <img
-                src="<?php echo (CSSPATH . 'images/phone1.png'); ?>"
+                src="<?php echo (CSSPATH . 'images/dtdd/phone1/1.png'); ?>"
                 alt="phone1"
                 class="img-size"
               />
@@ -164,7 +164,7 @@
             </div>
             <div class="col col-lg-1 all-center">
               <img
-                src="<?php echo (CSSPATH . 'images/phone3.png'); ?>"
+                src="<?php echo (CSSPATH . 'images/dtdd/phone3/1.png'); ?>"
                 alt="phone1"
                 class="img-size"
               />
@@ -211,7 +211,7 @@
             </div>
             <div class="col col-lg-1 all-center">
               <img
-                src="<?php echo (CSSPATH . 'images/phone4.png'); ?>"
+                src="<?php echo (CSSPATH . 'images/dtdd/phone4/1.png'); ?>"
                 alt="phone1"
                 class="img-size"
               />
@@ -258,7 +258,7 @@
             </div>
             <div class="col col-lg-1 all-center">
               <img
-                src="<?php echo (CSSPATH . 'images/phone5.png'); ?>"
+                src="<?php echo (CSSPATH . 'images/dtdd/phone5/1.png'); ?>"
                 alt="phone1"
                 class="img-size"
               />
