@@ -25,7 +25,7 @@
       ?>
 
 
-        <div class="path-menu">
+        <div class="path-menu" style="background-image: url(<?php echo (CSSPATH . 'images/try.jpg'); ?>);">
             <div class="path">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">

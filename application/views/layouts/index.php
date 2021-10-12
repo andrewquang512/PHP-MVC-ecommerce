@@ -2,20 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRANG CHU</title>
-  <link rel="shortcut icon" type="image" href="public/assets/images/cropped-mona-180x180.png">
-  <link rel="stylesheet" href="public/assets/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="public/assets/css/homepages/trangchu.css">
-  <script type="text/javascript" src="public/assets/bootstrap/js/jquery.min.js"></script>
-  <script type="text/javascript" src="public/assets/bootstrap/js/popper.min.js"></script>
-  <script type="text/javascript" src="public/assets/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="public/assets/js/myScript.js"></script>
-  <!-- Font Awesome Icon Library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <?php 
+    include('head.php');
+  ?>
+  <link rel="stylesheet" href="<?php echo (CSSPATH . "css/homepages/trangchu.css"); ?>" type="text/css">
 </head>
-
 <body>
 
   <div class="container-fluid" style="padding: 0;">
@@ -35,7 +27,7 @@
 
         <div class="carousel-inner ">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="images/slider1.jpg" alt="first-slider">
+            <img class="d-block w-100" src="<?php echo (CSSPATH . 'images/slider1.jpg'); ?>" alt="first-slider">
             <div class="carousel-caption d-none d-md-block text-left" style="margin-bottom: 5%;">
               <p>MONA SHOP – NƠI CUNG CẤP ĐIỆN THOẠI UY TÍN</p>
               <h2>HỖ TRỢ CHO BẠN </h2>
@@ -43,7 +35,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="images/slider2.jpg" alt="second-slider">
+            <img class="d-block w-100" src="<?php echo (CSSPATH . 'images/slider2.jpg'); ?>" alt="second-slider">
             <div class="carousel-caption d-none d-md-block text-left" style="margin-bottom: 5%;">
               <p>MONA SHOP – NƠI CUNG CẤP ĐIỆN THOẠI UY TÍN</p>
               <h2>HỖ TRỢ CHO BẠN </h2>
@@ -51,7 +43,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="images/slider3.jpg" alt="thirds-slider">
+            <img class="d-block w-100" src="<?php echo (CSSPATH . 'images/slider3.jpg'); ?>" alt="thirds-slider">
             <div class="carousel-caption d-none d-md-block text-left" style="margin-bottom: 5%;">
               <p>MONA SHOP – NƠI CUNG CẤP ĐIỆN THOẠI UY TÍN</p>
               <h2>HỖ TRỢ CHO BẠN </h2>
@@ -87,20 +79,20 @@
 
             <div class="row ">
               <div class="col-md-4">
-                <img class="rounded-circle" width="250" height="250" src="public/assets/images/apple.jpg" alt="">
+                <img class="rounded-circle" width="250" height="250" src="<?php echo (CSSPATH . 'images/apple.jpg'); ?>" alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>CANADA</h5>
                 </div> -->
               </div>
               <div class="col-md-4 clearfix d-none d-md-block">
-                <img class="rounded-circle" width="250" height="250" src="public/assets/images/oppo.jpg" alt="">
+                <img class="rounded-circle" width="250" height="250" src="<?php echo (CSSPATH . 'images/oppo.jpg'); ?>" alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>BRAZIL</h5>
                 </div> -->
               </div>
 
               <div class="col-md-4 clearfix d-none d-md-block">
-                <img class="rounded-circle" width="250" height="250" src="public/assets/images/huawei.jpg" alt="">
+                <img class="rounded-circle" width="250" height="250" src="<?php echo (CSSPATH . 'images/huawei.jpg'); ?>" alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>CUBA</h5>
                 </div> -->
@@ -116,7 +108,7 @@
             <div class="row">
               <div class="col-md-4">
 
-                <img class="rounded-circle" width="250" height="250" src="public/assets/images/samsung.jpg" alt="">
+                <img class="rounded-circle" width="250" height="250" src="<?php echo (CSSPATH . 'images/samsung.jpg'); ?>" alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>ITALY</h5>
                 </div> -->
@@ -124,7 +116,7 @@
 
               <div class="col-md-4 clearfix d-none d-md-block">
 
-                <img class="rounded-circle" width="250" height="250" src="public/assets/images/vivo.jpg" alt="">
+                <img class="rounded-circle" width="250" height="250" src="<?php echo (CSSPATH . 'images/vivo.jpg'); ?>" alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>USA</h5>
                 </div> -->
@@ -132,7 +124,7 @@
 
               <div class="col-md-4 clearfix d-none d-md-block">
 
-                <img class="rounded-circle" width="250" height="250" src="public/assets/images/xiaomi.jpg"
+                <img class="rounded-circle" width="250" height="250" src="<?php echo (CSSPATH . 'images/xiaomi.jpg'); ?>"
                   alt="">
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h5>PHILIPPINES</h5>
@@ -160,7 +152,7 @@
 
     </section>
 
-    <section class="home-inland" style="margin-top: 50px; padding-bottom: 50px;">
+    <section class="home-inland" style="margin-top: 50px; padding-bottom: 50px;background-image: url(<?php echo (CSSPATH . 'images/background.jpg'); ?>);">
       <p class="text-center">Tham khảo các sản phẩm nổi bật của tháng</p>
       <h2 class="text-center" style="margin-bottom: 30px;">PHONE BEST SALELER</h2>
 
@@ -187,7 +179,7 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="card mb-2">
-                  <img class="card-img-top" src="public/assets/images/phone1.png" alt="">
+                  <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone1.png'); ?>" alt="">
                   <div class="card-body">
                     <!-- <h3 class="card-title">SamSung Galaxy S21 Ultra</h3> -->
                     <p class="card-text">SamSung Galaxy S21 Ultra</p>
@@ -212,7 +204,7 @@
 
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
-                  <img class="card-img-top" src="public/assets/images/phone2.jpg" alt="">
+                  <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone2.jpg'); ?>" alt="">
                   <div class="card-body">
                     <p class="card-text">Iphone 12 64GB</p>
                     <div>
@@ -237,7 +229,7 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="public/assets/images/phone3.png" alt="">
+                    src="<?php echo (CSSPATH . 'images/phone3.png'); ?>" alt="">
                   <div class="card-body">
                     <p class="card-text">OPPO Reno6 5G 8G/128GB </p>
                     <div>
@@ -270,7 +262,7 @@
               <div class="col-md-4">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="public/assets/images/phone4.png" alt="">
+                    src="<?php echo (CSSPATH . 'images/phone4.png'); ?>" alt="">
                   <div class="card-body">
                     <p class="card-text">Vivo Y12s (4GB/128GB)</p>
                     <div>
@@ -295,7 +287,7 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="public/assets/images/phone5.png" alt="">
+                    src="<?php echo (CSSPATH . 'images/phone5.png'); ?>" alt="">
                   <div class="card-body">
                     <p class="card-text">Xiami Redmi 9T (6GB/128GB)</p>
                     <div>
@@ -320,7 +312,7 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="public/assets/images/phone6.png" alt="">
+                    src="<?php echo (CSSPATH . 'images/phone6.png'); ?>" alt="">
                   <div class="card-body">
                     <p class="card-text">Huawei P30 Pro 256GB</p>
                     <div>
@@ -370,7 +362,7 @@
       <div class="row" style="width: 80%; margin: 0 auto;">
         <div class="col-md-4 ">
           <div class="achiev-card mb-2">
-            <img class="achiev-icon" src="public/assets/images/smartphone.png" alt="">
+            <img class="achiev-icon" src="<?php echo (CSSPATH . 'images/smartphone.png'); ?>" alt="">
             <div class="card-body">
               <div>
                 <span style="font-weight: bold; font-size: 1.1em;">Sản phẩm tốt nhất
@@ -382,7 +374,7 @@
         </div>
         <div class="col-md-4 ">
           <div class="achiev-card mb-2">
-            <img class="achiev-icon" src="public/assets/images/customer-service.png" alt="">
+            <img class="achiev-icon" src="<?php echo (CSSPATH . 'images/customer-service.png'); ?>" alt="">
             <div class="card-body">
               <div>
                 <span style="font-weight: bold; font-size: 1.1em;">Tư vấn 24/7
@@ -394,7 +386,7 @@
         </div>
         <div class="col-md-4 ">
           <div class="achiev-card mb-2">
-            <img class="achiev-icon" src="public/assets/images/best-price.png" alt="">
+            <img class="achiev-icon" src="<?php echo (CSSPATH . 'images/best-price.png'); ?>" alt="">
             <div class="card-body">
               <div>
                 <span style="font-weight: bold; font-size: 1.1em;">Giá luôn tốt nhất
@@ -407,7 +399,7 @@
       </div>
     </section>
 
-    <section class="achieve" > 
+    <section class="achieve" style="background-image: url(<?php echo (CSSPATH . 'images/achieve.jpg'); ?>);"> 
       <h5>PHỤNG SỰ KHÁCH HÀNG 8 NĂM</h5>
       <h2 class="text-center" style="margin-bottom: 30px;">THÀNH QUẢ CỦA MONA SHOP</h2>
 
@@ -415,7 +407,7 @@
         <div class="col-12 col-md-6 col-lg-3 ">
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
-              src="public/assets/images/phone-icon.png" alt="">
+              src="<?php echo (CSSPATH . 'images/phone-icon.png'); ?>" alt="">
             <div class="card-body">
               <div>
                 <span class="number">20,549+
@@ -428,7 +420,7 @@
         <div class="col-12 col-md-6 col-lg-3 ">
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
-              src="public/assets/images/guest.png" alt="">
+              src="<?php echo (CSSPATH . 'images/guest.png'); ?>" alt="">
             <div class="card-body">
               <div>
                 <span class="number">60,419+
@@ -441,7 +433,7 @@
         <div class="col-12 col-md-6 col-lg-3">
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
-              src="public/assets/images/world.png" alt="">
+              src="<?php echo (CSSPATH . 'images/world.png'); ?>" alt="">
             <div class="card-body">
               <div>
                 <span class="number">100+
@@ -455,7 +447,7 @@
           
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
-              src="public/assets/images/money.png" alt="">
+              src="<?php echo (CSSPATH . 'images/money.png'); ?>" alt="">
             <div class="card-body">
               <div>
                 <span class="number">200000$+

@@ -1,126 +1,146 @@
 /* A little change in header */
 .header__cart {
-    border: 1px solid red;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 14px;
-    margin-left: 10px;
-    padding: 5px 8px;
-    width: 110px;
-    height:35px;
+  border: 1px solid red;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-left: 10px;
+  padding: 5px 8px;
+  width: 110px;
+  height: 35px;
 }
-.header__cart:hover{
-    background-color:red;
-    transition:1s;
+.header__cart:hover {
+  background-color: red;
+  transition: 1s;
 }
-.header__cart:hover i{
-    color:#fff;
+.header__cart:hover i {
+  color: #fff;
 }
-.header__cart:hover span{
-    color:#fff;
+.header__cart:hover span {
+  color: #fff;
 }
 .header__cart i {
-    margin-right: 5px;
-    font-size:20px;
-    color:black
+  margin-right: 5px;
+  font-size: 20px;
+  color: black;
 }
-.header__cart span{
-    color:black; 
-    font-size:14px;
+.header__cart span {
+  color: black;
+  font-size: 14px;
 }
-.header__cart i, .header__cart span {
-    display: inline-block;
-    vertical-align: middle;
+.header__cart i,
+.header__cart span {
+  display: inline-block;
+  vertical-align: middle;
 }
 .icon-cart {
-    background-position: -175px 0;
-    height: 18px;
-    width: 20px;
+  background-position: -175px 0;
+  height: 18px;
+  width: 20px;
 }
-.header__cart i, .header__cart span {
-    display: inline-block;
-    vertical-align: middle;
+.header__cart i,
+.header__cart span {
+  display: inline-block;
+  vertical-align: middle;
 }
 /* For separate part of php */
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-.container-fluid{
-    padding: 50px;
-    background-image: url("images/bg.jpg");
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.container-fluid {
+  padding: 50px;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.ads{
-    -webkit-animation: color_change 0.3s infinite alternate;
-	-moz-animation: color_change 0.3s infinite alternate;
-	-ms-animation: color_change 0.3s infinite alternate;
-	-o-animation: color_change 0.3s infinite alternate;
-    animation: color_change 0.3s infinite alternate;   
+.ads {
+  -webkit-animation: color_change 0.3s infinite alternate;
+  -moz-animation: color_change 0.3s infinite alternate;
+  -ms-animation: color_change 0.3s infinite alternate;
+  -o-animation: color_change 0.3s infinite alternate;
+  animation: color_change 0.3s infinite alternate;
 }
 @-webkit-keyframes color_change {
-	from {color: blue; }
-	to {color: red; }
+  from {
+    color: blue;
+  }
+  to {
+    color: red;
+  }
 }
 @-moz-keyframes color_change {
-	from {color: blue; }
-	to {color: red; }
+  from {
+    color: blue;
+  }
+  to {
+    color: red;
+  }
 }
 @-ms-keyframes color_change {
-	from {color: blue; }
-	to {color: red; }
+  from {
+    color: blue;
+  }
+  to {
+    color: red;
+  }
 }
 @-o-keyframes color_change {
-	from {color: blue; }
-	to {color: red; }
+  from {
+    color: blue;
+  }
+  to {
+    color: red;
+  }
 }
 @keyframes color_change {
-	from {color: blue; }
-	to {color: red; }
+  from {
+    color: blue;
+  }
+  to {
+    color: red;
+  }
 }
-.footer-col{
-    padding: 20px auto;
+.text-dark {
+  font-size: 1em;
+  font-weight: bold;
 }
-
-footer{
-    background-image: url(images/footer.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.footer-logo{
-    margin-bottom: 15px;
-}
-.col-md-4 h6{
-    margin :25px auto;
-    font-size: 1.2em;
-}
-.col-md-4 ul{
-    list-style: none;
+.footer-col {
+  padding: 20px auto;
 }
 
-.col-md-4 li{
-    line-height: 45px;
+footer {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.col-md-4 a{
-    color: aliceblue;
+.footer-logo {
+  margin-bottom: 15px;
 }
-.col-md-4{
-    padding: 15px;
-    
+.col-md-4 h6 {
+  margin: 25px auto;
+  font-size: 1.2em;
 }
-footer .col-4{
-    padding: 0 !important;
-    width: 70px !important;
-}
-.card-text{
-    font-size: 20px;
-    max-height: 20%;
+.col-md-4 ul {
+  list-style: none;
 }
 
-
-
+.col-md-4 li {
+  line-height: 45px;
+}
+.col-md-4 a {
+  color: aliceblue;
+}
+.col-md-4 {
+  padding: 15px;
+}
+footer .col-4 {
+  padding: 0 !important;
+  width: 70px !important;
+}
+.card-text {
+  font-size: 20px;
+  max-height: 20%;
+}

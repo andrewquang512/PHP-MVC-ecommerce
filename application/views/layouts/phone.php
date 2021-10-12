@@ -2,19 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
   <title>PHONE</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image" href="public/assets/images/cropped-mona-180x180.png">
-  <link rel="stylesheet" href="public/assets/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="public/assets/css/homepages/phone.css">
-  <script type="text/javascript" src="public/assets/bootstrap/js/jquery.min.js"></script>
-  <script type="text/javascript" src="public/assets/bootstrap/js/popper.min.js"></script>
-  <script type="text/javascript" src="public/assets/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="public/assets/js/myScript.js"></script>
-    <!-- Font Awesome Icon Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <?php 
+    include('head.php');
+  ?>
+  <link rel="stylesheet" href="<?php echo (CSSPATH . "css/homepages/phone.css"); ?>" type="text/css">
 </head>
 
 <body>
@@ -69,7 +61,7 @@
 
           <div class="col-12 col-md-6 col-lg-4 ">
             <div class="card mb-2">
-              <img class="card-img-top" src="public/assets/images/phone1.png" alt="">
+              <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone1.png'); ?>" alt="">
               <div class="card-body">
                 <p class="card-text" style="margin-bottom:10px">SamSung Galaxy S21 Ultra</p>
                 <p style="margin-bottom:5px; font-style:italic">Quà tặng 300.000đ</p>
@@ -90,7 +82,7 @@
 
           <div class="col-12 col-md-6 col-lg-4 ">
             <div class="card mb-2">
-              <img class="card-img-top" src="public/assets/images/phone2.jpg" alt="">
+              <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone2.jpg'); ?>" alt="">
               <div class="card-body">
                 <p class="card-text" style="margin-bottom:10px">Iphone 12 64GB</p>
                 <p style="margin-bottom:5px; font-style:italic">Quà tặng 100.000đ</p>
@@ -111,7 +103,7 @@
 
           <div class="col-12 col-md-6 col-lg-4 ">
             <div class="card mb-2">
-              <img class="card-img-top" src="public/assets/images/phone3.png" alt="">
+              <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone3.png'); ?>" alt="">
               <div class="card-body">
                 <p class="card-text" style="margin-bottom:10px">OPPO Reno6 5G 8G/128GB</p>
                 <p style="margin-bottom:5px; font-style:italic">Quà tặng 50.000đ</p>
@@ -132,7 +124,7 @@
 
           <div class="col-12 col-md-6 col-lg-4 ">
             <div class="card mb-2">
-              <img class="card-img-top" src="public/assets/images/phone4.png" alt="">
+              <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone4.png'); ?>" alt="">
               <div class="card-body">
                 <p class="card-text" style="margin-bottom:10px">Vivo Y12s (4GB/128GB)</p>
                 <p style="margin-bottom:5px; font-style:italic">Quà tặng 150.000đ</p>
@@ -153,7 +145,7 @@
 
           <div class="col-12 col-md-6 col-lg-4 ">
             <div class="card mb-2">
-              <img class="card-img-top" src="public/assets/images/phone5.png" alt="">
+              <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone5.png'); ?>" alt="">
               <div class="card-body">
                 <p class="card-text" style="margin-bottom:10px">Xiami Redmi 9T (6GB/128GB)</p>
                 <p style="margin-bottom:5px; font-style:italic">Quà tặng 300.000đ</p>
@@ -174,7 +166,7 @@
 
           <div class="col-12 col-md-6 col-lg-4 ">
             <div class="card mb-2">
-              <img class="card-img-top" src="public/assets/images/phone6.png" alt="">
+              <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone6.png'); ?>" alt="">
               <div class="card-body">
                 <p class="card-text" style="margin-bottom:10px">Huawei P30 Pro 256GB</p>
                 <p style="margin-bottom:5px; font-style:italic">Quà tặng 200.000đ</p>
@@ -200,7 +192,7 @@
           <div class="row mr-auto ml-auto">
             <div class="col-12 col-md-6 col-lg-4 mr-auto ml-auto">
               <div class="card mb-2" style="width: 110%;">
-                <img class="card-img-top" src="public/assets/images/phone7.jpg" alt="">
+                <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone7.jpg'); ?>" alt="">
                 <div class="card-body">
                   <p class="card-text" style="margin-bottom:10px">Samsung Galaxy Z Fold3</p>
                   <p style="margin-bottom:5px; font-style:italic"> Giảm giá: <span style="text-decoration-line: line-through;">42.100.000đ</span> -5%</p>
@@ -221,7 +213,7 @@
 
             <div class="col-12 col-md-6 col-lg-4 mr-auto ml-auto">
               <div class="card mb-2" style="width: 110%;">
-                <img class="card-img-top" src="public/assets/images/phone8.jpg" alt="">
+                <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone8.jpg'); ?>" alt="">
                 <div class="card-body">
                   <p class="card-text" style="margin-bottom:10px">Xiami Mi 11 Lite</p>
                   <p style="margin-bottom:5px; font-style:italic"> Giảm giá: <span style="text-decoration-line: line-through;">8.350.000đ</span> -10%</p>

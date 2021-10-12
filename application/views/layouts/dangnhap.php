@@ -2,16 +2,60 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DANG NHAP</title>
-  <link rel="shortcut icon" type="image" href="public/assets/images/cropped-mona-180x180.png">
-  <link rel="stylesheet" href="public/assets/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="public/assets/css/homepages/dangnhap.css">
-  <script type="text/javascript" src="public/assets/bootstrap/js/jquery.min.js"></script>
-  <script type="text/javascript" src="public/assets/bootstrap/js/popper.min.js"></script>
-  <script type="text/javascript" src="public/assets/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="public/assets/js/myScript.js"></script>
+  <title>DANG NHAP</title>  
+<style>
+     /* A little change in header */
+ .header__cart {
+  border: 1px solid red;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-left: 10px;
+  padding: 5px 8px;
+  width: 110px;
+  height: 35px;
+ }
+ .header__cart:hover {
+  background-color: red;
+  transition: 1s;
+ }
+ .header__cart:hover i {
+  color: #fff;
+ }
+ .header__cart:hover span {
+  color: #fff;
+ }
+ .header__cart i {
+  margin-right: 5px;
+  font-size: 20px;
+  color: black;
+ }
+ .header__cart span {
+  color: black;
+  font-size: 14px;
+ }
+ .header__cart i,
+ .header__cart span {
+  display: inline-block;
+  vertical-align: middle;
+ }
+ .icon-cart {
+  background-position: -175px 0;
+  height: 18px;
+  width: 20px;
+ }
+ .header__cart i,
+ .header__cart span {
+  display: inline-block;
+  vertical-align: middle;
+ }
+</style>
+  <?php 
+    include('head.php');
+  ?>
+  <link rel="stylesheet" href="<?php echo (CSSPATH . "css/homepages/dangnhap.css"); ?>" type="text/css">
 </head>
 <body>
     <?php
@@ -43,5 +87,6 @@
     <?php
     include('footer.php');
     ?>
+    
 </body>
 </html>
