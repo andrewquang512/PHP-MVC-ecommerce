@@ -179,7 +179,7 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="card mb-2">
-                  <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone1.png'); ?>" alt="">
+                  <img class="card-img-top" src="<?php echo (CSSPATH . 'images/dtdd/phone1/1.png'); ?>" alt="">
                   <div class="card-body">
                     <!-- <h3 class="card-title">SamSung Galaxy S21 Ultra</h3> -->
                     <p class="card-text">SamSung Galaxy S21 Ultra</p>
@@ -204,7 +204,7 @@
 
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
-                  <img class="card-img-top" src="<?php echo (CSSPATH . 'images/phone2.jpg'); ?>" alt="">
+                  <img class="card-img-top" src="<?php echo (CSSPATH . 'images/dtdd/phone2/1.png'); ?>" alt="">
                   <div class="card-body">
                     <p class="card-text">Iphone 12 64GB</p>
                     <div>
@@ -229,7 +229,7 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="<?php echo (CSSPATH . 'images/phone3.png'); ?>" alt="">
+                    src="<?php echo (CSSPATH . 'images/dtdd/phone3/1.png'); ?>" alt="">
                   <div class="card-body">
                     <p class="card-text">OPPO Reno6 5G 8G/128GB </p>
                     <div>
@@ -262,7 +262,7 @@
               <div class="col-md-4">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="<?php echo (CSSPATH . 'images/phone4.png'); ?>" alt="">
+                    src="<?php echo (CSSPATH . 'images/dtdd/phone4/1.png'); ?>" alt="">
                   <div class="card-body">
                     <p class="card-text">Vivo Y12s (4GB/128GB)</p>
                     <div>
@@ -287,7 +287,7 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="<?php echo (CSSPATH . 'images/phone5.png'); ?>" alt="">
+                    src="<?php echo (CSSPATH . 'images/dtdd/phone5/1.png'); ?>" alt="">
                   <div class="card-body">
                     <p class="card-text">Xiami Redmi 9T (6GB/128GB)</p>
                     <div>
@@ -312,7 +312,7 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
-                    src="<?php echo (CSSPATH . 'images/phone6.png'); ?>" alt="">
+                    src="<?php echo (CSSPATH . 'images/dtdd/phone6/1.png'); ?>" alt="">
                   <div class="card-body">
                     <p class="card-text">Huawei P30 Pro 256GB</p>
                     <div>
