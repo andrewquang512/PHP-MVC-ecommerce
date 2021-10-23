@@ -30,7 +30,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0 mr-auto">
           <a href="dangnhap.php">
-          <button class="btn btn-outline-success my-2 my-sm-0 text-dark" style=" font-size: 1em;font-weight: bold;" type="submit" >Login</button>
+          <button class="btn btn-outline-success my-2 my-sm-0 text-dark" style=" font-size: 1em;font-weight: bold;" type="button" >Login</button>
           </a>  
           <a href="shopping-cart.php" class="header__cart">
             <i class="fa fa-shopping-cart" ></i>
