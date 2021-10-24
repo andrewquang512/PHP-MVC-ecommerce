@@ -5,7 +5,7 @@
 ?> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image" href="<?php echo (CSSPATH . 'images/cropped-mona-180x180.png'); ?>">
+  <link rel="shortcut icon" type="image" href="http://localhost/PHP-MVC-ecommerce/public/assets/images/cropped-mona-180x180.png">
   <link rel="stylesheet" href="<?php echo (CSSPATH . 'bootstrap/css/bootstrap.css'); ?>">
   <script type="text/javascript" src="<?php echo (CSSPATH . 'bootstrap/js/jquery.min.js'); ?>"></script>
   <script type="text/javascript" src="<?php echo (CSSPATH . 'bootstrap/js/popper.min.js'); ?>"></script>
