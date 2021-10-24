@@ -3,7 +3,7 @@
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light   " id="navbar">
       <a class="navbar-brand text-center col-3  ml-auto" href="index.php">
-        <img width="120" height="auto" class="header-logo" src="<?php echo (CSSPATH . "images/mona-logo2.png"); ?>">
+        <img width="120" height="auto" class="header-logo" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/mona-logo2.png">
       </a>
       <button class="navbar-toggler d-lg-none ml-auto" type="button" data-toggle="collapse"
         data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -30,7 +30,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0 mr-auto">
           <a href="dangnhap.php">
-          <button class="btn btn-outline-success my-2 my-sm-0 text-dark" style=" font-size: 1em;font-weight: bold;" type="submit" >Login</button>
+          <button class="btn btn-outline-success my-2 my-sm-0 text-dark" style=" font-size: 1em;font-weight: bold;" type="button" >Login</button>
           </a>  
           <a href="shopping-cart.php" class="header__cart">
             <i class="fa fa-shopping-cart" ></i>

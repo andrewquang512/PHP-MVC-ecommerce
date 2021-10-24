@@ -182,7 +182,7 @@
                   <img class="card-img-top" src="<?php echo (CSSPATH . 'images/dtdd/phone1/1.png'); ?>" alt="">
                   <div class="card-body">
                     <!-- <h3 class="card-title">SamSung Galaxy S21 Ultra</h3> -->
-                    <p class="card-text">SamSung Galaxy S21 Ultra</p>
+                    <p class="card-text" <a href="../detailed/samsung-galaxy-21">SamSung Galaxy S21 Ultra</a></p>
                     <div>
                       <span class="price">26,990,000
                         <span class="currency">₫</span>
