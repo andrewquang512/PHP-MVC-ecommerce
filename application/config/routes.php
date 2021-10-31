@@ -1,6 +1,6 @@
 <?php
 $controllers = array(
-    'pages' => ['home'],
+    'pages' => ['home', 'tintuc','lienhe','gioithieu','sanpham','dangnhap','dangky','shoppingcart'],
     'admin' => ['customermanage']
 );
 
