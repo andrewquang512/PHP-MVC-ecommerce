@@ -1,10 +1,10 @@
-<footer style="background-image: url(<?php echo (CSSPATH . 'images/footer.jpg'); ?>);">
+<footer style="background-image: url('http://localhost/PHP-MVC-ecommerce/public/assets/images/footer.jpg')">
       <div class="sumary ml-auto mr-auto" style="width: 98%; color: aliceblue; padding-top: 25px;">
         <div class="row col-10 ml-auto mr-auto">
           <div class="col-md-4 footer-col ">
             <div class="list-group">
               <div class="footer-logo">
-                <img src="<?php echo (CSSPATH . 'images/logo-while.png'); ?>" width="200px" height="auto">
+                <img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/logo-while.png" width="200px" height="auto">
               </div>
               <p class="address">
                 <span>
@@ -42,28 +42,28 @@
             <h6>Sản phẩm phổ biến</h6>
             <div class="row">
               <div class="col-4" ">
-                <a href="http://"><img src="<?php echo (CSSPATH . 'images/phone1.png'); ?>" alt="" style="max-width:70%;
+                <a href="http://"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/phone1.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="col-4">
-                <a href="http://"><img src="<?php echo (CSSPATH . 'images/phone2.jpg'); ?>" alt="" style="max-width:70%;
+                <a href="http://"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/phone2.jpg" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="col-4">
-                <a href="http://"><img src="<?php echo (CSSPATH . 'images/phone3.png'); ?>" alt="" style="max-width:70%;
+                <a href="http://"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/phone3.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="w-100"></div>
               <div class="col-4">
-                <a href="http://"><img src="<?php echo (CSSPATH . 'images/phone4.png'); ?>" alt="" style="max-width:70%;
+                <a href="http://"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/phone4.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="col-4">
-                <a href="http://"><img src="<?php echo (CSSPATH . 'images/phone5.png'); ?>" alt="" style="max-width:70%;
+                <a href="http://"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/phone5.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="col-4">
-                <a href="http://"><img src="<?php echo (CSSPATH . 'images/phone6.png'); ?>" alt="" style="max-width:70%;
+                <a href="http://"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/phone6.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
             </div>

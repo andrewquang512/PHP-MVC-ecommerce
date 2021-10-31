@@ -6,7 +6,7 @@
   <?php 
     include('head.php');
   ?>
-  <link rel="stylesheet" href="<?php echo (CSSPATH . "css/homepages/tintuc.css"); ?>" type="text/css">
+  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/tintuc.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>

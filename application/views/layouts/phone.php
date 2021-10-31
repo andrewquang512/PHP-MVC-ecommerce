@@ -12,8 +12,8 @@
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>  
-  <link rel="stylesheet" href="<?php echo (CSSPATH . 'bootstrap/css/jquery-ui.css'); ?>"><!--//just add-->
-  <script type="text/javascript" src="<?php echo (CSSPATH . 'bootstrap/js/bootstrap.min1.js'); ?>"></script><!--//just add-->
+  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/bootstrap/css/jquery-ui.css"><!--//just add-->
+  <script type="text/javascript" src="http://localhost/PHP-MVC-ecommerce/public/assets/bootstrap/js/bootstrap.min1.js"></script><!--//just add-->
   <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/phone.css" type="text/css">
 </head>
 

@@ -6,7 +6,7 @@
   <?php 
     include('head.php');
   ?>
-  <link rel="stylesheet" href="<?php echo (CSSPATH . "css/homepages/lienhe.css"); ?>" type="text/css">
+  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/lienhe.css" type="text/css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 
   <div class="body">
     <div class="container-fluid">
-      <div class="row row1" style="background-image:url(<?php echo (CSSPATH . 'images/background1.jpg'); ?>)">
+      <div class="row row1" style="background-image:url('http://localhost/PHP-MVC-ecommerce/public/assets/images/background1.jpg'); ">
 
         <div class="col-md-4  mr-auto ml-auto">
           <div>
