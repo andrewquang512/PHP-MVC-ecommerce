@@ -8,9 +8,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image" href="<?php echo (CSSPATH . 'images/cropped-mona-180x180.png'); ?>">
+    <link rel="shortcut icon" type="image" href="http://localhost/PHP-MVC-ecommerce/public/assets/images/cropped-mona-180x180.png">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo (CSSPATH . 'bootstrap/css/bootstrap.css'); ?>">
+    <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/bootstrap/css/bootstrap.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,7 +19,7 @@
     />
 
     <!-- shopping-cart.css-->
-    <link rel="stylesheet" href="<?php echo (CSSPATH . 'css/homepages/shopping-cart.css'); ?>" >
+    <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/shopping-cart.css" >
 <style>
      /* A little change in header */
  .header__cart {
@@ -117,8 +117,8 @@
             </div>
             <div class="col col-lg-1 all-center">
               <img
-                src="<?php echo (CSSPATH . 'images/dtdd/phone1/1.png'); ?>"
-                alt="phone1"
+              src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone1/1.png"
+              alt="phone1"
                 class="img-size"
               />
             </div>
@@ -164,7 +164,7 @@
             </div>
             <div class="col col-lg-1 all-center">
               <img
-                src="<?php echo (CSSPATH . 'images/dtdd/phone3/1.png'); ?>"
+              src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone3/1.png"
                 alt="phone1"
                 class="img-size"
               />
@@ -211,8 +211,8 @@
             </div>
             <div class="col col-lg-1 all-center">
               <img
-                src="<?php echo (CSSPATH . 'images/dtdd/phone4/1.png'); ?>"
-                alt="phone1"
+              src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone4/1.png"
+              alt="phone1"
                 class="img-size"
               />
             </div>
@@ -258,7 +258,7 @@
             </div>
             <div class="col col-lg-1 all-center">
               <img
-                src="<?php echo (CSSPATH . 'images/dtdd/phone5/1.png'); ?>"
+              src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone5/1.png"
                 alt="phone1"
                 class="img-size"
               />
