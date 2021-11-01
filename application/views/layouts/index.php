@@ -399,7 +399,7 @@
       </div>
     </section>
 
-    <section class="achieve" style="background-image: url( 'http://localhost/PHP-MVC-ecommerce/public/assets/images/achieve.jpg'); > 
+    <section class="achieve" style="background-image: url( 'http://localhost/PHP-MVC-ecommerce/public/assets/images/achieve.jpg';);" > 
       <h5>PHỤNG SỰ KHÁCH HÀNG 8 NĂM</h5>
       <h2 class="text-center" style="margin-bottom: 30px;">THÀNH QUẢ CỦA MONA SHOP</h2>
 
