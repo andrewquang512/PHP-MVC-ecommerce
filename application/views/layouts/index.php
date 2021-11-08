@@ -152,7 +152,7 @@
 
     </section>
 
-    <section class="home-inland" style="margin-top: 50px; padding-bottom: 50px;background-image: url(<?php echo (CSSPATH . 'images/background.jpg'); ?>);">
+    <section class="home-inland" style="margin-top: 50px; padding-bottom: 50px;background-image: url('http://localhost/PHP-MVC-ecommerce/public/assets/images/background.jpg');>
       <p class="text-center">Tham khảo các sản phẩm nổi bật của tháng</p>
       <h2 class="text-center" style="margin-bottom: 30px;">PHONE BEST SALELER</h2>
 
@@ -179,7 +179,9 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="card mb-2">
+
                   <img class="card-img-top" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone1/1.png" alt="">
+
                   <div class="card-body">
                     <!-- <h3 class="card-title">SamSung Galaxy S21 Ultra</h3> -->
                     <p class="card-text" <a href="../detailed/samsung-galaxy-21">SamSung Galaxy S21 Ultra</a></p>
@@ -204,7 +206,9 @@
 
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
+
                   <img class="card-img-top" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone2/1.png" alt="">
+
                   <div class="card-body">
                     <p class="card-text">Iphone 12 64GB</p>
                     <div>
@@ -229,7 +233,9 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
+
                     src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone3/1.png" alt="">
+
                   <div class="card-body">
                     <p class="card-text">OPPO Reno6 5G 8G/128GB </p>
                     <div>
@@ -262,7 +268,9 @@
               <div class="col-md-4">
                 <div class="card mb-2">
                   <img class="card-img-top"
+
                     src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone4/1.png" alt="">
+
                   <div class="card-body">
                     <p class="card-text">Vivo Y12s (4GB/128GB)</p>
                     <div>
@@ -287,7 +295,9 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
+
                     src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone5/1.png" alt="">
+
                   <div class="card-body">
                     <p class="card-text">Xiami Redmi 9T (6GB/128GB)</p>
                     <div>
@@ -312,7 +322,9 @@
               <div class="col-md-4 clearfix d-none d-md-block">
                 <div class="card mb-2">
                   <img class="card-img-top"
+
                     src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone6/1.png" alt="">
+
                   <div class="card-body">
                     <p class="card-text">Huawei P30 Pro 256GB</p>
                     <div>
@@ -399,7 +411,9 @@
       </div>
     </section>
 
+
     <section class="achieve" style="background-image: url('http://localhost/PHP-MVC-ecommerce/public/assets/images/achieve.jpg');"> 
+
       <h5>PHỤNG SỰ KHÁCH HÀNG 8 NĂM</h5>
       <h2 class="text-center" style="margin-bottom: 30px;">THÀNH QUẢ CỦA MONA SHOP</h2>
 
@@ -407,7 +421,9 @@
         <div class="col-12 col-md-6 col-lg-3 ">
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
+
               src="http://localhost/PHP-MVC-ecommerce/public/assets/images/phone-icon.png" alt="">
+
             <div class="card-body">
               <div>
                 <span class="number">20,549+
@@ -420,7 +436,9 @@
         <div class="col-12 col-md-6 col-lg-3 ">
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
+
               src="http://localhost/PHP-MVC-ecommerce/public/assets/images/guest.png" alt="">
+
             <div class="card-body">
               <div>
                 <span class="number">60,419+
@@ -433,7 +451,9 @@
         <div class="col-12 col-md-6 col-lg-3">
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
+
               src="http://localhost/PHP-MVC-ecommerce/public/assets/images/world.png" alt="">
+
             <div class="card-body">
               <div>
                 <span class="number">100+
@@ -447,7 +467,9 @@
           
           <div class="achiev-card mb-2">
             <img class="achiev-icon"
+
               src="http://localhost/PHP-MVC-ecommerce/public/assets/images/money.png" alt="">
+
             <div class="card-body">
               <div>
                 <span class="number">200000$+

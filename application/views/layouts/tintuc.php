@@ -6,6 +6,7 @@
   <?php 
     include('head.php');
   ?>
+
   <style>
     details > summary {
   padding: 4px;
@@ -23,6 +24,7 @@ details > p {
   box-shadow: 1px 1px 2px #bbbbbb;
 }
   </style>
+
   <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/tintuc.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>

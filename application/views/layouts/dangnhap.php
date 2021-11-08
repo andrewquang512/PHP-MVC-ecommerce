@@ -56,6 +56,7 @@
     include('head.php');
   ?>
     <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/dangnhap.css" type="text/css">
+
 </head>
 <body>
     <?php

@@ -63,6 +63,7 @@
 
     <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
     <div class="row" style="padding: 20px">
+
       <div class="col-md-4 p2 a1" style="background-image: url(<?php echo (CSSPATH . 'images/muctieu.jpg'); ?>);height:300px;">
         <h4  style="color:#E06666">MỤC TIÊU</h4>
         <i style="color:aliceblue; padding: 0 70px 0 70px;font-weight:bold;">Với nhiều năm trong lĩnh vực này, shop cam kết đem đến cho người dùng những sản phẩm tốt nhất cũng như giá tốt nhất </i>
@@ -75,6 +76,7 @@
       <div class="col-md-4 p2 a3" style="background-image: url(<?php echo (CSSPATH . 'images/tuonglai1.png'); ?>);height:300px;">
         <h4 style="color:#E06666">TƯƠNG LAI</h4>
         <i style="color:aliceblue; padding: 0 70px 0 70px;font-weight:bold;">Phát triển hơn với nhiều chi nhánh được mở rộng, nhập thêm các dòng sản phẩm thương hiệu nổi tiếng khác thỏa mãn nhu cầu đa thương hiệu</i>
+
 
       </div>
     </div>

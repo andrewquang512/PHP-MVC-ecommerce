@@ -1,11 +1,15 @@
 <footer style="background-image: url('http://localhost/PHP-MVC-ecommerce/public/assets/images/footer.jpg')">
+
 <div class="sumary ml-auto mr-auto" style="width: 98%; color: aliceblue; padding-top: 25px;">
+
         <div class="row col-10 ml-auto mr-auto">
           <div class="col-md-4 footer-col ">
             <div class="list-group">
               <div class="footer-logo">
+
               <img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/logo-while.png" width="200px" height="auto">
             </div>
+
               <p class="address">
                 <span>
                   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor"
@@ -43,6 +47,7 @@
             <h6>Sản phẩm phổ biến</h6>
             <div class="row">
               <div class="col-4" ">
+
                 <a href="../detailed/samsung-galaxy-21.php"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone1/1.png" alt="" style="max-width:70%;
                   max-height:70%; 
                   /* clip:rect(2px,59px,61px,6px);position: absolute; */
@@ -54,10 +59,12 @@
               </div>
               <div class="col-4">
                 <a href="../detailed/iphone-12.php"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone2/1.png" alt="" style="max-width:70%;
+
                   max-height:70%;"></a>
               </div>
               <div class="w-100"></div>
               <div class="col-4">
+
                 <a href="../detailed/oppo-reno6.php"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone3/1.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
@@ -67,6 +74,7 @@
               </div>
               <div class="col-4">
                 <a href="../detailed/xiaomi-redmi-9t.php"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone5/1.png" alt="" style="max-width:70%;
+
                   max-height:70%;"></a>
               </div>
             </div>
