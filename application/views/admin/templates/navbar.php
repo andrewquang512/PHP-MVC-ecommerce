@@ -1,27 +1,26 @@
 <nav id="navbar">
     <?php
-    $url = $_SERVER['REQUEST_URI'];
-    if (strpos($url, 'index.php') == true) {
+    if ($file == 'index') {
         //echo 'Current page contains index.php';
         $title = "Dashboard";
     }
-    if (strpos($url, 'comment_manage.php') == true) {
+    if ($file == 'comment_manage') {
         //echo 'Current page contains index.php';
         $title = "Comment Management";
     }
-    if (strpos($url, 'content_manage.php') == true) {
+    if ($file == 'content_manage') {
         //echo 'Current page contains index.php';
         $title = "Content Management";
     }
-    if (strpos($url, 'customer_manage.php') == true) {
+    if ($file == 'customer_manage') {
         //echo 'Current page contains index.php';
         $title = "Customer Management";
     }
-    if (strpos($url, 'contact_manage.php') == true) {
+    if ($file == 'contact_manage') {
         //echo 'Current page contains index.php';
         $title = "Contact Management";
     }
-    if (strpos($url, 'product_manage.php') == true) {
+    if ($file == 'product_manage') {
         //echo 'Current page contains index.php';
         $title = "Product Management";
     }

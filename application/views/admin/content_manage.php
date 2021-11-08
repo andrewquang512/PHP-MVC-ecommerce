@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include "./templates/header.php"; ?>
+    <?php include  ROOT . '/application/views/admin/templates/header.php'; ?>
     <body>
-        <?php include "./templates/sidebar.php"; ?>
+        <?php include  ROOT . '/application/views/admin/templates/sidebar.php'; ?>
         <section id="section">
-            <?php include "./templates/navbar.php"; ?>
+            <?php include  ROOT . '/application/views/admin/templates/navbar.php'; ?>
             <div class="home-content" id="homecontent">
                 <div class="employee_list">
                 <!-- Website Overview -->
@@ -36,33 +36,7 @@
                                         <button class="btn btn-danger"><i class="fas fa-minus"></i></button>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Blog Post 2</td>
-                                    <td><i class="fas fa-check"></i></td>
-                                    <td>Dec 13, 2016</td>
-                                    <td>
-                                        <button class="btn btn-primary"><i class="far fa-edit"></i></button>
-                                        <button class="btn btn-danger"><i class="fas fa-minus"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Blog Post 3</td>
-                                    <td><i class="fas fa-minus"></i></td>
-                                    <td>Dec 13, 2016</td>
-                                    <td>
-                                        <button class="btn btn-primary"><i class="far fa-edit"></i></button>
-                                        <button class="btn btn-danger"><i class="fas fa-minus"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Blog Post 4</td>
-                                    <td><i class="fas fa-check"></i></td>
-                                    <td>Dec 14, 2016</td>
-                                    <td>
-                                        <button class="btn btn-primary"><i class="far fa-edit"></i></button>
-                                        <button class="btn btn-danger"><i class="fas fa-minus"></i></button>
-                                    </td>
-                                </tr>
+                                
                             </table>
                             <div class="row">
                                 <div class="col-md-12">
@@ -127,5 +101,5 @@
   </div>
 </div>
     </body>
-    <?php include "./templates/footer.php"; ?>
+    <?php include  ROOT . '/application/views/admin/templates/footer.php'; ?>
 </html>

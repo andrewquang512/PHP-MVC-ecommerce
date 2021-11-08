@@ -9,11 +9,9 @@ class BaseController{
         // echo($this->folder);
         // echo($this->folder == 'admin');
         if(is_file($view_file)){
-            // if($this->folder == 'admin'){
-            //     extract($data);
-            //     ob_start();
-            //     require_once($view_file);
-            //     $content = ob_get_clean();
+            extract($data);
+            // ob_start();
+            // $content = ob_get_clean();
             //     // require_once('views/admin/templates/footer.php');
             //     // require_once('views/admin/templates/header.php');
             //     // require_once('views/admin/templates/navbar.php');
@@ -30,7 +28,7 @@ class BaseController{
                 // require_once('views/layouts/footer.php');
             // }
         }else{
-            header('Location: index.php?controller=pages&action=error');
+            // header('Location: index.php?controller=pages&action=error');
         }        
     }
 }

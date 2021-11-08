@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include "./templates/header.php"; ?>
+    <?php include ROOT . '/application/views/admin/templates/header.php'; ?>
     <body>
-        <?php include "./templates/sidebar.php"; ?>
+        <?php include ROOT . '/application/views/admin/templates/sidebar.php'; ?>
         <section id="section">
-            <?php include "./templates/navbar.php"; ?>
+            <?php include ROOT . '/application/views/admin/templates/navbar.php'; ?>
             <div class="home-content" id="homecontent">
                 <div class="home-content">
                     <div class="demo_list">
@@ -49,5 +49,5 @@
             </div>
         </section>
     </body>
-    <?php include "./templates/footer.php"; ?>
+    <?php include ROOT . '/application/views/admin/templates/footer.php'; ?>
 </html>

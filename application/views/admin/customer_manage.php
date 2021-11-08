@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include "./templates/header.php"; ?>
+    <?php include ROOT . '/application/views/admin/templates/header.php'; ?>
     <body>
-        <?php include "./templates/sidebar.php"; ?>
+        <?php include ROOT . '/application/views/admin/templates/sidebar.php'; ?>
         <section id="section">
-            <?php include "./templates/navbar.php"; ?>
+            <?php include ROOT . '/application/views/admin/templates/navbar.php'; ?>
             <div class="home-content" id="homecontent">
                 <div class="employee_list">
                     <div class="panel panel-default">
@@ -22,22 +22,29 @@
                                 <tr>
                                     <th>No.</th>
                                     <th>Name</th>
-                                    <th>City/Province</th>
-                                    <th>Date of Birth</th>
-                                    <th>Telephone</th>
+                                    <th>Email</th>
+                                    <th>Phone Number</th>
                                     <th>Tools</th>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg">Nguyễn Văn A</a></td>
-                                    <td>Hồ Chí Minh</td>
-                                    <td>01/01/2001</td>
-                                    <td>0123456789</td>
-                                    <td>
-                                        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="far fa-edit"></i></button>
+                                <?php
+                                foreach ($customers as $customer) {
+                                    echo '<tr>';
+                                    echo '<td>' . $customer->user_id .
+                                        '</td>
+                                        <td><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg">' . $customer->user_name . '</a>
+                                        </td>
+                                        <td> ' . $customer->email .
+                                        '</td>
+                                        <td> ' . $customer->phone .
+                                        '</td>
+                                        <td>
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#message'. $customer->user_id .'"><i class="far fa-edit"></i></button>
                                         <button class="btn btn-danger"><i class="fas fa-minus"></i></button>
-                                    </td>
-                                </tr>
+                                        </td>';
+                                    echo '</tr>';
+                                }
+                                ?>
                             </table>
                         </div>
                     </div>
@@ -47,57 +54,65 @@
         
 
         <!-- Modal -->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Edit profile</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body container bg-white">
-                <div class="row">
-                    <div class="col-4 border-right">
-                        <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                            <img class="rounded-circle mt-5" src="https://bootdey.com/img/Content/avatar/avatar1.png" width="90">
-                            <span class="font-weight-bold">John Doe</span>
-                            <span class="text-black-50">john_doe12@bbb.com</span>
-                            <span>United States</span>
+        <?php
+            foreach ($customers as $customer) {
+                echo '
+            <div id="message'. $customer->user_id .'"class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <form action="http://localhost/PHP-MVC-ecommerce/index.php?controller=admin&action=updatecustomer" method="post" class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Edit profile</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body container bg-white">
+                            <div class="row" >
+                                <div class="col-4 border-right">
+                                    <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                                        <img class="rounded-circle mt-5" src="https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png" width="90">
+                                        <span class="font-weight-bold">'. $customer->user_name .'</span>
+                                        <span class="text-black-50">'. $customer->email .'</span>
+                                    </div>
+                                </div>
+                                <div class="col-8 border-right">
+                                    <div class="py-2">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h6 class="text-right">Edit profile</h6>
+                                        </div> 
+                                        <div class="row ">
+                                            <div class="col-md-6"><label class="labels">First Name</label><input type="text" class="form-control" name="first_name" value="'. $customer->first_name .'" placeholder="An"></div>
+                                            <div class="col-md-6"><label class="labels">Last Name</label><input type="text" class="form-control" name="last_name" value="'. $customer->last_name .'" placeholder="Nguyen Quang"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 mt-3"><label class="labels">Username</label><input type="text" class="form-control" name="user_name" value="'. $customer->user_name .'" placeholder="e.g: annguyen123"> </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 mt-3"><label class="labels">Telephone</label><input type="text" class="form-control" name="phone" value="'. $customer->phone .'" placeholder="e.g: 0112233442"> </div>
+                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-12 mt-3"><label class="labels">Email</label><input type="email" class="form-control" name="email" value="'. $customer->email .'" placeholder="e.g: annguyen123@gmail.com"> </div>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-md-12 mt-3"><label class="labels">Address</label><input type="text" class="form-control" name="addr" value="'. $customer->addr .'" placeholder="Your address"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
-                    <div class="col-8 border-right">
-                        <div class="py-2">
-                            <!-- <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h6 class="text-right">Edit profile</h6>
-                            </div> -->
-                            <div class="row ">
-                                <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="John"></div>
-                                <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control"  placeholder="Doe"></div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-md-12"><label class="labels">Date of Birth</label><input type="date" class="form-control"></div>
-                                <div class="col-md-12 mt-3"><label class="labels">Telephone</label><input type="text" class="form-control" placeholder="e.g: 0112233442"></div>
-                                <div class="col-md-12 mt-3"><label class="labels">Email</label><input type="email" class="form-control" placeholder="e.g: text@gmail.com"></div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-md-6 "><label class="labels">Country</label><input type="text" class="form-control" placeholder="Country"></div>
-                                <div class="col-md-6 mt-3"><label class="labels">City/Province</label><input type="text" class="form-control" placeholder="City/Province"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-    </div>
-  </div>
-</div>
+                </form>
+            </div>';
+            }
+        ?>
+
 
 
 
     </body>
-    <?php include "./templates/footer.php"; ?>
+    <?php include ROOT . '/application/views/admin/templates/footer.php'; ?>
 </html>
