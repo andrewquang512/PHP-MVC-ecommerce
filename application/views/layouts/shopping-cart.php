@@ -6,9 +6,11 @@
     include('head.php');
     ?>
     <!-- shopping-cart.css-->
+
     <link rel="stylesheet" href="./public/assets/css/homepages/shopping-cart.css?v=<?php echo time(); ?>">
     <title>GIO HANG</title>
 </head>
+
 
 <body>
     <!-- nav -->
@@ -20,6 +22,7 @@
     <!-- boby -->
 
     <div class="container">
+
         <h4 class="margin-top-30" id="shopping-cart">Giỏ hàng</h4>
         <div class="row">
             <div class="col col-lg-9">
@@ -42,6 +45,7 @@
                         <i class="fa fa-trash-o fa-lg"></i>
                     </div>
                 </div>
+
 
                 <?php for ($index = 1; $index < count($data); $index++) { ?>
 

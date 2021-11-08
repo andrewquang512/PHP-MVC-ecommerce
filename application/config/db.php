@@ -20,7 +20,6 @@ class DB{
             }
         } 
     }
-
     public function CreateConnection() {
         $db = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
         if($db->connect_error){
