@@ -80,7 +80,7 @@
           <div class="bon">
             <button type="submit" class="btn">Đăng nhập</button>
           </div>
-          <div class="signup-link">Chưa có tài khoản? <a href="dangky.php">Đăng ký ngay</a></div>
+          <div class="signup-link">Chưa có tài khoản? <a href="http://localhost/PHP-MVC-ecommerce/?controller=pages&action=dangky">Đăng ký ngay</a></div>
         </form>
 
     </div>

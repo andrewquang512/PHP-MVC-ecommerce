@@ -110,7 +110,9 @@ details > p {
     var search='search_data';
     var keyword=$('#keyword').val();
     $.ajax({
+      // ! NEEDED FIX !!!!!!!!!!!!!!!!
       url:"../../controllers/Newscontroller.php",
+      // ! NEEDED FIX !!!!!!!!!!!!!!!!
       method:"POST",
       data:{search:search,keyword:keyword},
       success:function(data){

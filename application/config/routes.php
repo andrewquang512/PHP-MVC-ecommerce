@@ -1,11 +1,13 @@
 <?php
 $controllers = array(
     'pages' => ['home', 'tintuc','lienhe','gioithieu','sanpham','dangnhap','dangky','shoppingcart'],
-    'admin' => ['customermanage']
+    'admin' => ['home','customermanage', 'contactmanage','commentmanage','contentmanage','updatecustomer']
 );
 
-if(!array_key_exists($controller, $controllers) || !in_array($action, $controllers[$controller])){
+if(!array_key_exists($controller, $controllers)){
     $controller = 'pages';
+}
+if(!in_array($action, $controllers[$controller])){
     $action = 'home';
 }
 
