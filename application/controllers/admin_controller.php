@@ -1,7 +1,7 @@
 <?php
 require_once(ROOT .'/application/controllers/base_controller.php');
-require_once(ROOT .'/application/models/customer.php');
-require_once(ROOT .'/application/models/contact.php');
+require_once(ROOT .'/application/models/CustomerModel.php');
+require_once(ROOT .'/application/models/ContactModel.php');
 
 class AdminController extends BaseController{
     function __construct(){
@@ -13,8 +13,9 @@ class AdminController extends BaseController{
     }
 
     public function customermanage(){
-      $customers = Customer::all();
-      $data = array('customers' => $customers);
+      $customer_model = new CustomerModel();
+      $customer_info = $customer_model->GetAll();
+      $data = array('customers' => $customer_info);
       $this->render('customer_manage', $data);
     }
     public function updatecustomer(){
@@ -29,8 +30,9 @@ class AdminController extends BaseController{
     }
 
     public function contactmanage(){
-      $contacts = Contact::all();
-      $data = array('contacts' => $contacts);
+      $contacts = new ContactModel();
+      $contacts_info = $contacts->GetAll();
+      $data = array('contacts' => $contacts_info);
       $this->render('contact_manage', $data);
     }
     public function commentmanage(){

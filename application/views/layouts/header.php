@@ -23,7 +23,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark" style=" font-size: 1em;font-weight: bold;"
-                        href="./?controller=pages&action=phone">SẢN
+                        href="./?controller=pages&action=sanpham">SẢN
                         PHẨM</a>
                 </li>
                 <li class="nav-item">

@@ -30,43 +30,43 @@
                                 <?php
                                 foreach ($contacts as $contact) {
                                     echo '<tr>';
-                                    echo '<td>' . $contact->id .
+                                    echo '<td>' . $contact->getid() .
                                         '</td>
-                                        <td>' . $contact->customer_name . 
+                                        <td>' . $contact->getcustomer_name() . 
                                         '</td>
-                                        <td> ' . $contact->title .
+                                        <td> ' . $contact->gettitle() .
                                         '</td>
-                                        <td> ' . $contact->phone .
+                                        <td> ' . $contact->getphone() .
                                         '</td>
-                                        <td> ' . $contact->email .
+                                        <td> ' . $contact->getemail() .
                                         '</td>
                                         <td>
-                                        <button id="'. $contact->id .'" onClick="displaycontact(this.id)" class="btn btn-primary"><i class="far fa-eye"></i></button>
+                                        <button id="'. $contact->getid() .'" onClick="displaycontact(this.id)" class="btn btn-primary"><i class="far fa-eye"></i></button>
                                         <button class="btn btn-danger"><i class="fas fa-minus"></i></button>
                                         </td>';
                                     echo '</tr>';
                                     
-                                    echo '<tr class="panel-body contact-details" id="contact'. $contact->id .'" >
+                                    echo '<tr class="panel-body contact-details" id="contact'. $contact->getid() .'" >
                                     <td colspan="6">
-                                        <h4>' . $contact->title . '</h4>
+                                        <h4>' . $contact->gettitle() . '</h4>
                                         <div class="table-responsive">
                                             <table class="table table-borderless mb-0">
                                                 <tbody>
                                                     <tr>
                                                         <th scope="row" class="p-1">Name:</th>
-                                                        <td class="p-1">' . $contact->customer_name . '</td>
+                                                        <td class="p-1">' . $contact->getcustomer_name() . '</td>
                                                     </tr>                                          
                                                     <tr>
                                                         <th scope="row" class="p-1">Phone:</th>
-                                                        <td class="p-1">' . $contact->phone . '</td>
+                                                        <td class="p-1">' . $contact->getphone() . '</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row" class="p-1">Email:</th>
-                                                        <td class="p-1">' . $contact->email . '</td>
+                                                        <td class="p-1">' . $contact->getemail() . '</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row" class="p-1">Content</th>
-                                                        <td class="p-1">' . $contact->content . '</td>
+                                                        <td class="p-1">' . $contact->getcontent() . '</td>
                                                     </tr>
                                                 </tbody>
                                             </table>

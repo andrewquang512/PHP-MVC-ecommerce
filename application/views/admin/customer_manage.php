@@ -30,16 +30,16 @@
                                 <?php
                                 foreach ($customers as $customer) {
                                     echo '<tr>';
-                                    echo '<td>' . $customer->user_id .
+                                    echo '<td>' . $customer->getCustomer_id() .
                                         '</td>
-                                        <td><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg">' . $customer->user_name . '</a>
+                                        <td><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg">' . $customer->getUser_name() . '</a>
                                         </td>
-                                        <td> ' . $customer->email .
+                                        <td> ' . $customer->getEmail() .
                                         '</td>
-                                        <td> ' . $customer->phone .
+                                        <td> ' . $customer->getPhone() .
                                         '</td>
                                         <td>
-                                        <button class="btn btn-primary" data-toggle="modal" data-target="#message'. $customer->user_id .'"><i class="far fa-edit"></i></button>
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#message'. $customer->getCustomer_id() .'"><i class="far fa-edit"></i></button>
                                         <button class="btn btn-danger"><i class="fas fa-minus"></i></button>
                                         </td>';
                                     echo '</tr>';
@@ -57,7 +57,7 @@
         <?php
             foreach ($customers as $customer) {
                 echo '
-            <div id="message'. $customer->user_id .'"class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div id="message'. $customer->getCustomer_id() .'"class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <form action="http://localhost/PHP-MVC-ecommerce/index.php?controller=admin&action=updatecustomer" method="post" class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -71,8 +71,8 @@
                                 <div class="col-4 border-right">
                                     <div class="d-flex flex-column align-items-center text-center p-3 py-5">
                                         <img class="rounded-circle mt-5" src="https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png" width="90">
-                                        <span class="font-weight-bold">'. $customer->user_name .'</span>
-                                        <span class="text-black-50">'. $customer->email .'</span>
+                                        <span class="font-weight-bold">'. $customer->getUser_name() .'</span>
+                                        <span class="text-black-50">'. $customer->getEmail() .'</span>
                                     </div>
                                 </div>
                                 <div class="col-8 border-right">
@@ -81,20 +81,20 @@
                                             <h6 class="text-right">Edit profile</h6>
                                         </div> 
                                         <div class="row ">
-                                            <div class="col-md-6"><label class="labels">First Name</label><input type="text" class="form-control" name="first_name" value="'. $customer->first_name .'" placeholder="An"></div>
-                                            <div class="col-md-6"><label class="labels">Last Name</label><input type="text" class="form-control" name="last_name" value="'. $customer->last_name .'" placeholder="Nguyen Quang"></div>
+                                            <div class="col-md-6"><label class="labels">First Name</label><input type="text" class="form-control" name="first_name" value="'. $customer->getFirst_name() .'" placeholder="An"></div>
+                                            <div class="col-md-6"><label class="labels">Last Name</label><input type="text" class="form-control" name="last_name" value="'. $customer->getLast_name() .'" placeholder="Nguyen Quang"></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-12 mt-3"><label class="labels">Username</label><input type="text" class="form-control" name="user_name" value="'. $customer->user_name .'" placeholder="e.g: annguyen123"> </div>
+                                            <div class="col-md-12 mt-3"><label class="labels">Username</label><input type="text" class="form-control" name="user_name" value="'. $customer->getUser_name() .'" placeholder="e.g: annguyen123"> </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-12 mt-3"><label class="labels">Telephone</label><input type="text" class="form-control" name="phone" value="'. $customer->phone .'" placeholder="e.g: 0112233442"> </div>
+                                            <div class="col-md-12 mt-3"><label class="labels">Telephone</label><input type="text" class="form-control" name="phone" value="'. $customer->getPhone() .'" placeholder="e.g: 0112233442"> </div>
                                          </div>
                                         <div class="row">
-                                            <div class="col-md-12 mt-3"><label class="labels">Email</label><input type="email" class="form-control" name="email" value="'. $customer->email .'" placeholder="e.g: annguyen123@gmail.com"> </div>
+                                            <div class="col-md-12 mt-3"><label class="labels">Email</label><input type="email" class="form-control" name="email" value="'. $customer->getEmail() .'" placeholder="e.g: annguyen123@gmail.com"> </div>
                                         </div>
                                         <div class="row ">
-                                            <div class="col-md-12 mt-3"><label class="labels">Address</label><input type="text" class="form-control" name="addr" value="'. $customer->addr .'" placeholder="Your address"></div>
+                                            <div class="col-md-12 mt-3"><label class="labels">Address</label><input type="text" class="form-control" name="addr" value="'. $customer->getAddr() .'" placeholder="Your address"></div>
                                         </div>
                                     </div>
                                 </div>
