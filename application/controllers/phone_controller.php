@@ -1,8 +1,10 @@
 <?php
-
+// require_once(ROOT .'/application/controllers/base_controller.php');
 //Phonecontroller.php
 
-include('../core/DB.php');
+
+// include('../core/DB.php');
+$connect = (new DB())->CreateConnection();
 $params = array(0,0,0,0);
 if(isset($_POST["action"]))
 {
@@ -58,9 +60,13 @@ if(isset($_POST["action"]))
     //print_r($query);
 	$statement = $connect->prepare($query);
 	$statement->execute();
-	$result = $statement->fetchAll();
-	$total_row = $statement->rowCount();
-	$output = '';
+    // ? PDO: $result = $statement->fetchAll();
+	// ? PDO: $total_row = $statement->rowCount();
+	// ? SQLi method
+	$result = $statement->get_result();
+	$total_row = $result->fetch_row();
+	print_r($result->fetch_row());
+
 	if($total_row > 0)
 	{
 		foreach($result as $row)
