@@ -1,5 +1,6 @@
 <?php
-  include('../../core/DB.php');
+  // include('../../core/DB.php');
+  $connect = (new DB())->CreateConnection();
   session_start();
 
   if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -53,6 +54,55 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.8.5/jquery-ui.min.js"></script>
 </head>
+  <style>
+    .header__cart {
+  border: 1px solid red;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-left: 10px;
+  padding: 5px 8px;
+  width: 110px;
+  height: 35px;
+ }
+ .header__cart:hover {
+  background-color: red;
+  transition: 1s;
+ }
+ .header__cart:hover i {
+  color: #fff;
+ }
+ .header__cart:hover span {
+  color: #fff;
+ }
+ .header__cart i {
+  margin-right: 5px;
+  font-size: 20px;
+  color: black;
+ }
+ .header__cart span {
+  color: black;
+  font-size: 14;
+ }
+ .header__cart i,
+ .header__cart span {
+  display: inline-block;
+  vertical-align: middle;
+ }
+ .icon-cart {
+  background-position: -175px 0;
+  height: 18px;
+  width: 20px;
+ }
+ .header__cart i,
+ .header__cart span {
+  display: inline-block;
+  vertical-align: middle;
+ }
+  </style>
+  
 <body>
     <?php
     include('header.php');
@@ -68,7 +118,7 @@
             <input type="password" placeholder="Nhập mật khẩu" id="pwd" pattern="[A-Za-z0-9]{3,15}" title="Mật khẩu phải từ 3 đến 15 kí tự" required>
             <p class="noti" id="noti"></p>
             <input type="button" id="sub_btn" class="btn" value="Đăng nhập">          
-            <h3 class="subheader-text">Chưa có tài khoản? <a href="dangky.php">Đăng ký ngay</a></h3>
+            <h3 class="subheader-text">Chưa có tài khoản? <a href="./?controller=pages&action=dangky">Đăng ký ngay</a></h3>
           </fieldset>          
 
         </form>

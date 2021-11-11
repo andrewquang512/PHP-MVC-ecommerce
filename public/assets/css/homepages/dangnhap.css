@@ -1,10 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
-* {margin: 0; padding: 0;}
-
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 
 body {
 	font-family: montserrat, arial, verdana;
-}
+} */
 
 .wrapper {
   min-height: 650px;
@@ -16,7 +19,6 @@ body {
   background-size: cover;
   position: relative;
 }
-
 
 #login_form {
   width: 400px;
@@ -34,68 +36,70 @@ body {
 }
 
 #login_form fieldset {
-	background: white;
-	border: 0 none;
-	border-radius: 3px;
-	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-	padding: 20px 30px;
-	box-sizing: border-box;
-	width: 80%;
-	margin: 0 10%;
-	
-	/*stacking fieldsets above each other*/
-	position: relative;
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+
+  /*stacking fieldsets above each other*/
+  position: relative;
 }
 
 /*inputs*/
-#login_form input, #login_form textarea {
-	padding: 15px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	margin-bottom: 10px;
-	width: 100%;
-	box-sizing: border-box;
-	font-family: montserrat;
-	color: #2C3E50;
-	font-size: 13px;
+#login_form input,
+#login_form textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 13px;
 }
 /*buttons*/
 #login_form .btn {
   font-family: montserrat;
   font-size: 13px;
-	width: 100px;
-	background: #3598dc;
-	font-weight: bold;
-	color: white;
-	border: none;
-	border-radius: 1px;
-	cursor: pointer;
-	padding: 10px 5px;
-	margin: 10px 5px;
+  width: 100px;
+  background: #3598dc;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
   margin-bottom: 20px;
 }
-#login_form .btn:hover, #login_form .btn:focus {
-	background: #2389cd;
+#login_form .btn:hover,
+#login_form .btn:focus {
+  background: #2389cd;
   outline: none;
 }
 
 .header-text {
-	font-size: 15px;
-	text-transform: uppercase;
-	color: #2C3E50;
-	margin-bottom: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
 }
 
 .subheader-text {
-	font-weight: normal;
-	font-size: 13px;
-	color: #666;
-	margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 .noti {
-	font-size: 10px;
-	color: #D8000C;
+  font-size: 10px;
+  color: #d8000c;
 }
 
 footer {

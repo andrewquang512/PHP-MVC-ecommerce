@@ -1,5 +1,6 @@
 <?php    
-    include('../../core/DB.php');
+    
+    $connect = (new DB())->CreateConnection();
     session_start();
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
