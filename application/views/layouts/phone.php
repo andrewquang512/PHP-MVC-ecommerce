@@ -81,6 +81,7 @@
                     $statement = $connect->prepare($query);
                     $statement->execute();
                     $result = $statement->get_result();
+                    print_r($result);
                     foreach($result as $row)
                     {
                     ?>
@@ -125,7 +126,7 @@ $(document).ready(function() {
       var storage = get_filter('storage');
       $.ajax({
         // ! NEEDED FIX !!!!!!!!!!!!!!!!
-        url:"../../controllers/Phonecontroller.php",
+        url:"http://localhost/PHP-MVC-ecommerce/?controller=client&action=phone",
         // ! NEEDED FIX !!!!!!!!!!!!!!!!
         method:"POST",
         data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, brand:brand, ram:ram, storage:storage},
