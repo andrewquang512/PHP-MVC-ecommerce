@@ -1,92 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+* {margin: 0; padding: 0;}
+
+body {
+	font-family: montserrat, arial, verdana;
+}
+
 .wrapper {
   min-height: 650px;
-  background-image: url('http://localhost/PHP-MVC-ecommerce/public/assets/images/background.jpg');
+
+  background-image: url(http://localhost/PHP-MVC-ecommerce/public/assets/images/background.jpg);
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
 }
 
-.form-box {
-  background: #fff;
-  margin: auto auto;
-  padding: 30px;
-  border-radius: 3px;
-  box-shadow: 0 0 10px #000;
+
+#signup_form {
+  width: 400px;
+  margin: 120px auto;
+  text-align: center;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 400px;
-  margin: 30px auto;
 }
 
-.form-box hr {
+#signup_form hr {
   margin: 0 -30px 20px;
 }
 
-.form-control {
-  height: 41px;
-  background: #f2f2f2;
-  box-shadow: none !important;
-  border: none;
+#signup_form fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
 }
 
-.form-control:focus {
-  background: #e2e2e2;
+#signup_form fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#signup_form input, #signup_form textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#signup_form .action-button {
+	width: 100px;
+	background: #3598dc;
+	font-weight: bold;
+	color: white;
+	border: none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#signup_form .action-button:hover, #signup_form .action-button:focus {
+	background: #2389cd;
+	outline: none;
 }
 
-.form-control,
-.btn {
-  border-radius: 3px;
+.header-text {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.subheader-text {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
 }
 
-.form-box .form-group {
-  margin-bottom: 20px;
-}
-.form-box input[type='checkbox'] {
-  margin-top: 3px;
-}
-.form-box .row div:first-child {
-  padding-right: 10px;
-}
-.form-box .row div:last-child {
-  padding-left: 10px;
+.noti {
+	font-size: 10px;
+	color: #D8000C;
 }
 
-.form-box .bon {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.form-box .term {
-  font-size: 80%;
-}
-
-.form-box .signup-link {
-  font-size: 15px;
-  margin-top: 30px;
-  text-align: center;
-}
-
-.form-box .btn {
-  font-size: 16px;
-  color: #fff;
-  background: #3598dc;
-  border: none;
-  min-width: 140px;
-}
-.form-box .btn:hover,
-.form-box .btn:focus {
-  background: #2389cd;
-  outline: none;
+.matched {
+	font-size: 10px;
 }
 
 footer {
