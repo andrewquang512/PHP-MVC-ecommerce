@@ -55,6 +55,11 @@ class PagesController extends BaseController
     $this->render('dangnhap');
     //? http://localhost/PHP-MVC-ecommerce/?controller=pages&action=dangnhap
   }
+  public function dangxuat()
+  {
+    $this->render('dangxuat');
+    //? http://localhost/PHP-MVC-ecommerce/?controller=pages&action=dangxuat
+  }
   public function shoppingcart()
   {
     //? http://localhost/PHP-MVC-ecommerce/?controller=pages&action=shoppingcart

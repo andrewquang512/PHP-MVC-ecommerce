@@ -111,7 +111,7 @@ details > p {
     var keyword=$('#keyword').val();
     $.ajax({
       // ! NEEDED FIX !!!!!!!!!!!!!!!!
-      url:"../../controllers/Newscontroller.php",
+      url:"http://localhost/PHP-MVC-ecommerce/?controller=client&action=new",
       // ! NEEDED FIX !!!!!!!!!!!!!!!!
       method:"POST",
       data:{search:search,keyword:keyword},

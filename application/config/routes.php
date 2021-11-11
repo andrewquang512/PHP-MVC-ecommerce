@@ -1,8 +1,8 @@
 <?php
 $controllers = array(
-    'pages' => ['home', 'tintuc','lienhe','gioithieu','sanpham','dangnhap','dangky','shoppingcart'],
+    'pages' => ['home', 'tintuc','lienhe','gioithieu','sanpham','dangnhap','dangky','shoppingcart','dangxuat'],
     'admin' => ['home','customermanage', 'contactmanage','commentmanage','contentmanage','updatecustomer'],
-    'client' => ['phone']
+    'client' => ['phone','new','contact']
 );
 
 if(!array_key_exists($controller, $controllers)){
@@ -15,6 +15,12 @@ if(!in_array($action, $controllers[$controller])){
 if($controller == 'client'){
     if($action == 'phone'){
         include(ROOT . '/application/controllers/phone_controller.php');
+    }
+    if($action == 'new'){
+        include(ROOT . '/application/controllers/new_controller.php');
+    }
+    if($action == 'contact'){
+        include(ROOT . '/application/controllers/contact_controller.php');
     }
 }
 else{
