@@ -65,8 +65,7 @@ if(isset($_POST["action"]))
 	// ? SQLi method
 	$result = $statement->get_result();
 	$total_row = $result->fetch_row();
-	print_r($result->fetch_row());
-
+	$output = "";
 	if($total_row > 0)
 	{
 		foreach($result as $row)

@@ -81,7 +81,6 @@
                     $statement = $connect->prepare($query);
                     $statement->execute();
                     $result = $statement->get_result();
-                    print_r($result);
                     foreach($result as $row)
                     {
                     ?>
