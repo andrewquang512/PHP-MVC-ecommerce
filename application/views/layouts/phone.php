@@ -101,7 +101,7 @@
  #loading
  {
 	text-align:center; 
-	background: url('loader.gif') no-repeat center; 
+	background: url('../../../public/assets/images/loader.gif') no-repeat center; 
 	height: 150px;
  }
 </style>  
