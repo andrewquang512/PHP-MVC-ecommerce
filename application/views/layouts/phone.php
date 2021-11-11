@@ -1,5 +1,6 @@
 <?php 
-    include('../../core/DB.php');
+    // include('../../core/DB.php');
+    $connect = (new DB())->CreateConnection();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +41,7 @@
           $query = "SELECT DISTINCT(brand) FROM phone ORDER BY id DESC";
           $statement = $connect->prepare($query);
           $statement->execute();
-          $result = $statement->fetchAll();
+          $result = $statement->get_result();
           foreach($result as $row)
           {
           ?>
@@ -60,7 +61,7 @@
           $query = "SELECT DISTINCT(ram) FROM phone ORDER BY ram DESC ";
                     $statement = $connect->prepare($query);
                     $statement->execute();
-                    $result = $statement->fetchAll();
+                    $result = $statement->get_result();
                     foreach($result as $row)
                     {
                     ?>
@@ -79,7 +80,7 @@
             $query = "SELECT DISTINCT(pstorage) FROM phone ORDER BY pstorage DESC";
                     $statement = $connect->prepare($query);
                     $statement->execute();
-                    $result = $statement->fetchAll();
+                    $result = $statement->get_result();
                     foreach($result as $row)
                     {
                     ?>
@@ -101,7 +102,7 @@
  #loading
  {
 	text-align:center; 
-	background: url('../../../public/assets/images/loader.gif') no-repeat center; 
+	background: url('./public/assets/images/loader.gif') no-repeat center; 
 	height: 150px;
  }
 </style>  
@@ -123,7 +124,9 @@ $(document).ready(function() {
       var ram = get_filter('ram');
       var storage = get_filter('storage');
       $.ajax({
-        url:"../../controllers/Phonecontroller.php",
+        // ! NEEDED FIX !!!!!!!!!!!!!!!!
+        url:"http://localhost/PHP-MVC-ecommerce/?controller=client&action=phone",
+        // ! NEEDED FIX !!!!!!!!!!!!!!!!
         method:"POST",
         data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, brand:brand, ram:ram, storage:storage},
         success:function(data){

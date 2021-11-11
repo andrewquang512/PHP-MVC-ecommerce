@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-    include('../../core/DB.php');
+    $connect = (new DB())->CreateConnection();
 ?>
 <head>
 <title>LIEN HE</title>
@@ -84,7 +84,9 @@ $(document).ready(function(){
   var email = $('#email').val();
   var content = $('#content').val();
   $.ajax({
+        // ! NEEDED FIX !!!!!!!!!!!!!!!!
         url:"../../controllers/Contactcontroller.php",
+        // ! NEEDED FIX !!!!!!!!!!!!!!!!
         method:"POST",
         data:{submit:submit,name:name, title:title, phone:phone, email:email, content:content},
         success:function(data){

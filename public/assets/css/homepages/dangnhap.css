@@ -8,7 +8,9 @@ body {
 
 .wrapper {
   min-height: 650px;
+
   background-image: url(http://localhost/PHP-MVC-ecommerce/public/assets/images/background.jpg);
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,7 +99,7 @@ body {
 }
 
 footer {
-  background-image: url(images/footer.jpg);
+  background-image: url('http://localhost/PHP-MVC-ecommerce/public/assets/footer.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }

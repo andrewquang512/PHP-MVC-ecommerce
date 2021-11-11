@@ -59,6 +59,7 @@
     ?>
 
     <div class="wrapper">
+
         <form id="login_form" action="dangnhap.php" method="POST">
           <fieldset>
             <h2 class="header-text">Đăng nhập</h2>
@@ -69,6 +70,7 @@
             <input type="button" id="sub_btn" class="btn" value="Đăng nhập">          
             <h3 class="subheader-text">Chưa có tài khoản? <a href="dangky.php">Đăng ký ngay</a></h3>
           </fieldset>          
+
         </form>
     </div>
 

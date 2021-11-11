@@ -6,6 +6,7 @@
 
 <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light   " id="navbar">
+
       <a class="navbar-brand text-center col-3  ml-auto" href="index.php">
         <img width="120" height="auto" class="header-logo" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/mona-logo2.png">
       </a>
@@ -51,6 +52,7 @@
           <p id="uid"><p>
         </form>
       </div>      
+
     </nav>
   </header>
   
