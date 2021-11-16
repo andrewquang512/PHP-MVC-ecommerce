@@ -1,121 +1,133 @@
-.wrapper{
-    min-height: 650px;
-    background-image: url(images/background.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    text-align: left;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+* {margin: 0; padding: 0;}
+
+body {
+	font-family: montserrat, arial, verdana;
 }
 
-.form-box{
-    background: #fff;
-    margin: auto auto;
-	padding: 30px;
+.wrapper {
+  min-height: 650px;
+
+  background-image: url(http://localhost/PHP-MVC-ecommerce/public/assets/images/background.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+#signup_form {
+  width: 400px;
+  margin: 120px auto;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#signup_form hr {
+  margin: 0 -30px 20px;
+}
+
+#signup_form fieldset {
+	background: white;
+	border: 0 none;
 	border-radius: 3px;
-	box-shadow: 0 0 10px #000;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 400px;
-	margin: 30px auto;
-
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
 }
 
-.form-box hr  {
-	margin: 0 -30px 20px;
+#signup_form fieldset:not(:first-of-type) {
+	display: none;
 }
-
-.form-control {
-	height: 41px;
-	background: #f2f2f2;
-	box-shadow: none !important;
-	border: none;
-}
-
-.form-control:focus {
-	background: #e2e2e2;
-}
-
-.form-control, .btn {
+/*inputs*/
+#signup_form input, #signup_form textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
 	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
 }
-
-.form-box .form-group {
-	margin-bottom: 20px;
-}
-.form-box input[type="checkbox"] {
-	margin-top: 3px;
-}
-.form-box .row div:first-child {
-	padding-right: 10px;
-}
-.form-box .row div:last-child {
-	padding-left: 10px;
-}
-
-.form-box .bon{
-    text-align: center;
-    margin-bottom: 20px
-}
-
-.form-box .term{
-	font-size: 80%
-}
-
-.form-box .signup-link{
-    font-size: 15px;
-    margin-top:30px;
-	text-align: center;
-}
-
-.form-box .btn {
-	font-size: 16px;
-	color: #fff;
+/*buttons*/
+#signup_form .action-button {
+	width: 100px;
 	background: #3598dc;
+	font-weight: bold;
+	color: white;
 	border: none;
-	min-width: 140px;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
 }
-.form-box .btn:hover, .form-box .btn:focus {
+#signup_form .action-button:hover, #signup_form .action-button:focus {
 	background: #2389cd;
 	outline: none;
 }
 
-footer{
-    background-image: url(images/footer.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.header-text {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
 }
-.footer-logo{
-    margin-bottom: 15px;
-}
-.col-md-4 h6{
-    margin :25px auto;
-    font-size: 1.2em;
-}
-.col-md-4 ul{
-    list-style: none;
+.subheader-text {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
 }
 
-.col-md-4 li{
-    line-height: 45px;
-}
-.col-md-4 a{
-    color: aliceblue;
-}
-.col-md-4{
-    padding: 15px;
-
+.noti {
+	font-size: 10px;
+	color: #D8000C;
 }
 
-footer .col-4{
-    padding: 0 !important;
-    width: 70px !important;
+.matched {
+	font-size: 10px;
+}
+
+footer {
+  background-image: url('http://localhost/PHP-MVC-ecommerce/public/assets/images/footer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer-logo {
+  margin-bottom: 15px;
+}
+.col-md-4 h6 {
+  margin: 25px auto;
+  font-size: 1.2em;
+}
+.col-md-4 ul {
+  list-style: none;
+}
+
+.col-md-4 li {
+  line-height: 45px;
+}
+.col-md-4 a {
+  color: aliceblue;
+}
+.col-md-4 {
+  padding: 15px;
+}
+
+footer .col-4 {
+  padding: 0 !important;
+  width: 70px !important;
 }
