@@ -18,8 +18,10 @@ if(isset($_POST["search"]))
     //print_r($query);
     $statement = $connect->prepare($query);
 	$statement->execute();
-    $result = $statement->fetchAll();
-	$total_row = $statement->rowCount();
+    // $result = $statement->fetchAll();
+	// $total_row = $statement->rowCount();
+    $result = $statement->get_result();
+	$total_row = $result->fetch_row();
 	$output = '';
 	if($total_row > 0)
 	{

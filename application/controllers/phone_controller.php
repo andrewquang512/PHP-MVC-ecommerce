@@ -77,7 +77,7 @@ if(isset($_POST["action"]))
                     <div class="card-body">
                         <p class="card-text" style="margin-bottom:10px; color:#FF5B5B">'. $row['PNAME'] .'</p>
                         <p style="margin-bottom:5px; font-style:italic">Quà tặng '. $row['GIFT'] .'đ</p>
-                        <a href="./?controller=detailed&action='. $row['LINK'] .'" class="btn btn-primary stretched-link">'. $row['PRICE'] .'đ</a>
+                        <a href="./?controller=pages&action=sanpham&id='. $row['LINK'] .'" class="btn btn-primary stretched-link">'. $row['PRICE'] .'đ</a>
                     </div>
                 </div>
             </div>

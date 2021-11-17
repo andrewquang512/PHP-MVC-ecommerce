@@ -40,6 +40,11 @@ class PagesController extends BaseController
     $this->render('phone');
     //? http://localhost/PHP-MVC-ecommerce/?controller=pages&action=sanpham
   }
+  public function sanpham_detailed($id = null)
+  {
+    $this->folder = 'detailed';
+    $this->render($id);
+  }
   public function lienhe()
   {
     $this->render('lienhe');
