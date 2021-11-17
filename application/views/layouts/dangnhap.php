@@ -1,5 +1,5 @@
 <?php
-  // require_once '../../../application/config/db.php';
+  //require_once '../../config/db.php';
   session_start();
   
   if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -7,8 +7,8 @@
   //Get username and password
   $username = $_POST['username'];
   $password = $_POST['pwd'];
-  print($username);
-  print($password);
+  //console.log($username);
+  //console.log($password);
   
   //Prevent mysqli injection :))
   $username = stripcslashes($username);  
@@ -32,15 +32,16 @@
   // print(" iam here");
   //Check if account esixted
   if($count == 1){  
+    //console.log('Have run');
     $_SESSION['user_id'] = $row['user_id'];
     
     //If it's the admin account
     if($username == 'admin'){
-      header('Location: http://localhost/PHP-MVC-ecommerce/?controller=admin&action=home');
+      //header('Location: http://localhost/PHP-MVC-ecommerce/?controller=admin&action=home');
       exit('2');
     }
     else{
-      header('Location: http://localhost/PHP-MVC-ecommerce/?controller=pages&action=home');
+      //header('Location: http://localhost/PHP-MVC-ecommerce/?controller=pages&action=home');
       exit('1');
     }
   }  

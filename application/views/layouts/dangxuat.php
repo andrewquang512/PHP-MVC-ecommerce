@@ -7,3 +7,4 @@
     header("location:http://localhost/PHP-MVC-ecommerce/?controller=pages&action=home");
     die();
 ?>
+
