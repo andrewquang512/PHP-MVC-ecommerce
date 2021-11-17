@@ -21,8 +21,8 @@
             <div class="path">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../layouts/index.php">TRANG CHỦ</a></li>
-                        <li class="breadcrumb-item"><a href="../layouts/phone.php">SẢN PHẨM</a></li>
+                        <li class="breadcrumb-item"><a href="./?controller=pages&action=home">TRANG CHỦ</a></li>
+                        <li class="breadcrumb-item"><a href="./?controller=pages&action=sanpham">SẢN PHẨM</a></li>
                         <li class="breadcrumb-item" aria-current="page">OPPO</li>
                     </ol>
                 </nav>
