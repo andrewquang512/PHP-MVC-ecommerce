@@ -1,5 +1,6 @@
 <?php    
-    include('connect.php');
+    
+    $connect = (new DB())->CreateConnection();
     session_start();
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -85,7 +86,8 @@
           <input type="text" placeholder="Nhập tên đăng nhập" id="username" pattern="[A-Za-z0-9]{12}" title="Tên chỉ gồm chữ hoặc số, phải có ít nhất một chữ thường" required>
           <input type="text" placeholder="Nhập e-mail" id="email" pattern="[A-Za-z]+\.@[A-Za-z0-9]+\.[A-z]{3}" title="something@gmail.com" required>
           <input type="password" placeholder="Nhập mật khẩu" id="pwd" pattern="[A-Za-z0-9]{3,15}" title="Mật khẩu phải từ 3 đến 15 kí tự" required>
-          <input type="password" placeholder="Xác nhận mật khẩu" id="confirm_psw" pattern="[A-z0-9]{3,15}" required>
+          <input type="password" placeholder="Xác nhận mật khẩu" id="confirm_psw" pattern="[A-z0-9]{3,15}" required onChange="checkPasswordMatch();">
+          <p class="matched" id="matched"></p>
           <input type="button" name="next" class="next action-button" value="Next" />
           <h3 class="subheader-text">Đã có tài khoản? <a href="dangnhap.php">Đăng nhập</a></h3>
         </fieldset>
@@ -111,11 +113,21 @@
     ?>
 
     <script>
+      function checkPasswordMatch() {
+        var password = $("#pwd").val();
+        var confirmPassword = $("#confirm_pwd").val();
+
+        if (password != confirmPassword) $("#matched").html("Passwords not match!");
+        else $("#matched").html("Passwords match.");
+      }
+
       $(document).ready(function(){
         //jQuery time
         var current_fs, next_fs, previous_fs; //fieldsets
         var left, opacity, scale; //fieldset properties which we will animate
         var animating; //flag to prevent quick multi-click glitches
+
+        $("#password, #confirm_password").keyup(checkPasswordMatch);
 
         $(".next").click(function(){
             if(animating) return false;

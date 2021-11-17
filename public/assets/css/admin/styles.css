@@ -1,331 +1,330 @@
-html, body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
-body{
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-  
-p{
-    line-height: 1.5;
-}
-  
-main{
-    margin: 0 auto;
-}
-  
-a{
-    text-decoration: none;
-    color: black;
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-a:hover{
-    text-decoration: none;
+p {
+  line-height: 1.5;
 }
 
-ul{
-    margin-left: 0;
-    padding-left: 0;
-    list-style: none;
+main {
+  margin: 0 auto;
 }
 
-.sidebar{
-    /* fixed value
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar {
+  /* fixed value
     The element is positioned relative to the browser window */
-    position: fixed;
-    background-color: #F0F8FF;
-    /* height property: it will have the exact height if it is a number
+  position: fixed;
+  background-color: #f0f8ff;
+  /* height property: it will have the exact height if it is a number
     otherwise, if it is a %, it will have % height of parent */
-    height: 100%;
-    /* if remove position fixed, it will now not 100% because
+  height: 100%;
+  /* if remove position fixed, it will now not 100% because
     the sidebar's parent will now is body - not browser and not
     have 100% */
-    width: 300px;
-    transition: all 0.4s ease;
+  width: 300px;
+  transition: all 0.4s ease;
 }
 
-.sidebar .logo{
-    height: 80px;
-    display: flex;
-    /* The flex children of a flex parent with flex-direction: row 
+.sidebar .logo {
+  height: 80px;
+  display: flex;
+  /* The flex children of a flex parent with flex-direction: row 
     (the default for display: flex)/* ? will be equal heights
     flex-direction: column => /* ? the children will be equal widths*/
 
-    /* align-items will center all the children in it
+  /* align-items will center all the children in it
     according to its flex-direction ( by default, it is row value)
     => center horizontal */
-    align-items: center;
-    /* * justify-content: center */
+  align-items: center;
+  /* * justify-content: center */
 }
 /* ? Instead of using margin: auto below
 ? we can add justify-content: center property in .logo above  */
-.sidebar .logo a{
-    /* margin property will determine the distance between
+.sidebar .logo a {
+  /* margin property will determine the distance between
     current element and its parent elements */
 
-    /* margin property to "auto" value to horizontally
+  /* margin property to "auto" value to horizontally
      center the element within its container. */
-    margin: auto;
+  margin: auto;
 }
 
-.sidebar .sidebar-links{
-    margin-top: 10px;
+.sidebar .sidebar-links {
+  margin-top: 10px;
 }
 
-.sidebar .sidebar-links li{
-    /* Elements with position: relative
+.sidebar .sidebar-links li {
+  /* Elements with position: relative
      remain in the normal flow of the document */
-    position: relative;
-    height: 50px;
+  position: relative;
+  height: 50px;
 }
 
-.sidebar .sidebar-links li a{
-    /* this element will have the same
+.sidebar .sidebar-links li a {
+  /* this element will have the same
     height, width of parent element */
-    /* % - value
+  /* % - value
     Defines the height in percent of the containing block */
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    transition: all 0.4s ease;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease;
 }
-.sidebar .sidebar-links li .active{
-    background: #081D45;
+.sidebar .sidebar-links li .active {
+  background: #081d45;
 }
-.sidebar .sidebar-links li .active *{
-    color: #fff;
+.sidebar .sidebar-links li .active * {
+  color: #fff;
 }
 /* ? This * will change all elements in it */
-.sidebar .sidebar-links li a:hover *{
-    color: #fff;
+.sidebar .sidebar-links li a:hover * {
+  color: #fff;
 }
 .sidebar .sidebar-links li a:hover {
-    background: #081D45;
-    
+  background: #081d45;
 }
 
-.sidebar .sidebar-links li a i{
-    /* text-align: center; */
-    font-size: 24px;
-    /* Padding property decide the distance between
+.sidebar .sidebar-links li a i {
+  /* text-align: center; */
+  font-size: 24px;
+  /* Padding property decide the distance between
      it and its children  elements*/
-    /* padding: 20px; */
-    width: 40px;
+  /* padding: 20px; */
+  width: 40px;
 
-    /* The text-align property specifies
+  /* The text-align property specifies
      the horizontal alignment of text (icons) in an element. */
-    text-align: center;
-    color: #343A40;
+  text-align: center;
+  color: #343a40;
 }
 
-.sidebar .sidebar-links li a span{
-    color: #343A40;
-    font-size: 20px;
-    font-weight: 400;
-    /* The white-space property specifies
+.sidebar .sidebar-links li a span {
+  color: #343a40;
+  font-size: 20px;
+  font-weight: 400;
+  /* The white-space property specifies
     how white-space inside an element is handled. */
-    /* "nowrap" value - Sequences of whitespace will collapse
+  /* "nowrap" value - Sequences of whitespace will collapse
      into a single whitespace. 
      Text will never wrap to the next line. */
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
-.sidebar .sidebar-links .log_out{
-    /* absolute position property 
+.sidebar .sidebar-links .log_out {
+  /* absolute position property 
     position: absolute are  /* ? positioned relative to their parent elements.
     In this case, /* ? the element is removed from the normal document flow.
      The other elements will behave as if that element is not in the document.
      /* ? if there is no parent , it will use <html> */
-    position: absolute;
-    /* top - bottom - left - right property:border:
+  position: absolute;
+  /* top - bottom - left - right property:border:
     set the value to its top - bottom - left - right to a unit
     can only be used if position is set */
-    bottom: 0;
-    width: 100%;
+  bottom: 0;
+  width: 100%;
 }
 
 /* ? position: sticky is a mix of position: relative and position: fixed.
  * It acts like a relatively positioned element until a certain scroll point
  * and then it acts like a fixed element. */
 
-section{
-    position: relative;
-    background-color: #f5f5f5;
-    width: calc(100% - 300px);
-    left: 300px;
-    transition: all 0.4s ease;
+section {
+  position: relative;
+  background-color: #f5f5f5;
+  width: calc(100% - 300px);
+  left: 300px;
+  transition: all 0.4s ease;
 }
 
-.hidden{    
-    opacity: 0;
-    transition-delay: .25s;
+.hidden {
+  opacity: 0;
+  transition-delay: 0.25s;
 }
 
-.push{
-    left:0;
+.push {
+  left: 0;
 }
 
-section nav{
-    /* ? z-index to prevent it is been overlaped in the future */
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    background-color: #fff;
-    align-items: center;
-    padding: 0 20px;
-    position: fixed;
-    /* This 2 property width and left 
+section nav {
+  /* ? z-index to prevent it is been overlaped in the future */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #fff;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  /* This 2 property width and left 
     will reset the width when set to fixed position */
-    width: calc(100% - 300px);
-    left: 300px;
-    box-shadow: 0 1px 1px rgba(0 ,0, 0, 0.1);
-    transition: all 0.5s ease;
+  width: calc(100% - 300px);
+  left: 300px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
 }
-section nav .sidebar-button{
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-section nav .sidebar-button i{
-    font-size: 35px;
-    margin-right: 10px;
+section nav .sidebar-button {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
 }
 
-section nav .search-box{
-    position: relative;
-    height: 50px;
-    /* these 2 below code for reponsive purpose */
-    width: 100%;
-    max-width: 550px;
-    margin: 0 20px;
+section nav .sidebar-button i {
+  font-size: 35px;
+  margin-right: 10px;
 }
 
-section nav .search-box input{
-    height: 100%;
-    width: 100%;
-    /* An outline is a line that is drawn around elements,
+section nav .search-box {
+  position: relative;
+  height: 50px;
+  /* these 2 below code for reponsive purpose */
+  width: 100%;
+  max-width: 550px;
+  margin: 0 20px;
+}
+
+section nav .search-box input {
+  height: 100%;
+  width: 100%;
+  /* An outline is a line that is drawn around elements,
      OUTSIDE the borders, to make the element "stand out". */
-    outline: none;
-    background-color: #F5F6FA;
-    border: 2px solid #EFEEF1;
+  outline: none;
+  background-color: #f5f6fa;
+  border: 2px solid #efeef1;
 }
 
-section nav .search-box i{
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    right: 5px;
-    /* ? usually, top and translate use to
+section nav .search-box i {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 5px;
+  /* ? usually, top and translate use to
     ? make center the element in parent block */
-    top: 50%;
-    transform: translateY(-50%);
-    /* ! Line-height help center icon vertically
+  top: 50%;
+  transform: translateY(-50%);
+  /* ! Line-height help center icon vertically
     ! due to there is input on top of it */
-    line-height: 40px;
-    text-align: center;
-    color: #000;
-    font-size: 22px;
-    transition: all 0.4s ease;
+  line-height: 40px;
+  text-align: center;
+  color: #000;
+  font-size: 22px;
+  transition: all 0.4s ease;
 }
 
-section nav .profile-details{
-    display: flex;
-    align-items: center;
-    background: #F5F6FA;
-    border: 2px solid #efeef1;
-    border-radius: 5px;
-    height: 50px;
-    min-width: 200px;
-    padding: 0 15px 0 2px;
+section nav .profile-details {
+  display: flex;
+  align-items: center;
+  background: #f5f6fa;
+  border: 2px solid #efeef1;
+  border-radius: 5px;
+  height: 50px;
+  min-width: 200px;
+  padding: 0 15px 0 2px;
 }
 
-section nav .profile-details i{
-    height: 40px;
-    width: 40px;
-    object-fit: cover;
-    /* these 3 property will center a lot of child element */
-    display: flex;
-    align-items: center;
-    /* justify-content: center	
+section nav .profile-details i {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  /* these 3 property will center a lot of child element */
+  display: flex;
+  align-items: center;
+  /* justify-content: center	
     => Items are positioned in the center of the container */
-    justify-content: center;
-    font-size: 33px;
-    color: #333;
+  justify-content: center;
+  font-size: 33px;
+  color: #333;
 }
 
-section nav .profile-details span{
-    margin-left: 10px;
+section nav .profile-details span {
+  margin-left: 10px;
 }
 
-section .home-content{
+section .home-content {
+  /* ? to make sure it will now overlap the nav */
+  z-index: 0;
+  position: relative;
+  padding: 120px 30px;
+  background: #fff;
+  /* padding: 20px 30px; */
+  /* margin: 0 20px; */
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-content .demo_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-content .demo_list .test {
+  width: 100%;
+  background: #fff;
+  padding: 20px 30px;
+  margin: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-content .demo_list .demo_details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 600px) {
+  .sidebar {
+    display: block;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+    z-index: 999;
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    margin-top: 80px;
+  }
+  section {
+    width: 100%;
+    left: 0;
+  }
+  section nav {
+    position: static;
+    width: 100%;
+    left: 0;
+  }
+  section .home-content {
     /* ? to make sure it will now overlap the nav */
     z-index: 0;
-    position: relative;
-    padding: 120px 30px;
-    background: #fff;
+    padding: 40px 30px;
     /* padding: 20px 30px; */
     /* margin: 0 20px; */
-    border-radius: 12px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.home-content .demo_list{
-    display: flex;
-    justify-content: space-between;
-}
-
-.home-content .demo_list .test{
-    width: 100%;
-    background: #fff;
-    padding: 20px 30px;
-    margin: 0 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    
-}
-
-.home-content .demo_list .demo_details{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-@media screen and (min-width: 600px){
-    .sidebar{
-        display: block; 
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 600px){
-    .sidebar{
-        display: none;
-        z-index: 999;
-        width: 100%;
-        height: 80%;
-        position: absolute;
-        margin-top: 80px;
-    }
-    section{
-        width: 100%;
-        left:0;
-    }
-    section nav{
-        position:static;
-        width: 100%;
-        left:0;
-    }
-    section .home-content{
-        /* ? to make sure it will now overlap the nav */
-        z-index: 0;
-        padding: 40px 30px;
-        /* padding: 20px 30px; */
-        /* margin: 0 20px; */
-    }
+  }
 }
