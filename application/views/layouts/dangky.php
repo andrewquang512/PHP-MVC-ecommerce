@@ -43,8 +43,8 @@
 
         // Finally, register user if there are no errors in the form
         if (!$errors) {
-            $query_custom = "INSERT INTO customer (user_id, user_name, pwd) VALUES(25, '$username', '$password')";
-            $query_contact = "INSERT INTO contact (user_id, first_name, last_name, phone, email, addr) VALUES(25, '$fname', '$lname', '$phone', '$email', '$addr')";
+            $query_custom = "INSERT INTO customer (user_name, pwd) VALUES('$username', '$password')";
+            $query_contact = "INSERT INTO contact (first_name, last_name, phone, email, addr) VALUES('$fname', '$lname', '$phone', '$email', '$addr')";
             $query_get = "SELECT * FROM customer WHERE user_name = '$username'";
 
             mysqli_query($con, $query_custom);
