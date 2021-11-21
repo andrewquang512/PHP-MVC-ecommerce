@@ -14,19 +14,19 @@
         $password = stripcslashes($password);
         
         // receive all input values from the form
-        $username = mysqli_real_escape_string($con, $username);    
-        $password = mysqli_real_escape_string($con, $password);
-        $email = mysqli_real_escape_string($con, $_POST['email']);
-        $fname = mysqli_real_escape_string($con, $_POST['fname']);
-        $lname = mysqli_real_escape_string($con, $_POST['lname']);
-        $phone = mysqli_real_escape_string($con, $_POST['phone']);
-        $addr = mysqli_real_escape_string($con, $_POST['addr']);
+        $username = mysqli_real_escape_string($connect, $username);    
+        $password = mysqli_real_escape_string($connect, $password);
+        $email = mysqli_real_escape_string($connect, $_POST['email']);
+        $fname = mysqli_real_escape_string($connect, $_POST['fname']);
+        $lname = mysqli_real_escape_string($connect, $_POST['lname']);
+        $phone = mysqli_real_escape_string($connect, $_POST['phone']);
+        $addr = mysqli_real_escape_string($connect, $_POST['addr']);
 
         // first check the database to make sure 
         // a user does not already exist with the same username and/or email
-        $user_check_query = "SELECT * FROM customer JOIN contact ON customer.user_id = contact.user_id WHERE user_name='$username' OR email='$email'";
+        $user_check_query = "SELECT * FROM customer WHERE user_name='$username' OR email='$email'";
 
-        $result = mysqli_query($con, $user_check_query);
+        $result = mysqli_query($connect, $user_check_query);
         $user = mysqli_fetch_assoc($result);
         
         if ($user) { // if user exists
@@ -47,9 +47,9 @@
             $query_contact = "INSERT INTO contact (first_name, last_name, phone, email, addr) VALUES('$fname', '$lname', '$phone', '$email', '$addr')";
             $query_get = "SELECT * FROM customer WHERE user_name = '$username'";
 
-            mysqli_query($con, $query_custom);
-            mysqli_query($con, $query_contact);
-            $get_userid = mysqli_query($con, $query_get);
+            mysqli_query($connect, $query_custom);
+            mysqli_query($connect, $query_contact);
+            $get_userid = mysqli_query($connect, $query_get);
             $row = mysqli_fetch_array($get_userid, MYSQLI_ASSOC);
 
             $_SESSION['user_id'] = $row['user_id'];
@@ -77,7 +77,7 @@
     ?>
 
     <div class="wrapper">
-      <form id="signup_form" action="dangky.php" method="POST">
+      <form id="signup_form" action="http://localhost/PHP-MVC-ecommerce/?controller=pages&action=dangky" method="POST">
         <!--fieldset-->
         <fieldset>
           <h2 class="header-text">Tạo tài khoản</h2>
@@ -103,7 +103,7 @@
           <p class="noti" id="noti"></p>
           <input type="button" name="previous" class="previous action-button" value="Previous" />
           <input type="submit" name="submit" class="submit action-button" value="Submit" />
-          <h3 class="subheader-text">Đã có tài khoản? <a href="dangky.php">Đăng nhập</a></h3>
+          <h3 class="subheader-text">Đã có tài khoản? <a href="./?controller=pages&action=dangnhap">Đăng nhập</a></h3>
         </fieldset>
       </form>
     </div>
@@ -216,7 +216,7 @@
     
           if(username != "" && pwd != "" && email != "" && phone != "" && fname != "" && lname != "" && addr != ""){
             $.ajax({
-              url: 'dangky.php',
+              url: 'http://localhost/PHP-MVC-ecommerce/?controller=pages&action=dangky',
               type: 'POST',
               data: {
                 username: username,
@@ -231,7 +231,7 @@
                 var msg = "";
                 
                 if(response == 2){
-                  window.open("http://localhost/PHP-MVC-ecommerce/application/views/layouts/index.php", "_self");
+                  window.open("http://localhost/PHP-MVC-ecommerce/?controller=pages&action=home", "_self");
                 }
                 
                 else if(response == 1){

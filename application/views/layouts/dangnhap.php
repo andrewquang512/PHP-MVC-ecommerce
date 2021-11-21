@@ -80,7 +80,7 @@
             <i class="fas fa-eye-slash" id="eyeID" style="margin-left: -30px; cursor: pointer;"></i>
             <p class="noti" id="noti"></p>
             <input type="button" id="sub_btn" class="btn" value="Đăng nhập">          
-            <h3 class="subheader-text">Chưa có tài khoản? <a href="localhost/PHP-MVC-ecommerce/?controller=pages&action=dangky">Đăng ký ngay</a></h3>
+            <h3 class="subheader-text">Chưa có tài khoản? <a href="./?controller=pages&action=dangky">Đăng ký ngay</a></h3>
           </fieldset>          
 
         </form>
