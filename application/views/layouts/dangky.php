@@ -43,8 +43,8 @@
 
         // Finally, register user if there are no errors in the form
         if (!$errors) {
-            $query_custom = "INSERT INTO customer (user_id, user_name, pwd) VALUES(25, '$username', '$password')";
-            $query_contact = "INSERT INTO contact (user_id, first_name, last_name, phone, email, addr) VALUES(25, '$fname', '$lname', '$phone', '$email', '$addr')";
+            $query_custom = "INSERT INTO customer (user_name, pwd) VALUES('$username', '$password')";
+            $query_contact = "INSERT INTO contact (first_name, last_name, phone, email, addr) VALUES('$fname', '$lname', '$phone', '$email', '$addr')";
             $query_get = "SELECT * FROM customer WHERE user_name = '$username'";
 
             mysqli_query($con, $query_custom);
@@ -86,7 +86,7 @@
           <input type="text" placeholder="Nhập tên đăng nhập" id="username" pattern="[A-Za-z0-9]{12}" title="Tên chỉ gồm chữ hoặc số, phải có ít nhất một chữ thường" required>
           <input type="text" placeholder="Nhập e-mail" id="email" pattern="[A-Za-z]+\.@[A-Za-z0-9]+\.[A-z]{3}" title="something@gmail.com" required>
           <input type="password" placeholder="Nhập mật khẩu" id="pwd" pattern="[A-Za-z0-9]{3,15}" title="Mật khẩu phải từ 3 đến 15 kí tự" required>
-          <input type="password" placeholder="Xác nhận mật khẩu" id="confirm_psw" pattern="[A-z0-9]{3,15}" required onChange="checkPasswordMatch();">
+          <input type="password" placeholder="Xác nhận mật khẩu" id="confirm_psw" pattern="[A-z0-9]{3,15}" required onkeyup="checkPasswordMatch();">
           <p class="matched" id="matched"></p>
           <input type="button" name="next" class="next action-button" value="Next" />
           <h3 class="subheader-text">Đã có tài khoản? <a href="dangnhap.php">Đăng nhập</a></h3>
@@ -113,12 +113,15 @@
     ?>
 
     <script>
-      function checkPasswordMatch() {
-        var password = $("#pwd").val();
-        var confirmPassword = $("#confirm_pwd").val();
-
-        if (password != confirmPassword) $("#matched").html("Passwords not match!");
-        else $("#matched").html("Passwords match.");
+      var checkPasswordMatch = function() {
+        if (document.getElementById('pwd').value ==
+          document.getElementById('confirm_psw').value) {
+          document.getElementById('matched').style.color = 'green';
+          document.getElementById('matched').innerHTML = 'Confirm password matched';
+        } else {
+          document.getElementById('matched').style.color = 'red';
+          document.getElementById('matched').innerHTML = 'Confirm password not matched';
+        }
       }
 
       $(document).ready(function(){

@@ -60,6 +60,7 @@
     include('head.php');
   ?>
   <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/dangnhap.css" type="text/css">
+  <script src="https://kit.fontawesome.com/27f4102942.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.8.5/jquery-ui.min.js"></script>
 </head>
@@ -76,6 +77,7 @@
             <hr>
             <input type="text" placeholder="Nhập tên đăng nhập" id="username" pattern="[A-Za-z]{3,}" title="Tên đăng nhập phải ít nhất 3 kí tự" required>       
             <input type="password" placeholder="Nhập mật khẩu" id="pwd" pattern="[A-Za-z0-9]{3,15}" title="Mật khẩu phải từ 3 đến 15 kí tự" required>
+            <i class="fas fa-eye-slash" id="eyeID" style="margin-left: -30px; cursor: pointer;"></i>
             <p class="noti" id="noti"></p>
             <input type="button" id="sub_btn" class="btn" value="Đăng nhập">          
             <h3 class="subheader-text">Chưa có tài khoản? <a href="localhost/PHP-MVC-ecommerce/?controller=pages&action=dangky">Đăng ký ngay</a></h3>
@@ -90,6 +92,18 @@
 </body>
     <script>
       $(document).ready(function(){
+        $('#eyeID').click(function(){       
+          if($(this).hasClass('fas fa-eye-slash')){          
+            $(this).removeClass('fas fa-eye-slash');         
+            $(this).addClass('fas fa-eye');         
+            $('#pwd').attr('type','text');           
+          }else{        
+            $(this).removeClass('fas fa-eye');            
+            $(this).addClass('fas fa-eye-slash');              
+            $('#pwd').attr('type','password');
+          }
+        });
+        
         $('#sub_btn').click(function(){
           var username = $('#username').val().trim();
           var pwd = $('#pwd').val().trim();
