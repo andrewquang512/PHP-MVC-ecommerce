@@ -52,7 +52,7 @@ class BillModel{
 
     public static function GetByCustomerId ($id) {
         $db = (new DB())->CreateConnection();
-        $statement = $db->prepare("SELECT * FROM bill WHERE CID = ?");
+        $statement = $db->prepare("SELECT * FROM bill WHERE CID = ? AND PaySTATUS = 0");
         $statement->bind_param('i', $id);
         $statement->bind_result($customer_id, $bill_id, $bill_date, $total, $status);
         if ($statement->execute()) {
