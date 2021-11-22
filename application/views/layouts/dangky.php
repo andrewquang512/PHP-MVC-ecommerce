@@ -137,7 +137,7 @@
           <input type="password" placeholder="Xác nhận mật khẩu" id="confirm_psw" pattern="[A-z0-9]{3,15}" required onChange="checkPasswordMatch();">
           <p class="matched" id="matched"></p>
           <input type="button" name="next" class="next action-button" value="Next" />
-          <h3 class="subheader-text">Đã có tài khoản? <a href="dangnhap.php">Đăng nhập</a></h3>
+          <h3 class="subheader-text">Đã có tài khoản? <a href="./?controller=pages&action=dangnhap">Đăng nhập</a></h3>
         </fieldset>
         
         <fieldset>
@@ -147,11 +147,11 @@
           <input type="text" id="fname"  placeholder="Họ" required>
           <input type="text" id="lname"  placeholder="Tên" required>
           <input type="text" placeholder="Số điện thoại" id="phone" pattern="[0-9]{10}" required>
-          <input type="text" placeholder="Địa chỉ" id="addr"  required>
+          <input type="text" placeholder="Địa chỉ" id="addr" required>
           <p class="noti" id="noti"></p>
           <input type="button" name="previous" class="previous action-button" value="Previous" />
           <input type="submit" name="submit" class="submit action-button" value="Submit" />
-          <h3 class="subheader-text">Đã có tài khoản? <a href="dangky.php">Đăng nhập</a></h3>
+          <h3 class="subheader-text">Đã có tài khoản? <a href="./?controller=pages&action=dangnhap">Đăng nhập</a></h3>
         </fieldset>
       </form>
     </div>
