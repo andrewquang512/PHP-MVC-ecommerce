@@ -40,6 +40,11 @@ class PagesController extends BaseController
     $this->render('phone');
     //? http://localhost/PHP-MVC-ecommerce/?controller=pages&action=sanpham
   }
+  public function sanpham_detailed($id = null)
+  {
+    $this->folder = 'detailed';
+    $this->render($id);
+  }
   public function lienhe()
   {
     $this->render('lienhe');
@@ -54,6 +59,11 @@ class PagesController extends BaseController
   {
     $this->render('dangnhap');
     //? http://localhost/PHP-MVC-ecommerce/?controller=pages&action=dangnhap
+  }
+  public function dangxuat()
+  {
+    $this->render('dangxuat');
+    //? http://localhost/PHP-MVC-ecommerce/?controller=pages&action=dangxuat
   }
   public function shoppingcart()
   {

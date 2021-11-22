@@ -2,13 +2,14 @@
 
 //Newscontroller.php
 
-include('../core/DB.php');
+$connect = (new DB())->CreateConnection();
+$params = array(0,0,0,0);
 if(isset($_POST["search"]))
 {   
     $query="";
     if(!empty($_POST["keyword"]))
 	{ 
-        $query .="SELECT news.news_id,news.title,news.content,news.image,news.release_hour FROM news,new_keywords WHERE news.news_id=new_keywords.news_id AND new_keywords.tag_name IN('".$_POST["keyword"]."');
+        $query .="SELECT DISTINCT news.news_id,news.title,news.content,news.image,news.release_hour FROM news WHERE news.title LIKE'%('".$_POST["keyword"]."')%' OR news.content LIKE '%('".$_POST["keyword"]."')%';
         ";
     }    
     else{
@@ -17,8 +18,10 @@ if(isset($_POST["search"]))
     //print_r($query);
     $statement = $connect->prepare($query);
 	$statement->execute();
-    $result = $statement->fetchAll();
-	$total_row = $statement->rowCount();
+    // $result = $statement->fetchAll();
+	// $total_row = $statement->rowCount();
+    $result = $statement->get_result();
+	$total_row = $result->fetch_row();
 	$output = '';
 	if($total_row > 0)
 	{

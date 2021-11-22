@@ -1,5 +1,6 @@
 <?php
-include('../core/DB.php');
+$connect = (new DB())->CreateConnection();
+$params = array(0,0,0,0);
 $error='';
 $flag=0;
 if(isset($_POST["submit"]))

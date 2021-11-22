@@ -85,7 +85,7 @@ $(document).ready(function(){
   var content = $('#content').val();
   $.ajax({
         // ! NEEDED FIX !!!!!!!!!!!!!!!!
-        url:"../../controllers/Contactcontroller.php",
+        url:"http://localhost/PHP-MVC-ecommerce/?controller=client&action=contact",
         // ! NEEDED FIX !!!!!!!!!!!!!!!!
         method:"POST",
         data:{submit:submit,name:name, title:title, phone:phone, email:email, content:content},

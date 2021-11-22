@@ -4,6 +4,7 @@
     session_destroy();
     
     $_SESSION['loggedin'] = false;
-    header("location:http://localhost/PHP-MVC-ecommerce/application/views/layouts/index.php");
+    header("location:http://localhost/PHP-MVC-ecommerce/?controller=pages&action=home");
     die();
 ?>
+
