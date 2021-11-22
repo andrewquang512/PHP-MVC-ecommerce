@@ -1,7 +1,7 @@
 <div class='sidebar' id="sidebar">
         <div class='logo'>
             <a class="" href="#">
-                <img width="120" height="auto" class="header-logo" src="../../../public/assets/images/mona-logo2.png">
+                <img width="120" height="auto" class="header-logo" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/mona-logo2.png">
             </a>
         </div>
         
