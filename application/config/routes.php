@@ -1,7 +1,7 @@
 <?php
 $controllers = array(
     'pages' => ['home', 'tintuc','lienhe','gioithieu','sanpham','dangnhap','dangky','shoppingcart','dangxuat'],
-    'admin' => ['home','customermanage', 'contactmanage','commentmanage','contentmanage','updatecustomer'],
+    'admin' => ['home','customermanage', 'contactmanage','commentmanage','contentmanage','updatecustomer', 'addcustomer', 'deletecustomer'],
     'client' => ['phone','new','contact'],
     'detailed' =>['huawei-p30-pro','iphone-12','iphone-13-promax','oppo-a74','oppo-reno6','samsung-galaxy-21','samsung-galaxyz-fold3','vivo-12s','vivo-y21s','xiaomi-mi11-lite','xiaomi-redmi-9t']
 );
