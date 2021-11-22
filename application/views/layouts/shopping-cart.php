@@ -21,71 +21,85 @@
     </div>
     <!-- boby -->
 
-    <div class="container">
+    <div class="container-fuild">
 
         <h4 class="margin-top-30" id="shopping-cart">Giỏ hàng</h4>
         <div class="row">
             <div class="col col-lg-9">
                 <div class="row bg-light" id="cart-header">
-                    <div class="col col-lg-2 col-center">
+                    <div class="col col-lg-1 col-center">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name='foo' id="all-check"
-                                onClick="toggle(this)" onchange="tempTotalMoney();" />
+                                onClick="toggle(this)" onchange="Calculate();" />
                             <label class="form-check-label bold-text" for="all-check">
-                                Tất cả
+                                (<?php echo count($data) - 1;?>)
                             </label>
-                            <span id="total-product">(<?php echo count($data) - 1;?>)</span>
+                            <br>
                         </div>
                     </div>
-                    <div class="col col-lg-3 col-center bold-text">Tên sản phẩm</div>
+                    <div class="col col-lg-2 col-center bold-text">Tên sản phẩm</div>
                     <div class="col col-lg-2 all-center bold-text">Đơn giá</div>
+                    <div class="col col-lg-2 all-center bold-text">Giảm giá</div>
                     <div class="col col-lg-2 all-center bold-text">Số lượng</div>
                     <div class="col col-lg-2 all-center bold-text">Thành tiền</div>
-                    <div class="col col-lg-1 all-center" onclick="RemoveAll()">
-                        <i class="fa fa-trash-o fa-lg"></i>
+                    <div class="col col-lg-1 all-center">
+                        <a href="./?controller=shoppingcart&action=getcart&index=-1">
+                            <i class="fa fa-trash-o fa-lg"></i>
+                        </a>
                     </div>
                 </div>
 
 
-                <?php for ($index = 1; $index < count($data); $index++) { ?>
+                <?php for ($index = 1; $index < count($data); $index++) { 
+                    $price = $data[$index]->getPrice()*(10**6);
+                    $gift = $data[$index]->getGift()*(10**6);
+                    ?>
 
                 <div class="row bg-light cart-product" id=<?php echo "product-" . $index?> name="product">
                     <div class="col col-lg-1 col-center">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="foo" onchange="tempTotalMoney();" />
+                            <input class="form-check-input" type="checkbox" name="foo" onchange="Calculate();" />
                         </div>
-                    </div>
-                    <div class="col col-lg-1 all-center">
                         <img src=<?php echo "./public/assets/images/dtdd/" . $data[$index]->getImage() ?> alt="phone1"
                             class="img-size" />
                     </div>
-                    <div class="col col-lg-3 col-center">
+
+                    <div class="col col-lg-2 col-center">
                         <?php print($data[$index]->getPname());?>
                     </div>
+
                     <div class="col col-lg-2 all-center" id=<?php echo "price-" . $index?>>
-                        <?php echo $data[$index]->getPrice()?></div>
+                        <?php echo number_format($price,0,'','.')?></div>
+
+                    <div class="col col-lg-2 all-center" id=<?php echo "gift-" . $index?>>
+                        <?php echo number_format($gift,0,'','.')?>
+                    </div>
 
                     <div class="col col-lg-2 all-center">
                         <input type="button" class="value-button decrease" id=<?php echo "decrease-" . $index?>
-                            onclick="decreaseValue(<?php echo $index ?>); intoMoney(<?php echo $index ?>)"
+                            onclick="decreaseValue(<?php echo $index ?>); intoMoney(<?php echo $index ?>, <?php echo $gift ?>, <?php echo $price ?>); Calculate();"
                             name="decrease" value="-" />
 
                         <input type="text" id=<?php echo "number-" . $index?> name="quantity" value="1"
-                            class="row-center number" oninput="intoMoney(<?php echo $index ?>);" />
+                            class="row-center number"
+                            oninput="intoMoney(<?php echo $index ?>, <?php echo $gift ?>, <?php echo $price ?>);Calculate();" />
 
                         <input type="button" class="value-button increase" id=<?php echo "increase-" . $index?>
-                            onclick="increaseValue(<?php echo $index ?>); intoMoney(<?php echo $index ?>)"
+                            onclick="increaseValue(<?php echo $index ?>); intoMoney(<?php echo $index ?>, <?php echo $gift ?>, <?php echo $price ?>); Calculate();"
                             name="increase" value="+" />
                     </div>
 
                     <div class="col col-lg-2 all-center red-text" id=<?php echo "money-" . $index?> name="money"
-                        onchange="tempTotalMoney();">
-                        <?php echo $data[$index]->getPrice()?>
+                        onchange="Calculate();">
+                        <?php echo number_format($price,0,'','.')?>
                     </div>
 
-                    <div class="col col-lg-1 all-center" onclick="Remove(<?php echo $index ?>)">
-                        <i class="fa fa-trash-o "></i>
+                    <div class="col col-lg-1 all-center">
+                        <a href=<?php echo "./?controller=shoppingcart&action=getcart&index=" . $index ?>>
+                            <i class="fa fa-trash-o "></i>
+                        </a>
                     </div>
+
 
                 </div>
 
@@ -111,26 +125,21 @@
                 <div class="bg-light" id="cart-total">
                     <div class="row">
                         <div class="col col-6">Tạm tính</div>
-                        <div class="col col-6" id="tempTotalMoney">0</div>
+                        <div class="col col-6 alignright" id="tempTotalMoney">0</div>
                     </div>
                     <div class="row">
                         <div class="col col-6">Giảm giá</div>
-                        <div class="col col-6" id="gift">
-                            <?php $sum=0; for ($index=1; $index < count($data); $index++) { $sum +=$data[$index]->
-                                getGift();}
-                                echo $sum;
-                            ?>
-                        </div>
+                        <div class="col col-6 alignright" id="gift">0</div>
                     </div>
                     <hr />
                     <div class="row">
                         <div class="col col-6 bold-text">Tổng cộng</div>
-                        <div class="col col-6 red-text" id="totalMoney">0</div>
+                        <div class="col col-6 red-text alignright" id="totalMoney">0</div>
                     </div>
                 </div>
 
                 <div class="all-center">
-                    <button type="button" class="btn btn-danger">Mua hàng</button>
+                    <button type="button" class="btn btn-danger" onclick="Buy()">Mua hàng</button>
                 </div>
             </div>
         </div>

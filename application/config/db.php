@@ -4,7 +4,7 @@ class DB{
     public $con;
     protected $servername = "localhost";
     protected $username = "root";
-    protected $password = "";
+    protected $password = "123456";
     protected $dbname = "phoneshop";
 
     public function CreateConnection() {

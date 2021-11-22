@@ -1,159 +1,179 @@
 /* A little change in header */
+
 .header__cart {
-  border: 1px solid red;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 14px;
-  margin-left: 10px;
-  padding: 5px 8px;
-  width: 110px;
-  height: 35px;
+    border: 1px solid red;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px;
+    margin-left: 10px;
+    padding: 5px 8px;
+    width: 110px;
+    height: 35px;
 }
+
 .header__cart:hover {
-  background-color: red;
-  transition: 1s;
+    background-color: red;
+    transition: 1s;
 }
+
 .header__cart:hover i {
-  color: #fff;
+    color: #fff;
 }
+
 .header__cart:hover span {
-  color: #fff;
+    color: #fff;
 }
+
 .header__cart i {
-  margin-right: 5px;
-  font-size: 20px;
-  color: black;
+    margin-right: 5px;
+    font-size: 20px;
+    color: black;
 }
+
 .header__cart span {
-  color: black;
-  font-size: 14px;
+    color: black;
+    font-size: 14px;
 }
+
 .header__cart i,
 .header__cart span {
-  display: inline-block;
-  vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 }
+
 .icon-cart {
-  background-position: -175px 0;
-  height: 18px;
-  width: 20px;
+    background-position: -175px 0;
+    height: 18px;
+    width: 20px;
 }
+
 .header__cart i,
 .header__cart span {
-  display: inline-block;
-  vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 }
+
+
 /* For separate part of php */
 
 .all-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .red-text {
-  color: red;
+    color: red;
 }
 
 .bold-text {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .row-center {
-  text-align: center;
+    text-align: center;
 }
 
 .col-center {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .img-size {
-  width: 80px;
-  height: 80px;
+    width: 100%;
+    height: 50%;
 }
 
 .increase {
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgb(108, 117, 125);
-  border-radius: 0px 3px 3px 0px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(108, 117, 125);
+    border-radius: 0px 3px 3px 0px;
 }
 
 .increase:hover {
-  background-color: rgb(106, 139, 248);
+    background-color: rgb(106, 139, 248);
 }
 
 .decrease {
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgb(108, 117, 125);
-  border-radius: 3px 0px 0px 3px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(108, 117, 125);
+    border-radius: 3px 0px 0px 3px;
 }
 
 .decrease:hover {
-  background-color: rgb(106, 139, 248);
+    background-color: rgb(106, 139, 248);
 }
 
 .number {
-  width: 45px;
-  height: 30px;
-  border: 1px solid rgb(108, 117, 125);
-  border-radius: 0px 0px 0px 0px;
+    width: 45px;
+    height: 30px;
+    border: 1px solid rgb(108, 117, 125);
+    border-radius: 0px 0px 0px 0px;
 }
 
 #cart-header {
-  height: 40px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 .cart-product {
-  margin-top: 5px;
-  border-radius: 10px;
-  height: 100px;
+    margin-top: 5px;
+    border-radius: 10px;
+    height: 100px;
 }
 
 #shopping-cart {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 #cart-price {
-  border-radius: 10px;
-  height: fit-content;
+    border-radius: 10px;
+    height: fit-content;
 }
 
 #cart-address {
-  border-radius: 10px;
-  padding: 5%;
+    border-radius: 10px;
+    padding: 5%;
 }
 
 #cart-total {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  padding: 5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 5%;
 }
 
 #cart-address-thaydoi {
-  font-size: 80%;
-  color: blue;
-  text-decoration: underline;
+    font-size: 80%;
+    color: blue;
+    text-decoration: underline;
 }
 
 #cart-address-giaotoi {
-  font-size: 120%;
-  font-weight: bold;
-  padding-top: 5%;
-  padding-bottom: 5%;
+    font-size: 120%;
+    font-weight: bold;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #address-detail {
-  font-size: 80%;
+    font-size: 80%;
 }
 
 .fa-trash-o:hover {
-  color: red;
+    color: red;
+}
+
+.container-fuild {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.alignright {
+    text-align: right;
 }
