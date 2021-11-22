@@ -69,17 +69,51 @@ class CustomerModel{
       return $list_model;
     }
     
-    public static function GetByCustomerId ($id) { 
+    public static function GetByCustomerId($id) { 
+      $db = (new DB())->CreateConnection();
+      $statement = $db->prepare("SELECT * FROM customer WHERE user_id = ?");
+      $statement->bind_param('i', $id);
+      $statement->bind_result($customer_id, $user_name, $pwd, $first_name, $last_name, $phone, $email, $addr);
+      if ($statement->execute()) {
+        while ($row = $statement->fetch()) {
+          $model = new CustomerModel($customer_id, $user_name, $pwd, $first_name, $last_name, $phone, $email, $addr);
+          return $model;
+        }
+      }
+    }
+    
+
+    public static function UpdateByCustomerId($customer_id, $first_name ,$last_name, $user_name, $phone, $email, $addr) { 
         $db = (new DB())->CreateConnection();
-        $statement = $db->prepare("SELECT * FROM customer WHERE user_id = ?");
-        $statement->bind_param('i', $id);
-        $statement->bind_result($customer_id, $user_name, $pwd, $first_name, $last_name, $phone, $email, $addr);
+        $statement = $db->prepare("UPDATE customer SET user_name = '$user_name',
+        first_name = '$first_name', last_name = '$last_name',
+        phone = '$phone', email = '$email', addr = '$addr'
+        WHERE user_id = $customer_id");
         if ($statement->execute()) {
-          while ($row = $statement->fetch()) {
-            $model = new CustomerModel($customer_id, $user_name, $pwd, $first_name, $last_name, $phone, $email, $addr);
-            return $model;
-          }
+          return "Record updated successfully";
+        } else {
+          return "Error updating record: ";
         }
     }
+    public static function CreateCustomer($pwd, $first_name ,$last_name, $user_name, $phone, $email, $addr) { 
+        $db = (new DB())->CreateConnection();
+        $statement = $db->prepare("INSERT INTO CUSTOMER(user_name,pwd,first_name,last_name,phone,email,addr)
+        VALUE ('$user_name','$pwd', '$first_name' ,'$last_name', '$phone', '$email', '$addr') ");
+        if ($statement->execute()) {
+          return "Record created successfully";
+        } else {
+          return "Error creating record: ";
+        }
+    }
+    public static function DeleteByCustomerId($customer_id) { 
+        $db = (new DB())->CreateConnection();
+        $statement = $db->prepare("DELETE FROM CUSTOMER WHERE user_id='$customer_id'");
+        if ($statement->execute()) {
+          return "Record deleted successfully";
+        } else {
+          return "Error deleting record: ";
+        }
+    }
+  
 }
 ?>
