@@ -69,7 +69,55 @@
     <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/dangky.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
-    
+    <style>
+/* A little change in header */
+.header__cart {
+  border: 1px solid red;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  margin-left: 10px;
+  padding: 5px 8px;
+  width: 110px;
+  height: 35px;
+}
+.header__cart:hover {
+  background-color: red;
+  transition: 1s;
+}
+.header__cart:hover i {
+  color: #fff;
+}
+.header__cart:hover span {
+  color: #fff;
+}
+.header__cart i {
+  margin-right: 5px;
+  font-size: 20px;
+  color: black;
+}
+.header__cart span {
+  color: black;
+  font-size: 14px;
+}
+.header__cart i,
+.header__cart span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon-cart {
+  background-position: -175px 0;
+  height: 18px;
+  width: 20px;
+}
+.header__cart i,
+.header__cart span {
+  display: inline-block;
+  vertical-align: middle;
+}
+  </style>
   </head>
   <body>
     <?php
@@ -83,23 +131,23 @@
           <h2 class="header-text">Tạo tài khoản</h2>
           <h3 class="subheader-text">Điền thông tin vào các ô<h3>
           <hr>
-          <input type="text" placeholder="Nhập tên đăng nhập" id="username" pattern="[A-Za-z0-9]{12}" title="Tên chỉ gồm chữ hoặc số, phải có ít nhất một chữ thường" required>
+          <input type="text" placeholder="Nhập tên đăng ký" id="username" pattern="[A-Za-z0-9]{12}" title="Tên chỉ gồm chữ hoặc số, phải có ít nhất một chữ thường" required>
           <input type="text" placeholder="Nhập e-mail" id="email" pattern="[A-Za-z]+\.@[A-Za-z0-9]+\.[A-z]{3}" title="something@gmail.com" required>
           <input type="password" placeholder="Nhập mật khẩu" id="pwd" pattern="[A-Za-z0-9]{3,15}" title="Mật khẩu phải từ 3 đến 15 kí tự" required>
           <input type="password" placeholder="Xác nhận mật khẩu" id="confirm_psw" pattern="[A-z0-9]{3,15}" required onkeyup="checkPasswordMatch();">
           <p class="matched" id="matched"></p>
           <input type="button" name="next" class="next action-button" value="Next" />
-          <h3 class="subheader-text">Đã có tài khoản? <a href="dangnhap.php">Đăng nhập</a></h3>
+          <h3 class="subheader-text">Đã có tài khoản? <a href="./?controller=pages&action=dangnhap">Đăng nhập</a></h3>
         </fieldset>
         
         <fieldset>
           <h2 class="header-text">Thông tin cá nhân</h2>
           <h3 class="subheader-text">Điền thông tin liên lạc<h3>
           <hr>
-          <input type="text" id="fname" pattern='[A-Za-z]+' placeholder="Họ" required>
-          <input type="text" id="lname" pattern='[A-Za-z]+' placeholder="Tên" required>
+          <input type="text" id="fname"  placeholder="Họ" required>
+          <input type="text" id="lname"  placeholder="Tên" required>
           <input type="text" placeholder="Số điện thoại" id="phone" pattern="[0-9]{10}" required>
-          <input type="text" placeholder="Địa chỉ" id="addr" pattern="[A-Za-z0-9]{0,125}" required>
+          <input type="text" placeholder="Địa chỉ" id="addr" required>
           <p class="noti" id="noti"></p>
           <input type="button" name="previous" class="previous action-button" value="Previous" />
           <input type="submit" name="submit" class="submit action-button" value="Submit" />
