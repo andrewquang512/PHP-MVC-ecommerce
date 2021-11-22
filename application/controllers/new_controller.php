@@ -9,7 +9,8 @@ if(isset($_POST["search"]))
     $query="";
     if(!empty($_POST["keyword"]))
 	{ 
-        $query .="SELECT DISTINCT news.news_id,news.title,news.content,news.image,news.release_hour FROM news WHERE news.title LIKE'%('".$_POST["keyword"]."')%' OR news.content LIKE '%('".$_POST["keyword"]."')%';
+        $keyword = $_POST["keyword"];
+        $query .="SELECT DISTINCT news.news_id,news.title,news.content,news.image,news.release_hour FROM news WHERE news.title LIKE'%$keyword%' OR news.content LIKE '%$keyword%';
         ";
     }    
     else{
