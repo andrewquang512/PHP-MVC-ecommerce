@@ -1,8 +1,3 @@
-<?php
-  //require_once '../../config/db.php';
-  session_start();
-  $connect = (new DB())->CreateConnection();
-?>  
 <!doctype html>
 <html lang="en">
 
@@ -12,6 +7,7 @@
     include(ROOT.'/application/views/layouts/head.php');
   ?>
   <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/trangchu.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -118,34 +114,20 @@
 </div>
 <script>
   $(document).ready(function() {
-  $('.btn-buy').click(function(){
-    alert('Add to cart success');
-    <?php
-          $Userid=$_SESSION['user_id'];
-          $Billid;
-          $query = "SELECT * FROM bill WHERE CID='1' AND PaySTATUS=False ";
-          $statement = $connect->prepare($query);
-          $statement->execute();
-          $result = $statement->get_result();
-          $total_row = $result->fetch_row();
-          if($total_row==0){
-            $query1 = "INSERT INTO bill(CID,TOTAL,PaySTATUS) VALUE ($Userid,0,False);";
-            $statement1 = $connect->prepare($query1);
-            $statement1->execute();
-            $Billid=$connect->lastInsertId();
-            //echo "The {$Billid}cage has arrived.";
-            $query2="INSERT INTO phone_in_bill VALUE ($Billid,1,1);";
-            $statement2 = $connect->prepare($query2);
-            $statement2->execute();
-          }
-          else{
-            $Billid=$result['BID'];
-            $query3="INSERT INTO phone_in_bill VALUE ($Billid,1,1);";
-            $statement3 = $connect->prepare($query3);
-            $statement3->execute();
-          }
-
-    ?>
+  // alert buy success
+    function Addtocart() {
+    alert('Thêm vào giỏ hàng thành công');
+    };  
+  $("#btn-buy").click(function(){
+    var addtocart=$('#btn-buy').val();
+    $.ajax({
+        url:"http://localhost/PHP-MVC-ecommerce/?controller=client&action=detail",
+        method:"POST",
+        data:{addtocart:addtocart, phone_id:1},
+        success:function(data){
+          Addtocart();
+        }
+      });
   });
 });  
 </script>

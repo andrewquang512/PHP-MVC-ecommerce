@@ -9,6 +9,11 @@
 
     <link rel="stylesheet" href="./public/assets/css/homepages/shopping-cart.css?v=<?php echo time(); ?>">
     <title>GIO HANG</title>
+    <style>
+        .menu-footer ul li a{
+            color:white;
+        }
+    </style>
 </head>
 
 

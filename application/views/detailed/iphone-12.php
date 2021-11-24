@@ -100,7 +100,7 @@
                             <p>Liên hệ 1800.1060 để được tư vấn (7:30 - 22:00)</p>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="">
                         <input name="" id="btn-buy" class="btn btn-primary" type="button" value="ĐẶT NGAY ">
                         </a>   
                 </div>
@@ -113,34 +113,20 @@
     </div>
     <script>
   $(document).ready(function() {
-  $('.btn-buy').click(function(){
-    alert('Add to cart success');
-    <?php
-          $Userid=$_SESSION['user_id'];
-          $Billid;
-          $query = "SELECT * FROM bill WHERE CID='1' AND PaySTATUS=False ";
-          $statement = $connect->prepare($query);
-          $statement->execute();
-          $result = $statement->get_result();
-          $total_row = $result->fetch_row();
-          if($total_row==0){
-            $query1 = "INSERT INTO bill(CID,TOTAL,PaySTATUS) VALUE ($Userid,0,False);";
-            $statement1 = $connect->prepare($query1);
-            $statement1->execute();
-            $Billid=$connect->lastInsertId();
-            //echo "The {$Billid}cage has arrived.";
-            $query2="INSERT INTO phone_in_bill VALUE ($Billid,2,1);";
-            $statement2 = $connect->prepare($query2);
-            $statement2->execute();
-          }
-          else{
-            $Billid=$result['BID'];
-            $query3="INSERT INTO phone_in_bill VALUE ($Billid,2,1);";
-            $statement3 = $connect->prepare($query3);
-            $statement3->execute();
-          }
-
-    ?>
+  // alert buy success
+    function Addtocart() {
+    alert('Thêm vào giỏ hàng thành công');
+    };  
+  $("#btn-buy").click(function(){
+    var addtocart=$('#btn-buy').val();
+    $.ajax({
+        url:"http://localhost/PHP-MVC-ecommerce/?controller=client&action=detail",
+        method:"POST",
+        data:{addtocart:addtocart, phone_id:2},
+        success:function(data){
+          Addtocart();
+        }
+      });
   });
 });  
 </script>
