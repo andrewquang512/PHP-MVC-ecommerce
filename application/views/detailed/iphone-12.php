@@ -100,7 +100,7 @@
                             <p>Liên hệ 1800.1060 để được tư vấn (7:30 - 22:00)</p>
                             </div>
                         </div>
-                        <a href="shopping-cart.php">
+                        <a href="">
                         <input name="" id="btn-buy" class="btn btn-primary" type="button" value="ĐẶT NGAY ">
                         </a>   
                 </div>
@@ -111,7 +111,25 @@
     include(ROOT.'/application/views/layouts/footer.php');
     ?>
     </div>
-
+    <script>
+  $(document).ready(function() {
+  // alert buy success
+    function Addtocart() {
+    alert('Thêm vào giỏ hàng thành công');
+    };  
+  $("#btn-buy").click(function(){
+    var addtocart=$('#btn-buy').val();
+    $.ajax({
+        url:"http://localhost/PHP-MVC-ecommerce/?controller=client&action=detail",
+        method:"POST",
+        data:{addtocart:addtocart, phone_id:2},
+        success:function(data){
+          Addtocart();
+        }
+      });
+  });
+});  
+</script>
 
 
 </body>

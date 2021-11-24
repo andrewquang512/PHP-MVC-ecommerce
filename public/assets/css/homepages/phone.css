@@ -45,6 +45,9 @@
   display: inline-block;
   vertical-align: middle;
 }
+.log_button:hover{
+  color:#fff
+}
 /* For separate part of php */
 * {
   padding: 0;

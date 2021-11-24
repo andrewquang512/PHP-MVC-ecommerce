@@ -1,10 +1,10 @@
 <?php
 class DB{
 
-    public $con;
+    public $db;
     protected $servername = "localhost";
     protected $username = "root";
-    protected $password = "123456";
+    protected $password = "";
     protected $dbname = "phoneshop";
 
     public function CreateConnection() {

@@ -2,7 +2,7 @@
 $controllers = array(
     'pages' => ['home', 'tintuc','lienhe','gioithieu','sanpham','dangnhap','dangky','shoppingcart','dangxuat'],
     'admin' => ['home','customermanage', 'contactmanage','commentmanage','contentmanage','updatecustomer', 'addcustomer', 'deletecustomer'],
-    'client' => ['phone','new','contact'],
+    'client' => ['phone','new','contact','detail'],
     'detailed' =>['huawei-p30-pro','iphone-12','iphone-13-promax','oppo-a74','oppo-reno6','samsung-galaxy-21','samsung-galaxyz-fold3','vivo-12s','vivo-y21s','xiaomi-mi11-lite','xiaomi-redmi-9t'],
     'shoppingcart' => ['getcart', 'removeitem', 'removeall']
 );
@@ -31,6 +31,9 @@ else if($controller == 'client'){
     }
     if($action == 'contact'){
         include(ROOT . '/application/controllers/contact_controller.php');
+    }
+    if($action == 'detail'){
+        include(ROOT . '/application/controllers/detailphone_controller.php');
     }
 }
 else{
