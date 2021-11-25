@@ -1,3 +1,5 @@
+const { data } = require('jquery')
+
 // + button
 function increaseValue(product_id) {
     var value = parseInt(
@@ -78,5 +80,32 @@ function toggle(source) {
 
 // alert buy success
 function Buy() {
-    alert('Mua hàng thành công')
+    const gettotal = parseFloat(
+        document.getElementById('totalMoney').innerHTML,
+        10
+    )
+    const total = isNaN(gettotal) ? 0 : gettotal
+    if (total === 0) {
+        alert('Bạn chưa chọn sản phẩm để thanh toán!')
+    } else {
+        var checkboxList = document.getElementsByName('foo')
+        arr = []
+        for (var i = 1; i < checkboxList.length; i++) {
+            if (checkboxList[i].checked == true) {
+                quantity = parseInt(document.getElementById('number-' + i).value, 10)
+                const phoneid = parseInt(
+                    document.getElementById('pid-' + i).innerHTML,
+                    10
+                )
+                arr.push(phoneid)
+                arr.push(quantity)
+            }
+        }
+        $.post(
+            'http://localhost/PHP-MVC-ecommerce/?controller=shoppingcart&action=getcart&index=0', { total: total, pid: arr },
+            function(data) {
+                alert('Mua hàng thành công')
+            }
+        )
+    }
 }

@@ -62,5 +62,10 @@ class BillModel{
           }
         }
     }
+    public function updateBill($billid, $total) {
+      $db = (new DB())->CreateConnection();
+      $qr = "UPDATE bill SET total='$total', PayStatus=1 WHERE BID='$billid'";
+      mysqli_query($db, $qr);
+    }
 }
 ?>

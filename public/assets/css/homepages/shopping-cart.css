@@ -177,3 +177,11 @@
 .alignright {
     text-align: right;
 }
+
+.under {
+    text-decoration: underline;
+}
+
+.hide {
+    display: none;
+}
