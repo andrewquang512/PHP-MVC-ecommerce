@@ -71,5 +71,11 @@ class PhoneInBillModel{
       $statement->bind_param('ii', $this->bill_id, $this->product_id);
       $statement->execute();
     }
+
+    public function updateQuantity($billid, $productid, $quan) {
+      $db = (new DB())->CreateConnection();
+      $qr = "UPDATE phone_in_bill SET quantity_buy='$quan' WHERE BID='$billid' AND PID='$productid'";
+      mysqli_query($db, $qr);
+    }
 }
 ?>

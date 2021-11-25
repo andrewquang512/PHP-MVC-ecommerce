@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./public/assets/css/homepages/shopping-cart.css?v=<?php echo time(); ?>">
     <title>GIO HANG</title>
     <style>
-        .menu-footer ul li a{
-            color:white;
-        }
+    .menu-footer ul li a {
+        color: white;
+    }
     </style>
 </head>
 
@@ -55,7 +55,10 @@
                 </div>
 
 
-                <?php for ($index = 1; $index < count($data); $index++) { 
+                <?php 
+                if(count($data) > 1) {
+
+                for ($index = 1; $index < count($data); $index++) { 
                     $price = $data[$index]->getPrice()*(10**6);
                     $gift = $data[$index]->getGift()*(10**6);
                     ?>
@@ -71,6 +74,10 @@
 
                     <div class="col col-lg-2 col-center">
                         <?php print($data[$index]->getPname());?>
+                    </div>
+
+                    <div class="col col-lg-2 col-center hide" id=<?php echo "pid-" . $index?>>
+                        <?php print($data[$index]->getId());?>
                     </div>
 
                     <div class="col col-lg-2 all-center" id=<?php echo "price-" . $index?>>
@@ -108,7 +115,7 @@
 
                 </div>
 
-                <?php }  ?>
+                <?php }}  ?>
             </div>
 
             <div class="col col-lg-3" id="cart-price">
@@ -130,21 +137,25 @@
                 <div class="bg-light" id="cart-total">
                     <div class="row">
                         <div class="col col-6">Tạm tính</div>
-                        <div class="col col-6 alignright" id="tempTotalMoney">0</div>
+                        <div class="col col-6 alignright" id="tempTotalMoney">0 <span class="under">đ</span>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col col-6">Giảm giá</div>
-                        <div class="col col-6 alignright" id="gift">0</div>
+                        <div class="col col-6 alignright" id="gift">0 <span class="under">đ</span>
+                        </div>
                     </div>
                     <hr />
                     <div class="row">
                         <div class="col col-6 bold-text">Tổng cộng</div>
-                        <div class="col col-6 red-text alignright" id="totalMoney">0</div>
+                        <div class="col col-6 red-text alignright" id="totalMoney">0 <span class="under">đ</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="all-center">
-                    <button type="button" class="btn btn-danger" onclick="Buy()">Mua hàng</button>
+                    <button type="submit" class="btn btn-danger" onclick="Buy()" id="buycart">Mua
+                        hàng</button>
                 </div>
             </div>
         </div>
