@@ -29,8 +29,8 @@
     <div class="container-fuild">
 
         <h4 class="margin-top-30" id="shopping-cart">Giỏ hàng</h4>
-        <div class="row">
-            <div class="col col-lg-9">
+        <div class="row dp-block">
+            <div class="col col-lg-9 col-md-12 col-sm-12 col-xs-12" id="plist">
                 <div class="row bg-light" id="cart-header">
                     <div class="col col-lg-1 col-center">
                         <div class="form-check">
@@ -43,10 +43,10 @@
                         </div>
                     </div>
                     <div class="col col-lg-2 col-center bold-text">Tên sản phẩm</div>
-                    <div class="col col-lg-2 all-center bold-text">Đơn giá</div>
-                    <div class="col col-lg-2 all-center bold-text">Giảm giá</div>
+                    <div class="col col-lg-2 all-center bold-text dongia">Đơn giá</div>
+                    <div class="col col-lg-2 all-center bold-text dongia">Giảm giá</div>
                     <div class="col col-lg-2 all-center bold-text">Số lượng</div>
-                    <div class="col col-lg-2 all-center bold-text">Thành tiền</div>
+                    <div class="col col-lg-2 all-center bold-text thanhtien">Thành tiền</div>
                     <div class="col col-lg-1 all-center">
                         <a href="./?controller=shoppingcart&action=getcart&index=-1">
                             <i class="fa fa-trash-o fa-lg"></i>
@@ -69,7 +69,7 @@
                             <input class="form-check-input" type="checkbox" name="foo" onchange="Calculate();" />
                         </div>
                         <img src=<?php echo "./public/assets/images/dtdd/" . $data[$index]->getImage() ?> alt="phone1"
-                            class="img-size" />
+                            class="img-size " />
                     </div>
 
                     <div class="col col-lg-2 col-center">
@@ -80,10 +80,10 @@
                         <?php print($data[$index]->getId());?>
                     </div>
 
-                    <div class="col col-lg-2 all-center" id=<?php echo "price-" . $index?>>
+                    <div class="col col-lg-2 all-center dongia" id=<?php echo "price-" . $index?>>
                         <?php echo number_format($price,0,'','.')?></div>
 
-                    <div class="col col-lg-2 all-center" id=<?php echo "gift-" . $index?>>
+                    <div class="col col-lg-2 all-center dongia" id=<?php echo "gift-" . $index?>>
                         <?php echo number_format($gift,0,'','.')?>
                     </div>
 
@@ -101,8 +101,8 @@
                             name="increase" value="+" />
                     </div>
 
-                    <div class="col col-lg-2 all-center red-text" id=<?php echo "money-" . $index?> name="money"
-                        onchange="Calculate();">
+                    <div class="col col-lg-2 all-center red-text thanhtien" id=<?php echo "money-" . $index?>
+                        name="money" onchange="Calculate();">
                         <?php echo number_format($price,0,'','.')?>
                     </div>
 
@@ -118,7 +118,7 @@
                 <?php }}  ?>
             </div>
 
-            <div class="col col-lg-3" id="cart-price">
+            <div class="col col-lg-3 col-md-12 col-sm-12 col-xs-12" id="cart-price">
                 <div class="bg-light" id="cart-address">
                     <div class="row">
                         <div class="col col-lg-6 col-center" id="cart-address-giaotoi">
