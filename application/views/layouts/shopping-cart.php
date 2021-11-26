@@ -154,8 +154,10 @@
                 </div>
 
                 <div class="all-center">
-                    <button type="submit" class="btn btn-danger" onclick="Buy()" id="buycart">Mua
-                        hàng</button>
+                    <a href="./?controller=shoppingcart&action=getcart&index=0">
+                        <button type="submit" class="btn btn-danger" onclick="Buy()" id="buycart">Mua
+                            hàng</button>
+                    </a>
                 </div>
             </div>
         </div>
