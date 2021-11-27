@@ -39,15 +39,25 @@
                         href="./?controller=pages&action=tintuc">TIN TỨC</a>
                 </li>
             </ul>
+            <?php if(isset($_SESSION['user_id'])){?>
+            <!-- <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item avatar"> -->
+                    <a class="nav-link" aria-haspopup="true" aria-expanded="false">
+              <img src="https://vsmcamp.com/wp-content/uploads/2020/11/JaZBMzV14fzRI4vBWG8jymplSUGSGgimkqtJakOV.jpeg" class="rounded-circle z-depth-0" alt="avatar image"
+                height="35">
+                    </a>
+                <text style="padding-right:20px;font-family: Arial, Helvetica, sans-serif;">Hello, <?php echo $_SESSION['first_name']?></text>
+                <!-- </li>
+            </ul> -->
             <form class="form-inline my-2 my-lg-0 mr-auto">
-                <?php if(isset($_SESSION['user_id'])){?>
                 <a href="./?controller=pages&action=dangxuat">
                     <button class="btn btn-outline-success my-2 my-sm-0 text-dark log_button" id="tf_btn"
                         style=" font-size: 1em;font-weight: bold;" type="button">Logout</button>
                 </a>
                 <!-- Dòng echo phía dưới chỉ dùng để test lấy user_id, bỏ đi được -->
-                <?php echo $_SESSION['user_id']?>
+                <!-- <?php echo $_SESSION['user_id']?> -->
                 <?php } else {?>
+                <form class="form-inline my-2 my-lg-0 mr-auto">
                 <a href="./?controller=pages&action=dangnhap">
                     <button class="btn btn-outline-success my-2 my-sm-0 text-dark log_button" id="tf_btn"
                         style=" font-size: 1em;font-weight: bold;" type="button">Login</button>
