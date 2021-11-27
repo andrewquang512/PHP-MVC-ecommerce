@@ -34,7 +34,7 @@
   if($count == 1){  
     //console.log('Have run');
     $_SESSION['user_id'] = $row['user_id'];
-    
+    $_SESSION['first_name']=$row['first_name'];
     //If it's the admin account
     if($username == 'admin'){
       //header('Location: http://localhost/PHP-MVC-ecommerce/?controller=admin&action=home');
