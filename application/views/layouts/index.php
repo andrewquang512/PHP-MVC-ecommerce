@@ -152,7 +152,7 @@
 
     </section>
 
-    <section class="home-inland" style="margin-top: 50px; padding-bottom: 50px;background-image: url('http://localhost/PHP-MVC-ecommerce/public/assets/images/background.jpg');>
+    <section class="home-inland" style="margin-top: 50px; padding-bottom: 50px;background-image: url('http://localhost/PHP-MVC-ecommerce/public/assets/images/background.jpg');">
       <p class="text-center">Tham khảo các sản phẩm nổi bật của tháng</p>
       <h2 class="text-center" style="margin-bottom: 30px;">PHONE BEST SALELER</h2>
 
