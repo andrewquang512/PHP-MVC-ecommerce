@@ -6,7 +6,6 @@ require_once(ROOT .'/application/models/PhoneModel.php');
 
 class AdminController extends BaseController{
     function __construct(){
-      // ! NEED TO INTERGATED LOG IN FUNCTION
       if(!isset($_SESSION)) { 
         session_start();
         if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == 1){
@@ -110,18 +109,103 @@ class AdminController extends BaseController{
       $data = array('products' => $products_info);
       $this->render('product_manage', $data);
     }
-    public function addproduct(){
+    public function deleteproduct(){
+      $product_id = $_POST['product_id'];
+      $phone = new PhoneModel();
+      $result = $phone->DeleteByPhoneId($product_id);
+      header('Location: index.php?controller=admin&action=productmanage');
+    }
+    public function updateproduct(){
       print_r($_POST);
-      print_r($_FILES);
+      //? getting data from form
+      $product_id = $_POST['product_id'];
       $product_name = $_POST['product_name'];
       $temp_product_price = $_POST['product_price'];
       $product_price = (float)$temp_product_price;
+      $product_price = number_format($product_price, 5, '.', '');
       $temp_product_quantity = $_POST['product_quantity'];
       $product_quantity = (float)$temp_product_quantity;
       $product_brand = $_POST['product_brand'];
       $product_ram = $_POST['product_ram'];
       $product_storage = $_POST['product_storage'];
-      $product_gift = $_POST['product_gift'];
+      $temp_product_gift = $_POST['product_gift'];
+      $product_gift = (float)$temp_product_gift;
+      $product_gift = number_format($product_gift, 5, '.', '');
+      $product_link = $_POST['product_link'];
+
+      //? getting old data from form for replacing purpose
+      $old_product_name = $_POST['old_product_name'];
+      $old_product_ram = $_POST['old_product_ram'];
+      $old_product_storage = $_POST['old_product_storage'];
+      $old_product_brand = $_POST['old_product_brand'];
+      $old_product_link = $_POST['old_product_link'];
+
+      $products = new PhoneModel();
+      $products_info = $products->UpdateByPhoneId($product_id,$product_name,$product_price,$product_quantity,$product_brand,"Phone$product_id/1.png",$product_ram,$product_storage,$product_gift,$product_link);
+
+      if($_FILES["fileToUpload"]){
+        print("i am here 1");
+        $filename = $_FILES["fileToUpload"]["name"];
+        $tempname = $_FILES["fileToUpload"]["tmp_name"];
+        unlink(ROOT ."/public/assets/images/dtdd/Phone$product_id/1.png");
+        mkdir(ROOT ."/public/assets/images/dtdd/Phone".$product_id, 0777, true);
+        $folder=ROOT ."/public/assets/images/dtdd/Phone".$product_id."/".$filename;
+        move_uploaded_file($tempname,$folder);
+        rename(ROOT ."/public/assets/images/dtdd/Phone".$product_id."/".$filename,ROOT ."/public/assets/images/dtdd/Phone".$product_id."/1.png");
+        if($old_product_link == $product_link){
+          $file = ROOT."/application/views/detailed/$product_link.php";
+          file_put_contents($file,str_replace($old_product_name,$product_name,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_ram,$product_ram,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_storage,$product_storage,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_brand,$product_brand,file_get_contents($file)));
+        }
+        else{
+          rename(ROOT."/application/views/detailed/$old_product_link.php", ROOT."/application/views/detailed/$product_link.php");
+          $file = ROOT."/application/views/detailed/$product_link.php";
+          file_put_contents($file,str_replace($old_product_name,$product_name,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_ram,$product_ram,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_storage,$product_storage,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_brand,$product_brand,file_get_contents($file)));
+        }
+      }
+      else{
+        if($old_product_link == $product_link){
+          print("i am here 2");
+          //? if link doesn't change
+          $file = ROOT."/application/views/detailed/$product_link.php";
+          print($file);
+          file_put_contents($file,str_replace($old_product_name,$product_name,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_ram,$product_ram,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_storage,$product_storage,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_brand,$product_brand,file_get_contents($file)));
+        }
+        else{
+          print("i am here 3");
+          //? if link changed
+          rename(ROOT."/application/views/detailed/$old_product_link.php", ROOT."/application/views/detailed/$product_link.php");
+          $file = ROOT."/application/views/detailed/$product_link.php";
+          file_put_contents($file,str_replace($old_product_name,$product_name,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_ram,$product_ram,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_storage,$product_storage,file_get_contents($file)));
+          file_put_contents($file,str_replace($old_product_brand,$product_brand,file_get_contents($file)));
+        }
+      }
+      header('Location: index.php?controller=admin&action=productmanage');
+    }
+
+    public function addproduct(){
+      $product_name = $_POST['product_name'];
+      $temp_product_price = $_POST['product_price'];
+      $product_price = (float)$temp_product_price;
+      $product_price = number_format($product_price, 5, '.', '');
+      $temp_product_quantity = $_POST['product_quantity'];
+      $product_quantity = (float)$temp_product_quantity;
+      $product_brand = $_POST['product_brand'];
+      $product_ram = $_POST['product_ram'];
+      $product_storage = $_POST['product_storage'];
+      $temp_product_gift = $_POST['product_gift'];
+      $product_gift = (float)$temp_product_gift;
+      $product_gift = number_format($product_gift, 5, '.', '');
       $product_link = $_POST['product_link'];
       $filename = $_FILES["fileToUpload"]["name"];
       $tempname = $_FILES["fileToUpload"]["tmp_name"];
@@ -147,6 +231,7 @@ class AdminController extends BaseController{
               $newcontent = str_replace('PRODUCT_RAM', $product_ram, $newcontent);
               $newcontent = str_replace('PRODUCT_STORAGE', $product_storage, $newcontent);
               $newcontent = str_replace('PRODUCT_NAME', $product_name, $newcontent);
+              $newcontent = str_replace('PRODUCT_BRAND', $product_brand, $newcontent);
               //? write to a new file
               $fp = fopen(ROOT . "/application/views/detailed/$product_link.php","wb");
               fwrite($fp,$newcontent);
@@ -159,6 +244,6 @@ class AdminController extends BaseController{
         }
 
       }
-      // header('Location: index.php?controller=admin&action=productmanage');
+      header('Location: index.php?controller=admin&action=productmanage');
     }
 }

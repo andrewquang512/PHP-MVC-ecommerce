@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h2>Samsung Galaxy S20 Ultra</h2>
+                    <h2>SamSung Galaxy S21 Ultraaaaaaa</h2>
                         <div>
                             <div class="product-short-description" style="padding-top:10px">
                               <table >

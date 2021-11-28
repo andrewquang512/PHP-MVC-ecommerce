@@ -125,5 +125,28 @@ class PhoneModel{
         return "Error updating record: ";
       }
     }
+
+    public static function DeleteByPhoneId($products_id) { 
+      $db = (new DB())->CreateConnection();
+      $statement = $db->prepare("DELETE FROM Phone WHERE id='$products_id'");
+      if ($statement->execute()) {
+        return "Contact deleted successfully";
+      } else {
+        return "Error deleting contact: ";
+      }
+    }
+
+    public static function UpdateByPhoneId($products_id, $pname, $price ,$quantity, $brand, $image, $ram, $pstorage,$gift,$link) { 
+      $db = (new DB())->CreateConnection();
+      $statement = $db->prepare("UPDATE Phone SET PNAME = '$pname',
+      PRICE = '$price', QUANTITY = '$quantity',
+      BRAND = '$brand', IMAGE = '$image', RAM = '$ram', PSTORAGE = '$pstorage', GIFT = '$gift', LINK = '$link'
+      WHERE ID = $products_id");
+      if ($statement->execute()) {
+        return true;
+      } else {
+        return false;
+      }
+  }
 }
 ?>
