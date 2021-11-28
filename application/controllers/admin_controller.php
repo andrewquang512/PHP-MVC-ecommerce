@@ -115,6 +115,7 @@ class AdminController extends BaseController{
       header('Location: index.php?controller=admin&action=contentmanage');
     }
     public function updatecontent(){
+      print_r($_POST);
       $content_id = $_POST['content_id'];
       $title = $_POST['title'];
       $content = $_POST['content'];
@@ -175,10 +176,10 @@ class AdminController extends BaseController{
       $products = new PhoneModel();
       $products_info = $products->UpdateByPhoneId($product_id,$product_name,$product_price,$product_quantity,$product_brand,"Phone$product_id/1.png",$product_ram,$product_storage,$product_gift,$product_link);
 
-      if($_FILES["fileToUpload"]){
+      if($_FILES["fileupdate"]["error"] == 0){
         print("i am here 1");
-        $filename = $_FILES["fileToUpload"]["name"];
-        $tempname = $_FILES["fileToUpload"]["tmp_name"];
+        $filename = $_FILES["fileupdate"]["name"];
+        $tempname = $_FILES["fileupdate"]["tmp_name"];
         unlink(ROOT ."/public/assets/images/dtdd/Phone$product_id/1.png");
         mkdir(ROOT ."/public/assets/images/dtdd/Phone".$product_id, 0777, true);
         $folder=ROOT ."/public/assets/images/dtdd/Phone".$product_id."/".$filename;
@@ -239,8 +240,8 @@ class AdminController extends BaseController{
       $product_gift = (float)$temp_product_gift;
       $product_gift = number_format($product_gift, 5, '.', '');
       $product_link = $_POST['product_link'];
-      $filename = $_FILES["fileupdate"]["name"];
-      $tempname = $_FILES["fileupdate"]["tmp_name"];
+      $filename = $_FILES["fileToUpload"]["name"];
+      $tempname = $_FILES["fileToUpload"]["tmp_name"];
       $products = new PhoneModel();
       // $products_id = $products->GetLastPhoneID(); 
       // $new_products_id = $products_id + 1;
@@ -264,7 +265,7 @@ class AdminController extends BaseController{
               $newcontent = str_replace('PRODUCT_STORAGE', $product_storage, $newcontent);
               $newcontent = str_replace('PRODUCT_NAME', $product_name, $newcontent);
               $newcontent = str_replace('PRODUCT_BRAND', $product_brand, $newcontent);
-              $newcontent = str_replace('PRODUCT_IMAGE', ROOT ."/public/assets/images/dtdd/Phone".$products_id."/1.png", $newcontent);
+              $newcontent = str_replace('PRODUCT_IMAGE',"http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone".$products_id."/1.png", $newcontent);
               //? write to a new file
               $fp = fopen(ROOT . "/application/views/detailed/$product_link.php","wb");
               fwrite($fp,$newcontent);
