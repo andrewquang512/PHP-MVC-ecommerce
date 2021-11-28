@@ -19,5 +19,8 @@
             if($file == 'contact_manage'){
                echo '<script type="text/javascript" src="public/assets/js/admin/contact/index.js"></script>';
             }
+            if($file == 'content_manage'){
+               echo '<script type="text/javascript" src="public/assets/js/admin/content/index.js"></script>';
+            }
     ?>
 </head>

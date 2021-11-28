@@ -3,6 +3,7 @@ require_once(ROOT .'/application/controllers/base_controller.php');
 require_once(ROOT .'/application/models/CustomerModel.php');
 require_once(ROOT .'/application/models/ContactModel.php');
 require_once(ROOT .'/application/models/PhoneModel.php');
+require_once(ROOT .'/application/models/ContentModel.php');
 
 class AdminController extends BaseController{
     function __construct(){
@@ -101,7 +102,10 @@ class AdminController extends BaseController{
       $this->render('comment_manage');
     }
     public function contentmanage(){
-      $this->render('content_manage');
+      $news = new ContentModel();
+      $news_info = $news->GetAll();
+      $data = array('news' => $news_info);
+      $this->render('content_manage', $data);
     }
     public function productmanage(){
       $products = new PhoneModel();
@@ -232,6 +236,7 @@ class AdminController extends BaseController{
               $newcontent = str_replace('PRODUCT_STORAGE', $product_storage, $newcontent);
               $newcontent = str_replace('PRODUCT_NAME', $product_name, $newcontent);
               $newcontent = str_replace('PRODUCT_BRAND', $product_brand, $newcontent);
+              $newcontent = str_replace('PRODUCT_IMAGE', ROOT ."/public/assets/images/dtdd/Phone".$products_id."/1.png", $newcontent);
               //? write to a new file
               $fp = fopen(ROOT . "/application/views/detailed/$product_link.php","wb");
               fwrite($fp,$newcontent);
