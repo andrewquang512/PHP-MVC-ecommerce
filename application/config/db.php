@@ -1,7 +1,7 @@
 <?php
 class DB{
 
-    public $con;
+    public $db;
     protected $servername = "localhost";
     protected $username = "root";
     protected $password = "";

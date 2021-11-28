@@ -5,6 +5,7 @@ class BillModel{
     private $bill_id;
     private $bill_date;
     private $total;
+    private $status;
 
     public function getCustomer_id () { return $this->customer_id; }
     private function setCustomer_id ($customer_id) { $this->customer_id = $customer_id; }
@@ -18,26 +19,31 @@ class BillModel{
     public function getTotal () { return $this->total; }
     private function setTotal ($total) { $this->total = $total; }
 
+    public function getStatus () { return $this->status; }
+    private function setStatus ($status) { $this->status = $status; }
+
     public function __construct(
         $customer_id = '',
         $bill_id = '',
         $bill_date = '',
-        $total = ''
+        $total = '',
+        $status = '',
       ) {
         $this->customer_id = $customer_id;
         $this->bill_id = $bill_id;
         $this->bill_date = $bill_date;
         $this->total = $total;
+        $this->status = $status;
     }
     
     public static function GetAll() {
       $list_model = [];
       $db = (new DB())->CreateConnection();
       $statement = $db->prepare("SELECT * FROM bill");
-      $statement->bind_result($customer_id, $bill_id, $bill_date, $total);
+      $statement->bind_result($customer_id, $bill_id, $bill_date, $total, $status);
       if ($statement->execute()) {
         while ($row = $statement->fetch()) {
-          $model = new BillModel($customer_id, $bill_id, $bill_date, $total);
+          $model = new BillModel($customer_id, $bill_id, $bill_date, $total, $status);
           array_push($list_model, $model);
         }
       }
@@ -46,15 +52,20 @@ class BillModel{
 
     public static function GetByCustomerId ($id) {
         $db = (new DB())->CreateConnection();
-        $statement = $db->prepare("SELECT * FROM bill WHERE CID = ?");
+        $statement = $db->prepare("SELECT * FROM bill WHERE CID = ? AND PaySTATUS = 0");
         $statement->bind_param('i', $id);
-        $statement->bind_result($customer_id, $bill_id, $bill_date, $total);
+        $statement->bind_result($customer_id, $bill_id, $bill_date, $total, $status);
         if ($statement->execute()) {
           while ($row = $statement->fetch()) {
-            $model = new BillModel($customer_id, $bill_id, $bill_date, $total);
+            $model = new BillModel($customer_id, $bill_id, $bill_date, $total, $status);
             return $model;
           }
         }
+    }
+    public function updateBill($billid, $total) {
+      $db = (new DB())->CreateConnection();
+      $qr = "UPDATE bill SET total='$total', PayStatus=1 WHERE BID='$billid'";
+      mysqli_query($db, $qr);
     }
 }
 ?>

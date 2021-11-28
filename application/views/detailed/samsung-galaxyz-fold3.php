@@ -6,7 +6,8 @@
     <?php 
     include(ROOT.'/application/views/layouts/head.php');
   ?>
-  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/trangchu.css" type="text/css">
+  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/trangchu.css?v=<?php echo time()?>" type="text/css">
+  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/header.css?v=<?php echo time()?>" type="text/css">
 </head>
 
 <body>
@@ -40,17 +41,17 @@
                         </ol>
                         <div class="carousel-inner ">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/1.png)" alt="first-slider" style="justify-content: center;"
+                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/1.png" alt="first-slider" style="justify-content: center;"
                                     style="max-height: 300px;">
 
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/2.png)" alt="second-slider" style="justify-content: center;"
+                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/2.png" alt="second-slider" style="justify-content: center;"
                                     style="max-height: 300px;">
 
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/3.png)" alt="thirds-slider" style="justify-content: center;"
+                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/3.png" alt="thirds-slider" style="justify-content: center;"
                                     style="max-height: 300px;">
 
                             </div>
@@ -100,7 +101,7 @@
                             <p>Liên hệ 1800.1060 để được tư vấn (7:30 - 22:00)</p>
                             </div>
                         </div>
-                        <a href="shopping-cart.php">
+                        <a href="#">
                         <input name="" id="btn-buy" class="btn btn-primary" type="button" value="ĐẶT NGAY ">
                         </a>   
                 </div>
@@ -111,7 +112,25 @@
     include(ROOT.'/application/views/layouts/footer.php');
     ?>
     </div>
-
+    <script>
+ $(document).ready(function() {
+  // alert buy success
+    function Addtocart() {
+    alert('Thêm vào giỏ hàng thành công');
+    };  
+  $("#btn-buy").click(function(){
+    var addtocart=$('#btn-buy').val();
+    $.ajax({
+        url:"http://localhost/PHP-MVC-ecommerce/?controller=client&action=detail",
+        method:"POST",
+        data:{addtocart:addtocart, phone_id:7},
+        success:function(data){
+          Addtocart();
+        }
+      });
+  });
+});  
+</script>
 
 
 </body>

@@ -15,7 +15,8 @@
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>  
   <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/bootstrap/css/jquery-ui.css"><!--//just add-->
   <script type="text/javascript" src="http://localhost/PHP-MVC-ecommerce/public/assets/bootstrap/js/bootstrap.min1.js"></script><!--//just add-->
-  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/phone.css" type="text/css">
+  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/phone.css?v=<?php echo time()?>" type="text/css">
+  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/header.css?v=<?php echo time()?>" type="text/css">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-3 col-md-3">
+      <div class="col-lg-3 col-md-3 col-sm-6">
         <div class="left-1" style="padding-bottom:10px;">
           <b style="color:#B4006A">CHỌN MỨC GIÁ (*1.000.000)</b>
           <input type="hidden" id="hidden_minimum_price" value="0" />
@@ -92,7 +93,7 @@
                     ?>	
         </div>  
       </div>
-      <div class="col-9 col-md-9" id='list-phones'>
+      <div class="col-lg-9 col-md-9 col-sm-12" id='list-phones'>
         <div class="row filter_data" style=" margin: 0 auto;">
         </div>
       </div>
