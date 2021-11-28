@@ -102,7 +102,7 @@
                                             <div class="col-md-6 mt-3"><label class="labels">Storage (in GB)</label><input type="text" class="form-control" name="product_storage" value="'. $product->getPstorage() .'" placeholder="500" required></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-12 mt-3"><label class="labels">Gift (nghìn VNĐ)</label><input type="text" class="form-control" name="product_gift" value="'. $product->getGift() .'" placeholder="e.g: 300000" required> </div>
+                                            <div class="col-md-12 mt-3"><label class="labels">Gift (trăm nghìn VNĐ)</label><input type="text" class="form-control" name="product_gift" value="'. $product->getGift() .'" placeholder="e.g: 300000" required> </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 mt-3"><label class="labels">Link</label><input type="text" class="form-control" name="product_link" value="'. $product->getLink() .'" placeholder="e.g: iphone-14" required> </div>
@@ -189,7 +189,7 @@
                                         <div class="col-md-6 mt-3"><label class="labels">Storage (in GB)</label><input type="text" class="form-control" name="product_storage" placeholder="e.g: 500" required></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12 mt-3"><label class="labels">Gift (nghìn VNĐ)</label><input type="text" class="form-control" name="product_gift" placeholder="e.g: 300000" required> </div>
+                                        <div class="col-md-12 mt-3"><label class="labels">Gift (trăm nghìn VNĐ)</label><input type="text" class="form-control" name="product_gift" placeholder="e.g: 300000" required> </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 mt-3"><label class="labels">Link</label><input type="text" class="form-control" name="product_link" placeholder="e.g: iphone-14" required> </div>
