@@ -115,6 +115,7 @@ class AdminController extends BaseController{
       header('Location: index.php?controller=admin&action=contentmanage');
     }
     public function updatecontent(){
+      print_r($_POST);
       $content_id = $_POST['content_id'];
       $title = $_POST['title'];
       $content = $_POST['content'];
