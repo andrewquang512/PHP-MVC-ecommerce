@@ -93,5 +93,37 @@ class PhoneModel{
           }
         }
     }
+    public static function CreatePhone($pname, $price ,$quantity, $brand, $image, $ram, $pstorage,$gift,$link) { 
+      $db = (new DB())->CreateConnection();
+      $statement = $db->prepare("INSERT INTO Phone(PNAME,PRICE,QUANTITY,BRAND,IMAGE,RAM,PSTORAGE,GIFT,LINK)
+      VALUE ('$pname','$price', '$quantity' ,'$brand', '$image', '$ram', '$pstorage', '$gift', '$link') ");
+      if ($statement->execute()) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    public static function GetLastPhoneID() { 
+      $db = (new DB())->CreateConnection();
+      $statement = $db->prepare("SELECT MAX(ID) FROM Phone ");
+      if ($statement->execute()) {
+        $result = $statement->get_result();
+        $row = $result->fetch_array();
+        $highest_id = $row[0];
+        return $highest_id;
+      } else {
+        return false;
+      }
+    }
+    public static function UpdatePhoneImage($image, $products_id) { 
+      $db = (new DB())->CreateConnection();
+      $statement = $db->prepare("UPDATE Phone SET IMAGE = '$image'
+      WHERE ID = $products_id");
+      if ($statement->execute()) {
+        return "Record updated successfully";
+      } else {
+        return "Error updating record: ";
+      }
+    }
 }
 ?>

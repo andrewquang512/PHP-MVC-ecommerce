@@ -15,10 +15,6 @@
     <link rel="stylesheet" type='text/css' href="public/assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type='text/css' href="public/assets/css/admin/styles.css">
     <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <script type="text/javascript" src="public/assets/js/admin/index.js"></script>
-    <script type="text/javascript" src="public/assets/bootstrap/js/jquery.min.js"></script>
-    <script type="text/javascript" src="public/assets/bootstrap/js/popper.min.js"></script>
-    <script type="text/javascript" src="public/assets/bootstrap/js/bootstrap.min.js"></script>
     <?php 
             if($file == 'contact_manage'){
                echo '<script type="text/javascript" src="public/assets/js/admin/contact/index.js"></script>';

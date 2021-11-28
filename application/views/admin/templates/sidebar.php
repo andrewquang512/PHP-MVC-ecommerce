@@ -10,10 +10,6 @@
                     <i class="fas fa-bars"></i>
                     <span>Dashboard</span>
             </a> </li>
-            <li><a href="#">
-                <i class="fas fa-money-bill-wave"></i>
-                <span>Sales Management</span>
-            </a> </li>
             <li><a class="<?php echo ($file == 'customer_manage') ? 'active' : ''; ?>" href="http://localhost/PHP-MVC-ecommerce/index.php?controller=admin&action=customermanage">
                 <i class="fas fa-users"></i>
                 <span>Customer Management</span>

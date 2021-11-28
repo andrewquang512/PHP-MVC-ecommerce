@@ -39,7 +39,7 @@
                             <h3>10 Comments</h3>
                             <!-- COMMENT 1 - START -->
                             <div class="media">
-                                <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a>
+                                <a class="pull-left" href="#"><img class="media-object" src="https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png" alt=""></a>
                                 <div class="media-body">
                                     <h4 class="media-heading">John Doe <span>Dec 12, 2016</span></h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -72,7 +72,7 @@
                             <h3>10 Comments</h3>
                             <!-- COMMENT 1 - START -->
                             <div class="media">
-                                <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a>
+                                <a class="pull-left" href="#"><img class="media-object" src="https://toppng.com/uploads/preview/roger-berry-avatar-placeholder-11562991561rbrfzlng6h.png" alt=""></a>
                                 <div class="media-body">
                                     <h4 class="media-heading">John Doe <span>Dec 12, 2016</span></h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
