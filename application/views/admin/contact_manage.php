@@ -14,11 +14,11 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <input class="form-control" type="text" placeholder="Filter Posts...">
+                                    <input class="form-control" id="FilterInput" onkeyup="FilterFunction()" type="text" placeholder="Filter Posts...">
                                 </div>
                             </div>
                             <br>
-                            <table class="table table-striped table-hover">
+                            <table class="table table-striped table-hover" id="FilterTable">
                                 <tr>
                                     <th>No.</th>
                                     <th>Name</th>
@@ -42,7 +42,7 @@
                                         '</td>
                                         <td>
                                         <button id="'. $contact->getid() .'" onClick="displaycontact(this.id)" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                                        <button class="btn btn-danger"><i class="fas fa-minus"></i></button>
+                                        <button class="btn btn-danger" data-toggle="modal" data-target="#deletecontact'. $contact->getid() .'"><i class="fas fa-minus"></i></button>
                                         </td>';
                                     echo '</tr>';
                                     
@@ -81,6 +81,34 @@
                 </div>
             </div>
         </section>
+                <!-- Modal -->
+                <?php
+            foreach ($contacts as $contact) {
+                echo '
+            <div id="deletecontact'. $contact->getid() .'"class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <form action="http://localhost/PHP-MVC-ecommerce/index.php?controller=admin&action=deletecontact" method="post" class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Edit Contact</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body container bg-white">
+                            <blockquote class="blockquote text-center">
+                                <p class="mb-0">Are you sure want to delete this contact ?</p>
+                            </blockquote>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-around">
+                        <input type="hidden" name="contact_id" value="'. $contact->getid() .'" />
+                            <button type="button" class="btn btn-success px-5" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger">Delete Contact</button>
+                        </div>
+                    </div>
+                </form>
+            </div>';
+            }
+        ?>
     </body>
     <?php include ROOT . '/application/views/admin/templates/footer.php'; ?>
 </html>

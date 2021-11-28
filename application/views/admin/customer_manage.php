@@ -183,30 +183,4 @@
 
     </body>
     <?php include ROOT . '/application/views/admin/templates/footer.php'; ?>
-    <script>
-function FilterFunction() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("FilterInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("FilterTable");
-    tr = table.getElementsByTagName("tr");
-
-    for (i = 0; i < tr.length; i++) {
-        td_1 = tr[i].getElementsByTagName("td")[1];
-        td_2 = tr[i].getElementsByTagName("td")[2];
-        td_3 = tr[i].getElementsByTagName("td")[3];
-        if (td_1 && td_2 && td_3) {
-        Value_td1 = td_1.textContent || td_1.innerText;
-        Value_td2 = td_2.textContent || td_2.innerText;
-        Value_td3 = td_3.textContent || td_3.innerText;
-        if (Value_td1.toUpperCase().indexOf(filter) > -1 || Value_td2.toUpperCase().indexOf(filter) > -1 || Value_td3.toUpperCase().indexOf(filter) > -1 ) {
-            tr[i].style.display = "";
-        } else {
-            tr[i].style.display = "none";
-        }
-        }
-    }
-}
-</script>
-
 </html>
