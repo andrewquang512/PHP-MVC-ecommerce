@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h2>Oppo Reno6 5GB</h2>
+                    <h2>OPPO Reno6 5G (8G/128GB)</h2>
                         <div>
                             <div class="product-short-description" style="padding-top:10px">
                               <table >

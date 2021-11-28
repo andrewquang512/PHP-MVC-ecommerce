@@ -107,6 +107,34 @@ class AdminController extends BaseController{
       $data = array('news' => $news_info);
       $this->render('content_manage', $data);
     }
+
+    public function deletecontent(){
+      $content_id = $_POST['content_id'];
+      $news = new ContentModel();
+      $result = $news->DeleteByContenttId($content_id);
+      header('Location: index.php?controller=admin&action=contentmanage');
+    }
+    public function updatecontent(){
+      $content_id = $_POST['content_id'];
+      $title = $_POST['title'];
+      $content = $_POST['content'];
+      $image= $_POST['thumbnail'];
+      $release_hour= $_POST['release_hour'];
+      $news = new ContentModel();
+      $result = $news->UpdateByContenttId($content_id,$title,$content,$image,$release_hour);
+      header('Location: index.php?controller=admin&action=contentmanage');
+    }
+    
+    public function addcontent(){
+      $title = $_POST['title'];
+      $content = $_POST['content'];
+      $image= $_POST['thumbnail'];
+      $release_hour= $_POST['release_hour'];
+      $news = new ContentModel();
+      $result = $news->CreateContent($title,$content,$image,$release_hour);
+      header('Location: index.php?controller=admin&action=contentmanage');
+    }
+
     public function productmanage(){
       $products = new PhoneModel();
       $products_info = $products->GetAll();
@@ -211,8 +239,8 @@ class AdminController extends BaseController{
       $product_gift = (float)$temp_product_gift;
       $product_gift = number_format($product_gift, 5, '.', '');
       $product_link = $_POST['product_link'];
-      $filename = $_FILES["fileToUpload"]["name"];
-      $tempname = $_FILES["fileToUpload"]["tmp_name"];
+      $filename = $_FILES["fileupdate"]["name"];
+      $tempname = $_FILES["fileupdate"]["tmp_name"];
       $products = new PhoneModel();
       // $products_id = $products->GetLastPhoneID(); 
       // $new_products_id = $products_id + 1;

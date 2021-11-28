@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h2>Vivo Y12s</h2>
+                    <h2>Vivo Y12s (4G/12GB)</h2>
                         <div>
                             <div class="product-short-description" style="padding-top:10px">
                               <table >

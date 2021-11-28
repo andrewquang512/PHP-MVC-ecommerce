@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h2>Samsung Galaxy Z Fold3</h2>
+                    <h2>SamSung Galaxy Z Fold3</h2>
                         <div>
                             <div class="product-short-description" style="padding-top:10px">
                               <table >

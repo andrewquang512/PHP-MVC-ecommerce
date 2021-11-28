@@ -19,7 +19,7 @@
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 mb-3">
                                     <button class="btn btn-success" data-toggle="modal" data-target="#createproduct">Add a new Product</button>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
                             <div class="row" >
                                 <div class="col-5 border-right">
                                     <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                                        <img class="mt-5" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone'. $product->getId() .'/1.png" id="preview_image" style="max-width:300px; max-height:800px;">
+                                        <img class="mt-5" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone'. $product->getId() .'/1.png" style="max-width:300px; max-height:800px;">
                                     </div>
                                 </div>
                                 <div class="col-7 border-right">
@@ -83,7 +83,7 @@
                                             <h6 class="text-right">Edit Product</h6>
                                         </div> 
                                         <div class="row ">
-                                            <div class="col-md-12"><label class="labels">Phone image</label><input class="form-control-file" type="file" name="fileToUpload" id="fileToUpload"></div>
+                                            <div class="col-md-12"><label class="labels">Phone image</label><input class="form-control-file" type="file" name="fileupdate" id="fileupdate"></div>
                                         </div>
                                         <div class="row ">
                                             <div class="col-md-6 mt-3"><label class="labels">Name</label><input type="text" class="form-control" value="'. $product->getPname() .'" name="product_name" placeholder="Iphone XX" required></div>
@@ -209,9 +209,9 @@
     <?php include ROOT . '/application/views/admin/templates/footer.php'; ?>
     <script>
         fileToUpload.onchange = evt => {
-            const [file] = fileToUpload.files
+            const [file] = fileToUpload.files;
             if (file) {
-                preview_image.src = URL.createObjectURL(file)
+                preview_image.src = URL.createObjectURL(file);
             }
         }
     </script>

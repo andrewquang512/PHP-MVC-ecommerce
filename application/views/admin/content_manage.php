@@ -21,8 +21,8 @@
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <button class="btn btn-success" data-toggle="modal" data-target="#createproduct">Add a new post</button>
+                                <div class="col-md-12 mb-3">
+                                    <button class="btn btn-success" data-toggle="modal" data-target="#createcontent">Add a new post</button>
                                 </div>
                             </div>
                             <table class="table table-striped table-hover" id="FilterTable">
@@ -78,39 +78,112 @@
         </section>
 
 <!-- Modal -->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Create new post</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body container bg-white">
-                <div class="row">
-                    <div class="col-12 border-right">
-                        <div class="py-2">
-                            <!-- <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h6 class="text-right">Edit profile</h6>
-                            </div> -->
-                            <div class="row ">
-                                <div class="col-md-12"><label class="labels">Title</label><input type="text" class="form-control" placeholder="John"></div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-md-12"><label class="labels">Content</label><textarea rows="12" class="form-control"></textarea></div>
+<?php
+            foreach ($news as $new) {
+                echo '
+            <div id="changecontent'. $new->getnews_id() .'"class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <form action="http://localhost/PHP-MVC-ecommerce/index.php?controller=admin&action=updatecontent" method="post" class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Create a new post</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body container bg-white">
+                            <div class="row" >
+                                <div class="col-12 border-right">
+                                    <div class="py-2">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h6 class="text-right">Add post</h6>
+                                        </div> 
+                                        <div class="row ">
+                                            <div class="col-md-12"><label class="labels">Thumbnail:</label><input type="text" name="thumbnail" value="'.$new->getimage().'" class="form-control" placeholder="e.g: Put you image URL here" required></div>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-md-12"><label class="labels">Title:</label><input type="text" name="title" class="form-control" value="'.$new->gettitle().'" placeholder="e.g: John" required></div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-12"><label class="labels">Content:</label><textarea rows="12" name="content" class="form-control" value="'.$new->getcontent().'" placeholder="e.g: Put some text about your newest post" required>'.$new->getcontent().'</textarea></div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-12"><label class="labels">Release Hour:</label><input type="text" name="release_hour" class="form-control" value="'.$new->getrelease_hour().'" placeholder="e.g: Time hour released" required></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="modal-footer">
+                            <input type="hidden" name="content_id" value="'. $new->getnews_id() .'" />
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Update Post</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Create new post</button>
-        </div>
-    </div>
-  </div>
-</div>
+            <div id="deletecontent'. $new->getnews_id() .'"class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <form action="http://localhost/PHP-MVC-ecommerce/index.php?controller=admin&action=deletecontent" method="post" class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Edit Post</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body container bg-white">
+                            <blockquote class="blockquote text-center">
+                                <p class="mb-0">Are you sure want to delete this account ?</p>
+                            </blockquote>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-around">
+                            <input type="hidden" name="content_id" value="'. $new->getnews_id() .'" />
+                            <button type="button" class="btn btn-success px-5" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger">Delete Post</button>
+                        </div>
+                    </div>
+                </form>
+            </div>';
+            }
+        ?>
+            <div id="createcontent"class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <form action="http://localhost/PHP-MVC-ecommerce/index.php?controller=admin&action=addcontent" method="post" class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Create a new post</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body container bg-white">
+                            <div class="row" >
+                                <div class="col-12 border-right">
+                                    <div class="py-2">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h6 class="text-right">Add post</h6>
+                                        </div> 
+                                        <div class="row ">
+                                            <div class="col-md-12"><label class="labels">Thumbnail:</label><input type="text" name="thumbnail" class="form-control" placeholder="e.g: Put you image URL here" required></div>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-md-12"><label class="labels">Title:</label><input type="text" name="title" class="form-control" placeholder="e.g: John" required></div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-12"><label class="labels">Content:</label><textarea rows="12" name="content" class="form-control" placeholder="e.g: Put some text about your newest post" required></textarea></div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-12"><label class="labels">Release Hour:</label><input type="text" name="release_hour" class="form-control" placeholder="e.g: Time hour released" required></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Create Post</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
     </body>
     <?php include  ROOT . '/application/views/admin/templates/footer.php'; ?>
 </html>

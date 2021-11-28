@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h2>Xiaomi MI 11 Lite</h2>
+                    <h2>Xiaomi Mi 11 Lite</h2>
                         <div>
                             <div class="product-short-description" style="padding-top:10px">
                               <table >

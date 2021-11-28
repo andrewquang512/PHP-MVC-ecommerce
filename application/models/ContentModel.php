@@ -51,15 +51,37 @@ class ContentModel{
       }
       return $list_model;
     }
-    
-    // public static function DeleteByContactId ($id) { 
-    //   $db = (new DB())->CreateConnection();
-    //   $statement = $db->prepare("DELETE FROM contact WHERE id='$id'");
-    //   if ($statement->execute()) {
-    //     return "Contact deleted successfully";
-    //   } else {
-    //     return "Error deleting contact: ";
-    //   }
-    // }
+    public static function CreateContent($title, $content ,$image, $release_hour) { 
+      $db = (new DB())->CreateConnection();
+      $statement = $db->prepare("INSERT INTO news(title,content,image,release_hour)
+      VALUE ('$title','$content', '$image' ,'$release_hour') ");
+      if ($statement->execute()) {
+        return "Record created successfully";
+      } else {
+        return "Error creating record: ";
+      }
+  }
+  public static function UpdateByContenttId($content_id,$title,$content,$image,$release_hour) { 
+    $db = (new DB())->CreateConnection();
+    $statement = $db->prepare("UPDATE news SET title = '$title',
+    content = '$content', image = '$image',
+    release_hour = '$release_hour'
+    WHERE news_id = $content_id");
+    if ($statement->execute()) {
+      return "Record updated successfully";
+    } else {
+      return "Error updating record: ";
+    }
+  }
+
+    public static function DeleteByContenttId ($id) { 
+      $db = (new DB())->CreateConnection();
+      $statement = $db->prepare("DELETE FROM news WHERE news_id='$id'");
+      if ($statement->execute()) {
+        return "Contact deleted successfully";
+      } else {
+        return "Error deleting contact: ";
+      }
+    }
 }
 ?>
