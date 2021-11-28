@@ -58,17 +58,14 @@ class ContactModel{
       return $list_model;
     }
     
-    public static function GetByCustomerId ($id) { 
-        $db = (new DB())->CreateConnection();
-        $statement = $db->prepare("SELECT * FROM customer WHERE user_id = ?");
-        $statement->bind_param('i', $id);
-        $statement->bind_result($id, $customer_name, $title, $first_name, $content, $phone, $email, $addr);
-        if ($statement->execute()) {
-          while ($row = $statement->fetch()) {
-            $model = new ContactModel($id, $customer_name, $title, $first_name, $content, $phone, $email, $addr);
-            return $model;
-          }
-        }
+    public static function DeleteByContactId ($id) { 
+      $db = (new DB())->CreateConnection();
+      $statement = $db->prepare("DELETE FROM contact WHERE id='$id'");
+      if ($statement->execute()) {
+        return "Contact deleted successfully";
+      } else {
+        return "Error deleting contact: ";
+      }
     }
 }
 ?>
