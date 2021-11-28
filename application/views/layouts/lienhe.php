@@ -40,7 +40,7 @@
           <div >
             <h3 style="padding-top: 30px;" align="center">GỬI TIN NHẮN</h3>
             <br>
-            <form>
+            <form id="myform">
               <div class="text-error"></div>
               <div class="form-group">
                 <input type="text" class="form-control" name="name" id="name" placeholder="Tên">
@@ -58,7 +58,9 @@
                 <textarea class="form-control" name="content" id="content" rows="3" placeholder="Nội dung"></textarea>
               </div>
               <div class="form-group" align="center">
+              <a href="./?controller=pages&action=sanpham">
                 <input type="submit" onclick="return false" name="submit" class="btn btn-info send" value="Gửi" />
+              </a>  
               </div>
             </form>
           </div>
@@ -90,7 +92,9 @@ $(document).ready(function(){
         method:"POST",
         data:{submit:submit,name:name, title:title, phone:phone, email:email, content:content},
         success:function(data){
+          //console.log(data);
           $('.text-error').html(data);
+          if(data==='<label style="color:#72c94d">Form Data Submitted</label>') {$("#myform")[0].reset();}
         }
       });
 }

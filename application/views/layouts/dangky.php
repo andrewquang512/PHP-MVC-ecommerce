@@ -52,6 +52,7 @@
             $row = mysqli_fetch_array($get_userid, MYSQLI_ASSOC);
 
             $_SESSION['user_id'] = $row['user_id'];
+            $_SESSION['first_name']=$row['first_name'];
             exit('2');
         }
     }
