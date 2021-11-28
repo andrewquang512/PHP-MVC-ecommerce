@@ -36,10 +36,10 @@
             <h6 style="padding-left:40px;">Menu</h6>
             <div class="menu-footer">
               <ul>
-                <li><a href="gioithieu.php">Giới thiệu</a></li>
-                <li><a href="phone.php">Sản phẩm</a></li>
-                <li><a href="lienhe.php">Liên hệ</a></li>
-                <li><a href="tintuc.php">Tin tức</a></li>
+                <li><a href="./?controller=pages&action=gioithieu">Giới thiệu</a></li>
+                <li><a href="./?controller=pages&action=sanpham">Sản phẩm</a></li>
+                <li><a href="./?controller=pages&action=lienhe">Liên hệ</a></li>
+                <li><a href="./?controller=pages&action=tintuc">Tin tức</a></li>
               </ul>
             </div>
           </div>
@@ -48,32 +48,32 @@
             <div class="row">
               <div class="col-4" ">
 
-                <a href="../detailed/samsung-galaxy-21.php"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone1/1.png" alt="" style="max-width:70%;
+                <a href="./?controller=pages&action=sanpham&id=samsung-galaxy-21"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone1/1.png" alt="" style="max-width:70%;
                   max-height:70%; 
                   /* clip:rect(2px,59px,61px,6px);position: absolute; */
                   "></a>
               </div>
               <div class="col-4">
-                <a href="../detailed/huawei-p30-pro.php"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone6/1.png" alt="" style="max-width:70%;
+                <a href="./?controller=pages&action=sanpham&id=huawei-p30-pro"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone6/1.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="col-4">
-                <a href="../detailed/iphone-12.php"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone2/1.png" alt="" style="max-width:70%;
+                <a href="./?controller=pages&action=sanpham&id=iphone-12"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone2/1.png" alt="" style="max-width:70%;
 
                   max-height:70%;"></a>
               </div>
               <div class="w-100"></div>
               <div class="col-4">
 
-                <a href="../detailed/oppo-reno6.php"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone3/1.png" alt="" style="max-width:70%;
+                <a href="./?controller=pages&action=sanpham&id=oppo-reno6"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone3/1.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="col-4">
-                <a href="../detailed/vivo-y12s.php"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone4/1.png" alt="" style="max-width:70%;
+                <a href="./?controller=pages&action=sanpham&id=vivo-y12s"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone4/1.png" alt="" style="max-width:70%;
                   max-height:70%;"></a>
               </div>
               <div class="col-4">
-                <a href="../detailed/xiaomi-redmi-9t.php"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone5/1.png" alt="" style="max-width:70%;
+                <a href="./?controller=pages&action=sanpham&id=xiaomi-redmi-9t"><img src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone5/1.png" alt="" style="max-width:70%;
 
                   max-height:70%;"></a>
               </div>
