@@ -15,7 +15,7 @@
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>  
   <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/bootstrap/css/jquery-ui.css"><!--//just add-->
   <script type="text/javascript" src="http://localhost/PHP-MVC-ecommerce/public/assets/bootstrap/js/bootstrap.min1.js"></script><!--//just add-->
-  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/phone.css" type="text/css">
+  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/phone.css?v=<?php echo time()?>" type="text/css">
   <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/header.css?v=<?php echo time()?>" type="text/css">
 </head>
 
