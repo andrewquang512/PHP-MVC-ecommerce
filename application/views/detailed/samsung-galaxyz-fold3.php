@@ -40,17 +40,17 @@
                         </ol>
                         <div class="carousel-inner ">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/1.png)" alt="first-slider" style="justify-content: center;"
+                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/1.png" alt="first-slider" style="justify-content: center;"
                                     style="max-height: 300px;">
 
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/2.png)" alt="second-slider" style="justify-content: center;"
+                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/2.png" alt="second-slider" style="justify-content: center;"
                                     style="max-height: 300px;">
 
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/3.png)" alt="thirds-slider" style="justify-content: center;"
+                                <img class="d-block w-100" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/phone7/3.png" alt="thirds-slider" style="justify-content: center;"
                                     style="max-height: 300px;">
 
                             </div>
