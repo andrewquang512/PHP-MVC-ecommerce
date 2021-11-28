@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h2>Huawei P30 Pro</h2>
+                    <h2>Huawei P30 Pro 256GB</h2>
                         <div>
                             <div class="product-short-description" style="padding-top:10px">
                               <table >
