@@ -8,7 +8,7 @@
   <?php 
     include('head.php');
   ?>
-
+    <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/header.css?v=<?php echo time()?>" type="text/css">
     <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/lienhe.css" type="text/css">
 
 </head>

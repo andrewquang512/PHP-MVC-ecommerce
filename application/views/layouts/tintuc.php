@@ -24,7 +24,7 @@ details > p {
   box-shadow: 1px 1px 2px #bbbbbb;
 }
   </style>
-
+  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/header.css?v=<?php echo time()?>" type="text/css">
   <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/tintuc.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
