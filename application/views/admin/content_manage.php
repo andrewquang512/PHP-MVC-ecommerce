@@ -16,33 +16,61 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <input class="form-control" type="text" placeholder="Filter Posts...">
+                                    <input class="form-control" id="FilterInput" onkeyup="FilterFunction()" type="text" placeholder="Filter Posts...">
                                 </div>
                             </div>
                             <br>
-                            <table class="table table-striped table-hover">
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Published</th>
-                                    <th>Created</th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <td>Blog Post 1</td>
-                                    <td><i class="fas fa-check"></i></td>
-                                    <td>Dec 12, 2016</td>
-                                    <td>
-                                        <button class="btn btn-primary"><i class="far fa-edit"></i></button>
-                                        <button class="btn btn-danger"><i class="fas fa-minus"></i></button>
-                                    </td>
-                                </tr>
-                                
-                            </table>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add a new Post</button>
+                                    <button class="btn btn-success" data-toggle="modal" data-target="#createproduct">Add a new post</button>
                                 </div>
                             </div>
+                            <table class="table table-striped table-hover" id="FilterTable">
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Image</th>
+                                    <th>Title</th>
+                                    <th>Tools</th>
+                                </tr>
+                                <?php
+                                foreach ($news as $new) {
+                                    echo '<tr>';
+                                    echo '<td>' . $new->getnews_id() .
+                                        '</td>
+                                        <td> <img class="rounded-circle" src="'.$new->getimage().'" width="80" height="80">
+                                        </td>
+                                        <td> ' . $new->gettitle() .
+                                        '</td>
+                                        <td style="width:20%;">
+                                        <button id="'. $new->getnews_id() .'" onClick="displaycontent(this.id)" class="btn btn-success"><i class="far fa-eye"></i></button>
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#changecontent'. $new->getnews_id() .'"><i class="fas fa-edit"></i></button>
+                                        <button class="btn btn-danger" data-toggle="modal" data-target="#deletecontent'. $new->getnews_id() .'"><i class="fas fa-minus"></i></button>
+                                        </td>';
+                                    echo '</tr>';
+                                    
+                                    echo '<tr class="panel-body content-details mt-2 mb-3" id="content'. $new->getnews_id() .'" style="display:none;" >
+                                    <td colspan="6">
+                                        <h4>' . $new->gettitle() . '</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless mb-0">
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row" class="p-1">Release Hour:</th>
+                                                        <td class="p-1">' . $new->getrelease_hour() . '</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <th scope="row" class="p-1">Content</th>
+                                                        <td class="p-1">' . $new->getcontent() . '</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>';
+                                }
+                                ?>
+                                
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -71,23 +99,6 @@
                             </div>
                             <div class="row mt-3">
                                 <div class="col-md-12"><label class="labels">Content</label><textarea rows="12" class="form-control"></textarea></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="dropdown">
-                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                                        <span class="caret"></span></button>
-                                        <ul class="dropdown-menu">
-                                        <input class="form-control" id="myInput" type="text" placeholder="Search..">
-                                        <li><a href="#">HTML</a></li>
-                                        <li><a href="#">CSS</a></li>
-                                        <li><a href="#">JavaScript</a></li>
-                                        <li><a href="#">jQuery</a></li>
-                                        <li><a href="#">Bootstrap</a></li>
-                                        <li><a href="#">Angular</a></li>
-                                    </div>
-                                </div>
-                                </ul>
                             </div>
                         </div>
                     </div>
