@@ -25,7 +25,7 @@ details > p {
 }
   </style>
   <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/header.css?v=<?php echo time()?>" type="text/css">
-  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/tintuc.css" type="text/css">
+  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/tintuc.css?v=<?php echo time()?>" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
@@ -33,8 +33,8 @@ details > p {
     include('header.php');
     ?>    
 <div class="container-fluid">
-  <div class="row">
-  <div class="col-8 col-md-8">
+  <div class="row" id="dpblock">
+  <div class="col-lg-8 col-md-12">
     <h3 class="titlehome">Dành cho bạn</h3>
     <form class="form-inline my-2 my-lg-0 search">
         <input class="form-control mr-sm-2 " type="search" placeholder="Fill in keyword" aria-label="Search" id="keyword">
@@ -42,7 +42,7 @@ details > p {
     </form>
     <div class="news-array" style="padding-top: 20px;"></div>
   </div>
-  <div class="col-4 col-md-4">   
+  <div class="col-lg-4 col-md-12">   
     <h3 class="titlehome">Thảo luận nhiều</h3>
     <div class="summarycomment">
                 <a href="https://www.thegioididong.com/tin-tuc/nokia-x80-pro-co-gi-moi-1383246">

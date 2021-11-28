@@ -140,3 +140,9 @@ footer .col-4 {
   padding: 0 !important;
   width: 70px !important;
 }
+
+@media (max-width: 991.98px) {
+  #dpblock {
+    display: block;
+  }
+}
