@@ -73,12 +73,16 @@
 .card-text {
   font-size: 20px;
   margin-bottom: 0%;
+  color: black;
+  height: 70px;
+  overflow-x: hidden;
 }
 
 .price {
   margin-top: 0;
   font-weight: bold;
   text-align: center;
+  color: black;
 }
 
 .achieve {
@@ -220,4 +224,12 @@ th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+.card {
+  height: fit-content;
+}
+
+.currency {
+  color: black;
 }

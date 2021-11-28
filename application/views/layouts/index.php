@@ -6,7 +6,7 @@
   <?php 
     include('head.php');
   ?>
-  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/trangchu.css" type="text/css">
+  <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/trangchu.css?v=<?php echo time()?>" type="text/css">
 </head>
 <body>
 
@@ -177,14 +177,16 @@
           <div class="carousel-item active">
 
             <div class="row">
+              
               <div class="col-md-4">
+              <a href="./?controller=pages&action=sanpham&id=samsung-galaxy-21">
                 <div class="card mb-2">
 
                   <img class="card-img-top" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone1/1.png" alt="">
 
                   <div class="card-body">
                     <!-- <h3 class="card-title">SamSung Galaxy S21 Ultra</h3> -->
-                    <p class="card-text" <a href="../detailed/samsung-galaxy-21">SamSung Galaxy S21 Ultra</a></p>
+                    <p class="card-text">SamSung Galaxy S21 Ultra</p>
                     <div>
                       <span class="price">26,990,000
                         <span class="currency">₫</span>
@@ -192,19 +194,22 @@
                     </div>
                     <div class="item-rating" style="padding-top:10px">
                       <p>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>     
-                      <span>82</span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:black"></span>
+                      <span class="fa fa-star" style="color:black"></span>     
+                      <span class="currency">82</span>
                       </p>
                   </div>
                   </div>
-                </div>
+                </div> 
+                </a>
               </div>
+              
 
               <div class="col-md-4 clearfix d-none d-md-block">
+              <a href="./?controller=pages&action=sanpham&id=iphone-12">
                 <div class="card mb-2">
 
                   <img class="card-img-top" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/Phone2/1.png" alt="">
@@ -218,19 +223,21 @@
                     </div>
                     <div class="item-rating" style="padding-top:10px">
                       <p>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
                       <span class="fa fa-star"  style="color:orange"></span>
-                      <span class="fa fa-star"></span>     
-                      <span>102</span>
+                      <span class="fa fa-star" style="color:black"></span>     
+                      <span class="currency">102</span>
                       </p>
                   </div>
                   </div>
                 </div>
+              </a>
               </div>
 
               <div class="col-md-4 clearfix d-none d-md-block">
+              <a href="./?controller=pages&action=sanpham&id=oppo-reno6">
                 <div class="card mb-2">
                   <img class="card-img-top"
 
@@ -245,16 +252,17 @@
                     </div>
                     <div class="item-rating" style="padding-top:10px">
                       <p>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>     
-                      <span>45</span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:black"></span>
+                      <span class="fa fa-star" style="color:black"></span>     
+                      <span class="currency">45</span>
                       </p>
                   </div>
                   </div>
                 </div>
+              </a>
               </div>
             </div>
 
@@ -266,6 +274,7 @@
 
             <div class="row">
               <div class="col-md-4">
+              <a href="./?controller=pages&action=sanpham&id=vivo-y12s">
                 <div class="card mb-2">
                   <img class="card-img-top"
 
@@ -280,19 +289,21 @@
                     </div>
                     <div class="item-rating" style="padding-top:10px">
                       <p>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " ></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>     
-                      <span>50</span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:black"></span>
+                      <span class="fa fa-star" style="color:black"></span>
+                      <span class="fa fa-star" style="color:black"></span>     
+                      <span class="currency">50</span>
                       </p>
                   </div>
                   </div>
                 </div>
+              </a>
               </div>
 
               <div class="col-md-4 clearfix d-none d-md-block">
+              <a href="./?controller=pages&action=sanpham&id=xiaomi-redmi-9t">
                 <div class="card mb-2">
                   <img class="card-img-top"
 
@@ -307,19 +318,21 @@
                     </div>
                     <div class="item-rating" style="padding-top:10px">
                       <p>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star"  style="color:orange"></span>
-                      <span class="fa fa-star"></span>     
-                      <span>150</span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:black"></span>     
+                      <span class="currency">150</span>
                       </p>
                   </div>
                   </div>
                 </div>
+              </a>
               </div>
 
               <div class="col-md-4 clearfix d-none d-md-block">
+              <a href="./?controller=pages&action=sanpham&id=huawei-p30-pro">
                 <div class="card mb-2">
                   <img class="card-img-top"
 
@@ -334,16 +347,17 @@
                     </div>
                     <div class="item-rating" style="padding-top:10px">
                       <p>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star " style="color:orange"></span>
-                      <span class="fa fa-star"  style="color:orange"></span>
-                      <span class="fa fa-star"  style="color:orange"></span>     
-                      <span>80</span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>
+                      <span class="fa fa-star" style="color:orange"></span>     
+                      <span class="currency">80</span>
                       </p>
                   </div>
                   </div>
                 </div>
+              </a>
               </div>
             </div>
 
