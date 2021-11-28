@@ -51,7 +51,7 @@
             </ul> -->
             <form class="form-inline my-2 my-lg-0 mr-auto">
                 <a href="./?controller=pages&action=dangxuat">
-                    <button class="btn btn-outline-success my-2 my-sm-0 text-dark log_button" id="tf_btn"
+                    <button class="btn btn-outline-success my-2 my-sm-0 log_button" id="tf_btn"
                         style=" font-size: 1em;font-weight: bold;" type="button">Logout</button>
                 </a>
                 <!-- Dòng echo phía dưới chỉ dùng để test lấy user_id, bỏ đi được -->
@@ -59,8 +59,8 @@
                 <?php } else {?>
                 <form class="form-inline my-2 my-lg-0 mr-auto">
                 <a href="./?controller=pages&action=dangnhap">
-                    <button class="btn btn-outline-success my-2 my-sm-0 text-dark log_button" id="tf_btn"
-                        style=" font-size: 1em;font-weight: bold;" type="button">Login</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0 log_button" id="tf_btn"
+                         type="button">Login</button>
                 </a>
                 <?php } ?>
                 <a href="./?controller=shoppingcart&action=getcart&index=0" class="header__cart">

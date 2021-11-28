@@ -68,55 +68,7 @@
     <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/dangky.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
-    <style>
-/* A little change in header */
-.header__cart {
-  border: 1px solid red;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 14px;
-  margin-left: 10px;
-  padding: 5px 8px;
-  width: 110px;
-  height: 35px;
-}
-.header__cart:hover {
-  background-color: red;
-  transition: 1s;
-}
-.header__cart:hover i {
-  color: #fff;
-}
-.header__cart:hover span {
-  color: #fff;
-}
-.header__cart i {
-  margin-right: 5px;
-  font-size: 20px;
-  color: black;
-}
-.header__cart span {
-  color: black;
-  font-size: 14px;
-}
-.header__cart i,
-.header__cart span {
-  display: inline-block;
-  vertical-align: middle;
-}
-.icon-cart {
-  background-position: -175px 0;
-  height: 18px;
-  width: 20px;
-}
-.header__cart i,
-.header__cart span {
-  display: inline-block;
-  vertical-align: middle;
-}
-  </style>
+    <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/header.css?v=<?php echo time()?>" type="text/css">
   </head>
   <body>
     <?php

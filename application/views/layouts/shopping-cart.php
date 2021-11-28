@@ -6,7 +6,7 @@
     include('head.php');
     ?>
     <!-- shopping-cart.css-->
-
+    <link rel="stylesheet" href="http://localhost/PHP-MVC-ecommerce/public/assets/css/homepages/header.css?v=<?php echo time()?>" type="text/css">
     <link rel="stylesheet" href="./public/assets/css/homepages/shopping-cart.css?v=<?php echo time(); ?>">
     <title>GIO HANG</title>
     <style>
