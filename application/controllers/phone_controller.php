@@ -76,7 +76,7 @@ if(isset($_POST["action"]))
                     <img class="card-img-top img-responsive" src="http://localhost/PHP-MVC-ecommerce/public/assets/images/dtdd/'. $row['IMAGE'] .'" alt="Phone" >
                     <div class="card-body">
                         <p class="card-text" style="margin-bottom:10px; color:#FF5B5B">'. $row['PNAME'] .'</p>
-                        <p style="margin-bottom:5px; font-style:italic">Quà tặng '. $row['GIFT']*1000000 .'đ</p>
+                        <p style="margin-bottom:5px; font-style:italic">Quà tặng '. number_format($row['GIFT']*1000000,0,'','.') .'đ</p>
                         <a href="./?controller=pages&action=sanpham&id='. $row['LINK'] .'" class="btn btn-primary stretched-link">'. $row['PRICE'] .'đ</a>
                     </div>
                 </div>
